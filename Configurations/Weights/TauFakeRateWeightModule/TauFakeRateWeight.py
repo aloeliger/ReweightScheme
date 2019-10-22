@@ -6,7 +6,6 @@ def CalculateTauFakeRateWeight(self,theTree):
     tauVector = ROOT.TLorentzVector()
     tauVector.SetPtEtaPhiM(theTree.pt_1,theTree.eta_1,theTree.phi_1,theTree.m_1)
     self.value[0] = self.eleSFTool.getSFvsEta(tauVector.Eta(),theTree.gen_match_2) * self.muSFTool.getSFvsEta(tauVector.Eta(),theTree.gen_match_2)
-    
 
 tauFakeRateWeight_2016 = Weight()
 tauFakeRateWeight_2016.name = 'TauFakeRateWeight'
