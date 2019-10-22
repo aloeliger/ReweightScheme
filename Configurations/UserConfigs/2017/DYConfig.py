@@ -29,7 +29,7 @@ DYConfiguration.listOfWeights = [
     muIDIsoWeight,
     muTrackingWeight,
     pileupWeight,
-    tauFakeRateWeight,
+    #tauFakeRateWeight,
     tauIDWeight,
     triggerWeight,
     ZPTWeight,

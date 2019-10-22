@@ -1,4 +1,4 @@
-import ROOT
+import ROOT 
 
 from Configurations.Weights.CrossSectionWeightingModule.CrossSectionWeight import crossSectionWeight
 from Configurations.Weights.MuIDIsoReweightingModule.MuIDIsoWeight import muIDIsoWeight_2018 as muIDIsoWeight
@@ -7,31 +7,28 @@ from Configurations.Weights.PileupWeightingModule.PileupWeight import pileupWeig
 from Configurations.Weights.TauFakeRateWeightModule.TauFakeRateWeight import tauFakeRateWeight_2018 as tauFakeRateWeight
 from Configurations.Weights.TauIDModule.TauIDWeight import tauIDWeight_2018 as tauIDWeight
 from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2018 as triggerWeight
-from Configurations.Weights.ZPTReweightingModule.ZPTWeight import ZPTWeight_2018 as ZPTWeight
 from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
-DYConfiguration = ReweightConfiguration()
-DYConfiguration.name = 'DY'
-DYConfiguration.inputFile = "/data/aloeliger/SMHTT_Selected_2018_AntiIso_Deep/DY.root"
-#Do set-up
-crossSectionWeight.sample = 'DY'
+EWKConfiguration = ReweightConfiguration()
+EWKConfiguration.name = "ZH"
+EWKConfiguration.inputFile = "/data/aloeliger/SMHTT_Selected_2018_MCOnly_Deep/ZH.root"
+crossSectionWeight.sample = 'ZH'
 crossSectionWeight.year = '2018'
-totalEventsFile = ROOT.TFile.Open(DYConfiguration.inputFile)
-crossSectionWeight.totalEvents=totalEventsFile.eventCount.GetBinContent(2)
+totalEventsFile = ROOT.TFile.Open("/data/aloeliger/SMHTT_Selected_2018_MCOnly_Deep/ZH.root")
+crossSectionWeight.totalEvents = totalEventsFile.eventCount.GetBinContent(2)
 totalEventsFile.Close()
 pileupWeight.year = '2018'
-pileupWeight.sample = 'DY'
+pileupWeight.sample = 'ZH'
 pileupWeight.InitPileupWeightings(pileupWeight)
-DYConfiguration.listOfWeights = [
+EWKConfiguration.listOfWeights = [
     crossSectionWeight,
     muIDIsoWeight,
     muTrackingWeight,
     pileupWeight,
-    #tauFakeRateWeight,
+    tauFakeRateWeight,
     tauIDWeight,
     triggerWeight,
-    ZPTWeight,
-    bTaggingWeight
-    ]
+    bTaggingWeight,
+]

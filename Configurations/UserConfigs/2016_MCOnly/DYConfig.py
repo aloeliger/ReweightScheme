@@ -14,7 +14,7 @@ from Configurations.ConfigDefinition import ReweightConfiguration
 
 DYConfiguration = ReweightConfiguration()
 DYConfiguration.name = 'DY'
-DYConfiguration.inputFile = "/data/aloeliger/SMHTT_Selected_2016_AntiIso_Deep/DY.root"
+DYConfiguration.inputFile = "/data/aloeliger/SMHTT_Selected_2016_MCOnly_Deep/DY.root"
 #Do set-up
 crossSectionWeight.sample = 'DY'
 crossSectionWeight.year = '2016'
