@@ -11,9 +11,10 @@ from tqdm import tqdm
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Handle script for performing final reweighting of events')
     parser.add_argument('--ConfigFiles',nargs = '+',help="Python based config files used to specify samples",required=True)
+    parser.add_argument('--RemovalRecipe',help = "Provide the recipe to remove the branches from the file, and then exit", action="store_true")
 
     args = parser.parse_args()
-    theLoader= RecursiveLoader()
+    theLoader= RecursiveLoader()    
     numErrors = 0
     for configFile in args.ConfigFiles:
         try:
@@ -23,7 +24,30 @@ if __name__ == "__main__":
             for item in dir(theConfigModule):
                 theConfig = getattr(theConfigModule,item)
                 if isinstance(theConfig,ReweightConfiguration):
-                    break
+                    break                        
+            if(args.RemovalRecipe):
+                #okay, let's figure out the name of any branches we're going add.
+                branchesToAdd=[]
+                for weight in theConfig.listOfWeights:                
+                    branchesToAdd.append(weight.name)
+                    if weight.hasUpDownUncertainties:
+                        for uncertainty in weight.uncertaintyVariationList:
+                            branchesToAdd.append(uncertainty)
+                branchesToAdd.append("FinalWeighting")
+                for weight in theConfig.listOfWeights:
+                    if weight.hasUpDownUncertainties:
+                        for uncertainty in weight.uncertaintyVariationList:
+                            branchesToAdd.append('FinalWeighting_'+uncertainty)                        
+
+                print("Removal Recipe: \'\n")
+                theRecipe = "python PruneBranch.py --Branches "
+                for branch in branchesToAdd:
+                    theRecipe += branch+' '
+                theRecipe += '--Files '
+                print(theRecipe)
+                print("\n\'")
+                continue
+            #now get on with it
             theFile = ROOT.TFile.Open(theConfig.inputFile,"UPDATE")
             theTree = theFile.mt_Selected
             print("Creating individual event weights...")                        
@@ -90,6 +114,12 @@ if __name__ == "__main__":
                     for key in finalWeightVariations:                        
                         if key not in alreadyHandledVariations:
                             finalWeightVariations[key][0] = finalWeightVariations[key][0] * weight.value[0]
+                #debug print statement
+                #print ""
+                #print "Event #"+str(i+1)
+                #for weight in theConfig.listOfWeights:
+                #    print(weight.name+": "+str(weight.value[0]))
+                #print("FinalWeighting: "+str(theFinalWeight[0]))
                 #fill everything
                 for branch in weightsBranchesDictionary:
                     weightsBranchesDictionary[branch].Fill()

@@ -13,7 +13,7 @@ def CalculateTriggerWeight2018(self,theTree):
     if decayMode == 11:
         decayMode = 10
     if theTree.Trigger24 or theTree.Trigger27:
-        self.value[0] = self.TriggerSFFile.w.function("m_trg24_27_binned_kit_ratio").getVal()
+        self.value[0] = self.TriggerSFFile.w.function("m_trg_SingleMu_Mu24ORMu27_desy_ratio").getVal()
     elif theTree.Trigger2027:        
         self.value[0] = self.TriggerSFFile.w.function("m_trg_MuTau_Mu20Leg_desy_ratio").getVal() * self.tauSFs.getTriggerScaleFactor(tauVector.Pt(),tauVector.Eta(),tauVector.Phi(),decayMode)
 

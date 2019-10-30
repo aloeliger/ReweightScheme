@@ -28,7 +28,7 @@ EWKConfiguration.listOfWeights = [
     muTrackingWeight,
     pileupWeight,
     tauFakeRateWeight,
-    tauIDWeight,
+    #tauIDWeight,
     triggerWeight,
     bTaggingWeight,
 ]

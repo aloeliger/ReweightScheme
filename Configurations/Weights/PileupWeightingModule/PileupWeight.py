@@ -28,14 +28,22 @@ def InitPileupWeightings(self):
             self.MCHisto = self.Pileup_MC_File.Get("pua/#WZ_TuneCP5_13TeV-pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1#MINIAODSIM")
         elif self.sample == "ST_tW_top":
             self.MCHisto = self.Pileup_MC_File.Get("pua/#ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2#MINIAODSIM")
-        elif self.sample == "WminusH125":
+        elif self.sample == "WHMinus":
             self.MCHisto = self.Pileup_MC_File.Get("pua/#WminusHToTauTau_M125_13TeV_powheg_pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1#MINIAODSIM")
+        elif self.sample == "WHPlus":
+            self.MCHisto = self.Pileup_MC_File.Get("pua/#WplusHToTauTau_M125_13TeV_powheg_pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1#MINIAODSIM")
         elif self.sample == "ST_tW_antitop":
             self.MCHisto = self.Pileup_MC_File.Get("pua/#ST_tW_antitop_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2#MINIAODSIM")
         elif self.sample == "W3":
             self.MCHisto = self.Pileup_MC_File.Get("pua/#W3JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1#MINIAODSIM")
         elif self.sample == "ZH125":
             self.MCHisto = self.Pileup_MC_File.Get("pua/#ZHToTauTau_M125_13TeV_powheg_pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1#MINIAODSIM")        
+        elif self.sample == "TTTo2L2Nu":
+            self.MCHisto = self.Pileup_MC_File.Get("pua/#TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1#MINIAODSIM")
+        elif self.sample == "TTToHadronic":
+            self.MCHisto = self.Pileup_MC_File.Get("pua/#TTToHadronic_TuneCP5_13TeV-powheg-pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v2#MINIAODSIM")
+        elif self.sample == "TTToSemiLeptonic":
+            self.MCHisto = self.Pileup_MC_File.Get("pua/#TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1#MINIAODSIM")
         self.DataHisto = self.Pileup_Data_File.Get("pileup")
     elif self.year == "2016" or self.year == "2018":
         self.MCHisto = self.Pileup_MC_File.Get("pileup")

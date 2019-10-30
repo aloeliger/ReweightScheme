@@ -9,6 +9,7 @@ from Configurations.Weights.TauIDModule.TauIDWeight import tauIDWeight_2016 as t
 from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2016 as triggerWeight
 from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight
 from Configurations.Weights.TopPtReweightingModule.TopPtWeight import topPtWeight
+from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -29,8 +30,9 @@ EWKConfiguration.listOfWeights = [
     muTrackingWeight,
     pileupWeight,
     tauFakeRateWeight,
-    tauIDWeight,
+    #tauIDWeight,
     triggerWeight,
     bTaggingWeight,
     topPtWeight,
+    PrefiringWeighting
 ]

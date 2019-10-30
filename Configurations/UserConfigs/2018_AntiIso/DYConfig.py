@@ -9,6 +9,7 @@ from Configurations.Weights.TauIDModule.TauIDWeight import tauIDWeight_2018 as t
 from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2018 as triggerWeight
 from Configurations.Weights.ZPTReweightingModule.ZPTWeight import ZPTWeight_2018 as ZPTWeight
 from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight
+from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -30,8 +31,9 @@ DYConfiguration.listOfWeights = [
     muTrackingWeight,
     pileupWeight,
     #tauFakeRateWeight,
-    tauIDWeight,
+    #tauIDWeight,
     triggerWeight,
     ZPTWeight,
-    bTaggingWeight
+    bTaggingWeight,
+    #PrefiringWeighting,
     ]
