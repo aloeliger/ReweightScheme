@@ -51,7 +51,7 @@ triggerWeight_2018.name = 'TriggerSF'
 triggerWeight_2018.TriggerSFFile = ROOT.TFile.Open(localWeightDataPath+"htt_scalefactors_legacy_2018.root")
 triggerWeight_2018.tauSFs = getTauTriggerSFs('mutau',2018,'tight','MVAv2')
 triggerWeight_2018.CalculateWeight = TriggerFunctions2018.CalculateTriggerWeight2018
-triggerWeight_2017.hasUpDownUncertainties = True
+triggerWeight_2018.hasUpDownUncertainties = True
 triggerWeight_2018.uncertaintyVariationList = [
     "Trigger24or27_UP",
     "Trigger24or27_DOWN",    
