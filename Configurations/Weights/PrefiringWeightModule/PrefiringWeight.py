@@ -4,11 +4,11 @@ from Configurations.Weights.WeightDefinition import Weight as Weight
 def CalculatePrefiringWeighting(self,theTree):
     self.value[0] = theTree.prefiring_weight
 
-def CalculatePrefiringWeightingUp(self,theTree):
-    self.value[0] = theTree.prefiring_weight_up
+def CalculatePrefiringWeightingUp(self,theTree,uncert):
+    self.uncertaintyVariationArrays[uncert][0] = theTree.prefiring_weight_up
 
-def CalculatePrefiringWeightingDown(self,theTree):
-    self.value[0] = theTree.prefiring_weight_down
+def CalculatePrefiringWeightingDown(self,theTree,uncert):
+    self.uncertaintyVariationArrays[uncert][0] = theTree.prefiring_weight_down
 
 PrefiringWeighting = Weight()
 PrefiringWeighting.name = 'PrefiringWeighting'
