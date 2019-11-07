@@ -8,6 +8,7 @@ from Configurations.Weights.TauFakeRateWeightModule.TauFakeRateWeight import tau
 from Configurations.Weights.TauIDModule.TauIDWeight import tauIDWeight_2017 as tauIDWeight
 from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2017 as triggerWeight
 from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight
+from Configurations.Weights.ZPTReweightingModule.ZPTWeight import ZPTWeight_2017 as ZPTWeight
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 
 from Configurations.ConfigDefinition import ReweightConfiguration
@@ -21,7 +22,7 @@ totalEventsFile = ROOT.TFile.Open("/data/aloeliger/SMHTT_Selected_2017_MCOnly_De
 crossSectionWeight.totalEvents = totalEventsFile.eventCount.GetBinContent(2)
 totalEventsFile.Close()
 pileupWeight.year = '2017'
-pileupWeight.sample = 'EWKZLL'
+pileupWeight.sample = 'EWK'
 pileupWeight.InitPileupWeightings(pileupWeight)
 EWKConfiguration.listOfWeights = [
     crossSectionWeight,
@@ -31,6 +32,7 @@ EWKConfiguration.listOfWeights = [
     tauFakeRateWeight,
     tauIDWeight,
     triggerWeight,
+    ZPTWeight,
     bTaggingWeight,
     PrefiringWeighting,
 ]

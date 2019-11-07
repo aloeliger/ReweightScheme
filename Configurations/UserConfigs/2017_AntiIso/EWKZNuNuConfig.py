@@ -7,6 +7,7 @@ from Configurations.Weights.PileupWeightingModule.PileupWeight import pileupWeig
 from Configurations.Weights.TauFakeRateWeightModule.TauFakeRateWeight import tauFakeRateWeight_2017 as tauFakeRateWeight
 from Configurations.Weights.TauIDModule.TauIDWeight import tauIDWeight_2017 as tauIDWeight
 from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2017 as triggerWeight
+from Configurations.Weights.ZPTReweightingModule.ZPTWeight import ZPTWeight_2017 as ZPTWeight
 from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 
@@ -21,7 +22,7 @@ totalEventsFile = ROOT.TFile.Open("/data/aloeliger/SMHTT_Selected_2017_AntiIso_D
 crossSectionWeight.totalEvents = totalEventsFile.eventCount.GetBinContent(2)
 totalEventsFile.Close()
 pileupWeight.year = '2017'
-pileupWeight.sample = 'EWKZNuNu'
+pileupWeight.sample = 'EWK'
 pileupWeight.InitPileupWeightings(pileupWeight)
 EWKConfiguration.listOfWeights = [
     crossSectionWeight,
@@ -31,6 +32,7 @@ EWKConfiguration.listOfWeights = [
     tauFakeRateWeight,
     #tauIDWeight,
     triggerWeight,
+    ZPTWeight,
     bTaggingWeight,
     PrefiringWeighting,
 ]

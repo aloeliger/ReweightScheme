@@ -7,6 +7,7 @@ from Configurations.Weights.PileupWeightingModule.PileupWeight import pileupWeig
 from Configurations.Weights.TauFakeRateWeightModule.TauFakeRateWeight import tauFakeRateWeight_2016 as tauFakeRateWeight
 from Configurations.Weights.TauIDModule.TauIDWeight import tauIDWeight_2016 as tauIDWeight
 from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2016 as triggerWeight
+from Configurations.Weights.ZPTReweightingModule.ZPTWeight import ZPTWeight_2016 as ZPTWeight
 from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 
@@ -31,6 +32,7 @@ EWKConfiguration.listOfWeights = [
     tauFakeRateWeight,
     #tauIDWeight,
     triggerWeight,
+    ZPTWeight,
     bTaggingWeight,
     PrefiringWeighting
 ]
