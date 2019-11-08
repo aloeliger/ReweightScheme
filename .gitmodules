@@ -1,0 +1,3 @@
+[submodule "Configurations/Weights/Data/LegacyCorrectionsWorkspace"]
+	path = Configurations/Weights/Data/LegacyCorrectionsWorkspace
+	url = https://github.com/danielwinterbottom/LegacyCorrectionsWorkspace.git
