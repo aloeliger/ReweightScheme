@@ -6,8 +6,8 @@ def CalculateEmbeddedWeight(self,theTree):
     muVector = ROOT.TLorentzVector()
     tauVector = ROOT.TLorentzVector()
     muVector.SetPtEtaPhiM(theTree.pt_1,theTree.eta_1,theTree.phi_1,theTree.m_1)
-    if self.year == "2016":
-        muVector.SetPtEtaPhiM(theTree.pt_1+4.0,theTree.eta_1,theTree.phi_1,theTree.m_1)
+    #if self.year == "2016":
+    #    muVector.SetPtEtaPhiM(theTree.pt_1+4.0,theTree.eta_1,theTree.phi_1,theTree.m_1)
     tauVector.SetPtEtaPhiM(theTree.pt_2,theTree.eta_2,theTree.phi_2,theTree.m_2)
     theWeight = self.TauIDWeight
     if (theTree.genweight <= 1.0):
@@ -30,18 +30,30 @@ def CalculateEmbeddedWeight(self,theTree):
     self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.genpt_2)
     self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.geneta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
-    theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_trg_ratio").getVal()
-    theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_idEmb_ratio").getVal()
+    self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)
+    if self.year == "2016":
+        theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_trg_ic_ratio").getVal()
+        theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_id_ic_ratio").getVal() #is this still correct in the ic workspace?
+    else:
+        theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_trg_ratio").getVal()
+        theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_idEmb_ratio").getVal()
     self.embeddedWorkspace.w.var("gt_pt").setVal(theTree.genpt_2)
     self.embeddedWorkspace.w.var("gt_eta").setVal(theTree.geneta_2)
-    theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_idEmb_ratio").getVal()
-    theWeight = theWeight*self.embeddedWorkspace.w.function("m_iso_binned_embed_kit_ratio").getVal()
-    theWeight = theWeight*self.embeddedWorkspace.w.function("m_id_embed_kit_ratio").getVal()
+    if self.year == "2016":
+        theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_id_ic_ratio").getVal()
+        theWeight = theWeight*self.embeddedWorkspace.w.function("m_idiso_ic_embed_ratio").getVal()
+    else:
+        theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_idEmb_ratio").getVal()
+        theWeight = theWeight*self.embeddedWorkspace.w.function("m_iso_binned_embed_kit_ratio").getVal()
+        theWeight = theWeight*self.embeddedWorkspace.w.function("m_id_embed_kit_ratio").getVal()
     if self.year == "2016":
         if theTree.Trigger22:
-            theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg24_27_embed_kit_ratio").getVal()
+            #theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg24_27_embed_kit_ratio").getVal()
+            theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_ic_embed_ratio").getVal()
         elif theTree.Trigger1920:
-            theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_MuTau_Mu20Leg_kit_ratio_embed").getVal()
+            #theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_MuTau_Mu20Leg_kit_ratio_embed").getVal()
+            theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_19_binned_ic_embed_ratio").getVal()
+            theWeight = theWeight * self.embeddedWorkspace.w.function("t_trg_mediumDeepTau_mutau_embed_ratio").getVal()
     if self.year == "2018" or self.year == "2017":
         if(theTree.Trigger24 or theTree.Trigger27):
             theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg24_27_embed_kit_ratio").getVal()
@@ -57,8 +69,8 @@ def CalculateEmbeddedWeight(self,theTree):
 #2016 Weight still not complete!
 embeddedWeight_2016 = Weight()
 embeddedWeight_2016.name = 'EmbeddedWeighting'
-embeddedWeight_2016.embeddedWorkspace = ROOT.TFile.Open(localWeightDataPath+"htt_scalefactors_legacy_2017.root")
-embeddedWeight_2016.TauIDWeight = 0.85
+embeddedWeight_2016.embeddedWorkspace = ROOT.TFile.Open(localWeightDataPath+"LegacyCorrectionsWorkspace/output/htt_scalefactors_legacy_2016.root")
+embeddedWeight_2016.TauIDWeight = 1.0 #= 0.85
 embeddedWeight_2016.CalculateWeight = CalculateEmbeddedWeight
 embeddedWeight_2016.year = "2016"
 
