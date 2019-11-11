@@ -27,8 +27,11 @@ def CalculateEmbeddedWeight(self,theTree):
     self.embeddedWorkspace.w.var("gt_eta").setVal(theTree.geneta_1)
     self.embeddedWorkspace.w.var("gt1_pt").setVal(theTree.genpt_1)
     self.embeddedWorkspace.w.var("gt1_eta").setVal(theTree.geneta_1)
-    self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.genpt_2)
-    self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.geneta_2)
+    #self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.genpt_2)
+    #self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.geneta_2)
+    #gen values are currently bugged
+    self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
+    self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
     theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_trg_ratio").getVal()
     theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_idEmb_ratio").getVal()
