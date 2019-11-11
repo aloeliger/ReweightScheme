@@ -27,8 +27,11 @@ def CalculateEmbeddedWeight(self,theTree):
     self.embeddedWorkspace.w.var("gt_eta").setVal(theTree.geneta_1)
     self.embeddedWorkspace.w.var("gt1_pt").setVal(theTree.genpt_1)
     self.embeddedWorkspace.w.var("gt1_eta").setVal(theTree.geneta_1)
-    self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.genpt_2)
-    self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.geneta_2)
+    #self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.genpt_2)
+    #self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.geneta_2)
+    #gen values are currently bugged
+    self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
+    self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)
     if self.year == "2016":
