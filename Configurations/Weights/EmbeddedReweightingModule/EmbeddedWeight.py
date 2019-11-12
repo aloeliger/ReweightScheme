@@ -14,6 +14,7 @@ def CalculateEmbeddedWeight(self,theTree):
         theWeight = theWeight * theTree.genweight # can't forget this
     else:
         theWeight = theWeight* 0.0
+    #does this need to be replaced by some Danny weight?
     if theTree.l2_decayMode == 0:
         theWeight = theWeight * 0.975
     elif theTree.l2_decayMode == 1:
@@ -36,7 +37,8 @@ def CalculateEmbeddedWeight(self,theTree):
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)
     if self.year == "2016":
         theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_trg_ic_ratio").getVal()
-        theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_id_ic_ratio").getVal() #is this still correct in the ic workspace?
+        theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_id_ic_ratio").getVal()
+        theWeight = theWeight*self.embeddedWorkspace.w.function("m_trk_ratio").getVal()
     else:
         theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_trg_ratio").getVal()
         theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_idEmb_ratio").getVal()
@@ -73,20 +75,20 @@ def CalculateEmbeddedWeight(self,theTree):
 embeddedWeight_2016 = Weight()
 embeddedWeight_2016.name = 'EmbeddedWeighting'
 embeddedWeight_2016.embeddedWorkspace = ROOT.TFile.Open(localWeightDataPath+"LegacyCorrectionsWorkspace/output/htt_scalefactors_legacy_2016.root")
-embeddedWeight_2016.TauIDWeight = 1.0 #= 0.85
+embeddedWeight_2016.TauIDWeight = 0.9 #= 0.85
 embeddedWeight_2016.CalculateWeight = CalculateEmbeddedWeight
 embeddedWeight_2016.year = "2016"
 
 embeddedWeight_2017 = Weight()
 embeddedWeight_2017.name = 'EmbeddedWeighting'
 embeddedWeight_2017.embeddedWorkspace = ROOT.TFile.Open(localWeightDataPath+"htt_scalefactors_legacy_2017.root")
-embeddedWeight_2017.TauIDWeight = 0.85
+embeddedWeight_2017.TauIDWeight = 0.95 #0.85
 embeddedWeight_2017.CalculateWeight = CalculateEmbeddedWeight
 embeddedWeight_2017.year = "2017"
 
 embeddedWeight_2018 = Weight()
 embeddedWeight_2018.name = 'EmbeddedWeighting'
 embeddedWeight_2018.embeddedWorkspace = ROOT.TFile.Open(localWeightDataPath+"htt_scalefactors_legacy_2018.root")
-embeddedWeight_2018.TauIDWeight = 0.88
+embeddedWeight_2018.TauIDWeight = 0.95#0.88
 embeddedWeight_2018.CalculateWeight = CalculateEmbeddedWeight
 embeddedWeight_2018.year = "2018"
