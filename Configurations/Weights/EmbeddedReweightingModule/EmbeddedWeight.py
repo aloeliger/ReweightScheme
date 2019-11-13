@@ -70,14 +70,14 @@ embeddedWeight_2016.year = "2016"
 
 embeddedWeight_2017 = Weight()
 embeddedWeight_2017.name = 'EmbeddedWeighting'
-embeddedWeight_2017.embeddedWorkspace = ROOT.TFile.Open(localWeightDataPath+"htt_scalefactors_legacy_2017.root")
+embeddedWeight_2017.embeddedWorkspace = ROOT.TFile.Open(localWeightDataPath+"LegacyCorrectionsWorkspace/output/htt_scalefactors_legacy_2017.root")
 embeddedWeight_2017.TauIDWeight = 0.95 #0.85
 embeddedWeight_2017.CalculateWeight = CalculateEmbeddedWeight
 embeddedWeight_2017.year = "2017"
 
 embeddedWeight_2018 = Weight()
 embeddedWeight_2018.name = 'EmbeddedWeighting'
-embeddedWeight_2018.embeddedWorkspace = ROOT.TFile.Open(localWeightDataPath+"htt_scalefactors_legacy_2018.root")
+embeddedWeight_2018.embeddedWorkspace = ROOT.TFile.Open(localWeightDataPath+"LegacyCorrectionsWorkspace/output/htt_scalefactors_legacy_2018.root")
 embeddedWeight_2018.TauIDWeight = 0.95#0.88
 embeddedWeight_2018.CalculateWeight = CalculateEmbeddedWeight
 embeddedWeight_2018.year = "2018"
