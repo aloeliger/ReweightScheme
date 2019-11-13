@@ -18,8 +18,10 @@ def CalculateEmbeddedWeight(self,theTree):
         theWeight = theWeight * 0.975
     elif theTree.l2_decayMode == 1:
         theWeight = theWeight * 0.975 * 1.051
-    else:
+    elif theTree.l2_decayMode == 10:
         theWeight = theWeight * 0.975 * 0.975 * 0.975    
+    else:
+        theWeight = theWeight * 0.975 * 0.975 * 0.975 * 1.051
     self.embeddedWorkspace.w.var("m_pt").setVal(muVector.Pt())
     self.embeddedWorkspace.w.var("m_eta").setVal(muVector.Eta())
     self.embeddedWorkspace.w.var("m_iso").setVal(theTree.iso_1)
@@ -40,6 +42,7 @@ def CalculateEmbeddedWeight(self,theTree):
     theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_idEmb_ratio").getVal()
     theWeight = theWeight*self.embeddedWorkspace.w.function("m_iso_binned_embed_kit_ratio").getVal()
     theWeight = theWeight*self.embeddedWorkspace.w.function("m_id_embed_kit_ratio").getVal()
+    theWeight = theWeight*self.embeddedWorkspace.w.function("m_trk_ratio").getVal()
     if self.year == "2016":
         if theTree.Trigger22:
             theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg24_27_embed_kit_ratio").getVal()
