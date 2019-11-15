@@ -14,6 +14,7 @@ def CalculateEmbeddedWeight(self,theTree):
         theWeight = theWeight * theTree.genweight # can't forget this
     else:
         theWeight = theWeight* 0.0
+    #doing a very stupid test with this. Never commit something like this
     #does this need to be replaced by some Danny weight?
     if theTree.l2_decayMode == 0:
         theWeight = theWeight * 0.975
@@ -30,15 +31,18 @@ def CalculateEmbeddedWeight(self,theTree):
     self.embeddedWorkspace.w.var("gt_eta").setVal(theTree.geneta_1)
     self.embeddedWorkspace.w.var("gt1_pt").setVal(theTree.genpt_1)
     self.embeddedWorkspace.w.var("gt1_eta").setVal(theTree.geneta_1)
+    #bugged gen_2 values
     #self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.genpt_2)
     #self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.geneta_2)
-    #gen values are currently bugged
     self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
     self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)    
     theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_trg_ic_ratio").getVal()
     theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_id_ic_ratio").getVal()            
+    #bugged gen_2 values
+    #self.embeddedWorkspace.w.var("gt_pt").setVal(theTree.genpt_2)
+    #self.embeddedWorkspace.w.var("gt_eta").setVal(theTree.geneta_2)    
     self.embeddedWorkspace.w.var("gt_pt").setVal(theTree.genpt_2)
     self.embeddedWorkspace.w.var("gt_eta").setVal(theTree.geneta_2)    
     theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_id_ic_ratio").getVal()
@@ -60,7 +64,6 @@ def CalculateEmbeddedWeight(self,theTree):
             theWeight = theWeight * self.embeddedWorkspace.w.function("t_trg_mediumDeepTau_mutau_embed_ratio").getVal()#tau leg
     self.value[0] = theWeight
 
-#2016 Weight still not complete!
 embeddedWeight_2016 = Weight()
 embeddedWeight_2016.name = 'EmbeddedWeighting'
 embeddedWeight_2016.embeddedWorkspace = ROOT.TFile.Open(localWeightDataPath+"LegacyCorrectionsWorkspace/output/htt_scalefactors_legacy_2016.root")
