@@ -5,9 +5,7 @@ from Configurations.Weights import localWeightDataPath
 def CalculateEmbeddedWeight(self,theTree):
     muVector = ROOT.TLorentzVector()
     tauVector = ROOT.TLorentzVector()
-    muVector.SetPtEtaPhiM(theTree.pt_1,theTree.eta_1,theTree.phi_1,theTree.m_1)
-    #if self.year == "2016":
-    #    muVector.SetPtEtaPhiM(theTree.pt_1+4.0,theTree.eta_1,theTree.phi_1,theTree.m_1)
+    muVector.SetPtEtaPhiM(theTree.pt_1,theTree.eta_1,theTree.phi_1,theTree.m_1)    
     tauVector.SetPtEtaPhiM(theTree.pt_2,theTree.eta_2,theTree.phi_2,theTree.m_2)
     theWeight = self.TauIDWeight
     if (theTree.genweight <= 1.0):
@@ -37,14 +35,16 @@ def CalculateEmbeddedWeight(self,theTree):
     self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
     self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
+    self.embeddedWorkspace.w.var("t_eta").setVal(tauVector.Eta())
+    self.embeddedWorkspace.w.var("t_phi").setVal(tauVector.Phi())
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)    
     #theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_trg_ic_ratio").getVal()
     theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_id_ic_ratio").getVal()            
     #bugged gen_2 values
     #self.embeddedWorkspace.w.var("gt_pt").setVal(theTree.genpt_2)
     #self.embeddedWorkspace.w.var("gt_eta").setVal(theTree.geneta_2)    
-    self.embeddedWorkspace.w.var("gt_pt").setVal(theTree.genpt_2)
-    self.embeddedWorkspace.w.var("gt_eta").setVal(theTree.geneta_2)    
+    self.embeddedWorkspace.w.var("gt_pt").setVal(theTree.pt_2)
+    self.embeddedWorkspace.w.var("gt_eta").setVal(theTree.eta_2)    
     theWeight = theWeight*self.embeddedWorkspace.w.function("m_sel_id_ic_ratio").getVal()
     theWeight = theWeight*self.embeddedWorkspace.w.function("m_idiso_ic_embed_ratio").getVal()    
     theWeight = theWeight*self.embeddedWorkspace.w.function("m_trk_ratio").getVal()    

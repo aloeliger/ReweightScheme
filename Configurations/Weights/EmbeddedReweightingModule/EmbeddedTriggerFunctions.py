@@ -19,6 +19,8 @@ def CalculateEmbeddedTriggerWeight2016(self,theTree):
     self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
     self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
+    self.embeddedWorkspace.w.var("t_eta").setVal(tauVector.Eta())
+    self.embeddedWorkspace.w.var("t_phi").setVal(tauVector.Phi())
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)    
 
     if theTree.Trigger22:
@@ -50,6 +52,8 @@ def CalculateEmbeddedTriggerWeight2016_22UP(self,theTree,uncert):
     self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
     self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
+    self.embeddedWorkspace.w.var("t_eta").setVal(tauVector.Eta())
+    self.embeddedWorkspace.w.var("t_phi").setVal(tauVector.Phi())
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)    
 
     if theTree.Trigger22:
@@ -81,6 +85,8 @@ def CalculateEmbeddedTriggerWeight2016_22DOWN(self,theTree,uncert):
     self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
     self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
+    self.embeddedWorkspace.w.var("t_eta").setVal(tauVector.Eta())
+    self.embeddedWorkspace.w.var("t_phi").setVal(tauVector.Phi())
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)    
 
     if theTree.Trigger22:
@@ -112,6 +118,8 @@ def CalculateEmbeddedTriggerWeight2016_1920UP(self,theTree,uncert):
     self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
     self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
+    self.embeddedWorkspace.w.var("t_eta").setVal(tauVector.Eta())
+    self.embeddedWorkspace.w.var("t_phi").setVal(tauVector.Phi())
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)    
 
     if theTree.Trigger22:
@@ -143,6 +151,8 @@ def CalculateEmbeddedTriggerWeight2016_1920DOWN(self,theTree,uncert):
     self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
     self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
+    self.embeddedWorkspace.w.var("t_eta").setVal(tauVector.Eta())
+    self.embeddedWorkspace.w.var("t_phi").setVal(tauVector.Phi())
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)    
 
     if theTree.Trigger22:
@@ -174,6 +184,8 @@ def CalculateEmbeddedTriggerWeight1718(self,theTree):
     self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
     self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
+    self.embeddedWorkspace.w.var("t_eta").setVal(tauVector.Eta())
+    self.embeddedWorkspace.w.var("t_phi").setVal(tauVector.Phi())
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)    
 
     if(theTree.Trigger24 or theTree.Trigger27):
@@ -202,6 +214,8 @@ def CalculateEmbeddedTriggerWeight1718_24or27UP(self,theTree,uncert):
     self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
     self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
+    self.embeddedWorkspace.w.var("t_eta").setVal(tauVector.Eta())
+    self.embeddedWorkspace.w.var("t_phi").setVal(tauVector.Phi())
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)    
 
     if(theTree.Trigger24 or theTree.Trigger27):
@@ -230,6 +244,8 @@ def CalculateEmbeddedTriggerWeight1718_24or27DOWN(self,theTree,uncert):
     self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
     self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
+    self.embeddedWorkspace.w.var("t_eta").setVal(tauVector.Eta())
+    self.embeddedWorkspace.w.var("t_phi").setVal(tauVector.Phi())
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)    
 
     if(theTree.Trigger24 or theTree.Trigger27):
@@ -259,6 +275,8 @@ def CalculateEmbeddedTriggerWeight1718_2027UP(self,theTree,uncert):
     self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
     self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
+    self.embeddedWorkspace.w.var("t_eta").setVal(tauVector.Eta())
+    self.embeddedWorkspace.w.var("t_phi").setVal(tauVector.Phi())
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)    
 
     if(theTree.Trigger24 or theTree.Trigger27):
@@ -287,6 +305,8 @@ def CalculateEmbeddedTriggerWeight1718_2027DOWN(self,theTree,uncert):
     self.embeddedWorkspace.w.var("gt2_pt").setVal(theTree.pt_2)
     self.embeddedWorkspace.w.var("gt2_eta").setVal(theTree.eta_2)
     self.embeddedWorkspace.w.var("t_pt").setVal(tauVector.Pt())
+    self.embeddedWorkspace.w.var("t_eta").setVal(tauVector.Eta())
+    self.embeddedWorkspace.w.var("t_phi").setVal(tauVector.Phi())
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)    
 
     if(theTree.Trigger24 or theTree.Trigger27):
