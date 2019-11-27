@@ -3,6 +3,8 @@ import ROOT
 from Configurations.Weights.EmbeddedReweightingModule.EmbeddedWeight import embeddedWeight_2018 as embeddedWeight
 from Configurations.Weights.EmbeddedReweightingModule.EmbeddedTriggerWeight import embeddedTriggerWeight_2018 as embeddedTriggerWeight
 
+embeddedWeight.TauIDWeight = 1.0 #Anti isolated taus aren't actually identified.
+
 from Configurations.ConfigDefinition import ReweightConfiguration
 
 DYConfiguration = ReweightConfiguration()
