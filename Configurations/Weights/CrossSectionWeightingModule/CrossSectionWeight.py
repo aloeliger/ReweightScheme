@@ -51,15 +51,15 @@ def CalculateCrossSectionWeight(self,theTree):
     #multi sample weights
     if self.year == "2016":
         if self.sample == "DY":
-            crossSectionWeighting = 1.4922
+            crossSectionWeighting = 1.49526
             if theTree.numGenJets == 1:
-                crossSectionWeighting = 0.4765
+                crossSectionWeighting = 0.43169
             elif theTree.numGenJets == 2:
-                crossSectionWeighting = 0.4936
+                crossSectionWeighting = 0.4649
             elif theTree.numGenJets == 3:
-                crossSectionWeighting = 0.51177
+                crossSectionWeighting = 0.5373
             elif theTree.numGenJets == 4:
-                crossSectionWeighting = 0.4255
+                crossSectionWeighting = 0.7815
         if self.sample == "W":
             crossSectionWeighting = 25.427
             if theTree.numGenJets == 1:
@@ -69,7 +69,7 @@ def CalculateCrossSectionWeight(self,theTree):
             elif theTree.numGenJets == 3:
                 crossSectionWeighting = 0.68722
             elif theTree.numGenJets == 4:
-                crossSectionWeighting = 1.7433
+                crossSectionWeighting = 0.76513
     if self.year == "2017":
         if self.sample == "DY":
             crossSectionWeighting = 2.582
