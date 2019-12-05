@@ -11,9 +11,7 @@ def CalculateEmbeddedWeight(self,theTree):
     if (theTree.genweight <= 1.0):
         theWeight = theWeight * theTree.genweight # can't forget this
     else:
-        theWeight = theWeight* 0.0
-    #doing a very stupid test with this. Never commit something like this
-    #does this need to be replaced by some Danny weight?
+        theWeight = theWeight* 0.0        
     if theTree.l2_decayMode == 0:
         theWeight = theWeight * 0.975
     elif theTree.l2_decayMode == 1:

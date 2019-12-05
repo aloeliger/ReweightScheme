@@ -90,10 +90,8 @@ def CalculateEmbeddedTriggerWeight2016_22DOWN(self,theTree,uncert):
     self.embeddedWorkspace.w.var("t_dm").setVal(theTree.l2_decayMode)    
 
     if theTree.Trigger22:
-        #theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg24_27_embed_kit_ratio").getVal()
         theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_ic_embed_ratio").getVal() * 0.98
     elif theTree.Trigger1920:
-        #theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_MuTau_Mu20Leg_kit_ratio_embed").getVal()
         theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_19_ic_embed_ratio").getVal()
         theWeight = theWeight * self.embeddedWorkspace.w.function("t_trg_mediumDeepTau_mutau_embed_ratio").getVal()
 
