@@ -8,8 +8,7 @@ import TriggerFunctions2018
 
 triggerWeight_2016 = Weight()
 triggerWeight_2016.name = 'TriggerSF'
-triggerWeight_2016.TriggerSFFile = ROOT.TFile.Open(localWeightDataPath+"htt_scalefactors_legacy_2016.root")
-triggerWeight_2016.DESYTriggerSFFile = ROOT.TFile.Open(localWeightDataPath+"Muon_Run2016_legacy_IsoMu22.root")
+triggerWeight_2016.TriggerSFFile = ROOT.TFile.Open(localWeightDataPath+"LegacyCorrectionsWorkspace/output/htt_scalefactors_legacy_2016.root")
 triggerWeight_2016.tauSFs = getTauTriggerSFs('mutau',2016,'tight','MVAv2')
 triggerWeight_2016.CalculateWeight = TriggerFunctions2016.CalculateTriggerWeight2016
 triggerWeight_2016.hasUpDownUncertainties = True
@@ -28,7 +27,7 @@ triggerWeight_2016.uncertaintyVariationFunctions = {
 
 triggerWeight_2017 =  Weight()
 triggerWeight_2017.name = 'TriggerSF'
-triggerWeight_2017.TriggerSFFile = ROOT.TFile.Open(localWeightDataPath+"htt_scalefactors_legacy_2017.root")
+triggerWeight_2017.TriggerSFFile = ROOT.TFile.Open(localWeightDataPath+"LegacyCorrectionsWorkspace/output/htt_scalefactors_legacy_2017.root")
 triggerWeight_2017.tauSFs = getTauTriggerSFs('mutau',2017,'tight','MVAv2')
 triggerWeight_2017.CalculateWeight = TriggerFunctions2017.CalculateTriggerWeight2017
 triggerWeight_2017.hasUpDownUncertainties = True
@@ -48,7 +47,7 @@ triggerWeight_2017.uncertaintyVariationFunctions = {
 
 triggerWeight_2018 = Weight()
 triggerWeight_2018.name = 'TriggerSF'
-triggerWeight_2018.TriggerSFFile = ROOT.TFile.Open(localWeightDataPath+"htt_scalefactors_legacy_2018.root")
+triggerWeight_2018.TriggerSFFile = ROOT.TFile.Open(localWeightDataPath+"LegacyCorrectionsWorkspace/output/htt_scalefactors_legacy_2018.root")
 triggerWeight_2018.tauSFs = getTauTriggerSFs('mutau',2018,'tight','MVAv2')
 triggerWeight_2018.CalculateWeight = TriggerFunctions2018.CalculateTriggerWeight2018
 triggerWeight_2018.hasUpDownUncertainties = True
