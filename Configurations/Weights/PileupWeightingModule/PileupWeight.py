@@ -8,6 +8,10 @@ from Configurations.Weights import localWeightDataPath
 
 def InitPileupWeightings(self):
     if self.year == "2017":
+        if self.sample == 'ZH':
+            self.MCHisto = self.Pileup_MC_File.Get("pua/#ZHToTauTau_M125_13TeV_powheg_pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1#MINIAODSIM")
+        if self.sample == 'ggH':
+            self.MCHisto = self.Pileup_MC_File.Get("pua/#GluGluHToTauTau_M125_13TeV_powheg_pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v2#MINIAODSIM")
         if self.sample == "VBF":
             self.MCHisto = self.Pileup_MC_File.Get("pua/#VBFHToTauTau_M125_13TeV_powheg_pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1#MINIAODSIM")
         elif self.sample == "W1":
