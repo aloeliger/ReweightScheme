@@ -7,7 +7,7 @@ def CalculateEmbeddedWeight(self,theTree):
     tauVector = ROOT.TLorentzVector()
     muVector.SetPtEtaPhiM(theTree.pt_1,theTree.eta_1,theTree.phi_1,theTree.m_1)    
     tauVector.SetPtEtaPhiM(theTree.pt_2,theTree.eta_2,theTree.phi_2,theTree.m_2)
-    theWeight = self.TauIDWeight
+    theWeight = 1.0
     if (theTree.genweight <= 1.0):
         theWeight = theWeight * theTree.genweight # can't forget this
     else:
