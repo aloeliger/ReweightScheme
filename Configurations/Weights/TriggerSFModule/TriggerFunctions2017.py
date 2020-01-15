@@ -1,6 +1,5 @@
 import ROOT
 
-
 def CalculateTriggerWeight2017(self,theTree):
     muVector = ROOT.TLorentzVector()
     tauVector = ROOT.TLorentzVector()
@@ -9,13 +8,15 @@ def CalculateTriggerWeight2017(self,theTree):
     self.TriggerSFFile.w.var("m_pt").setVal(muVector.Pt())
     self.TriggerSFFile.w.var("m_iso").setVal(theTree.iso_1)
     self.TriggerSFFile.w.var("m_eta").setVal(abs(muVector.Eta()))
-    decayMode = theTree.l2_decayMode
-    if decayMode == 11:
-        decayMode = 10
+    self.TriggerSFFile.w.var("t_pt").setVal(tauVector.Pt())
+    self.TriggerSFFile.w.var("t_dm").setVal(theTree.l2_decayMode)
+    #decayMode = theTree.l2_decayMode
+    #if decayMode == 11:
+    #    decayMode = 10
     if theTree.Trigger24 or theTree.Trigger27:
         self.value[0] = self.TriggerSFFile.w.function("m_trg_ic_ratio").getVal()
     elif theTree.Trigger2027:        
-        self.value[0] = self.TriggerSFFile.w.function("t_trg_mediumDeepTau_mutau_ratio").getVal()
+        self.value[0] = self.TriggerSFFile.w.function("t_trg_pog_deeptau_medium_mutau_ratio").getVal()
 
 def CalculateTriggerWeight2017_Trigger24or27_UP(self,theTree,uncert):
     muVector = ROOT.TLorentzVector()
@@ -25,13 +26,15 @@ def CalculateTriggerWeight2017_Trigger24or27_UP(self,theTree,uncert):
     self.TriggerSFFile.w.var("m_pt").setVal(muVector.Pt())
     self.TriggerSFFile.w.var("m_iso").setVal(theTree.iso_1)
     self.TriggerSFFile.w.var("m_eta").setVal(abs(muVector.Eta()))
-    decayMode = theTree.l2_decayMode
-    if decayMode == 11:
-        decayMode = 10
+    self.TriggerSFFile.w.var("t_pt").setVal(tauVector.Pt())
+    self.TriggerSFFile.w.var("t_dm").setVal(theTree.l2_decayMode)
+    #decayMode = theTree.l2_decayMode
+    #if decayMode == 11:
+    #    decayMode = 10
     if theTree.Trigger24 or theTree.Trigger27:
         self.uncertaintyVariationArrays[uncert][0] = self.TriggerSFFile.w.function("m_trg_ic_ratio").getVal() * 1.02    
     elif theTree.Trigger2027:        
-        self.uncertaintyVariationArrays[uncert][0] = self.TriggerSFFile.w.function("t_trg_mediumDeepTau_mutau_ratio").getVal()
+        self.uncertaintyVariationArrays[uncert][0] = self.TriggerSFFile.w.function("t_trg_pog_deeptau_medium_mutau_ratio").getVal()
 
 def CalculateTriggerWeight2017_Trigger24or27_DOWN(self,theTree,uncert):
     muVector = ROOT.TLorentzVector()
@@ -41,13 +44,15 @@ def CalculateTriggerWeight2017_Trigger24or27_DOWN(self,theTree,uncert):
     self.TriggerSFFile.w.var("m_pt").setVal(muVector.Pt())
     self.TriggerSFFile.w.var("m_iso").setVal(theTree.iso_1)
     self.TriggerSFFile.w.var("m_eta").setVal(abs(muVector.Eta()))
-    decayMode = theTree.l2_decayMode
-    if decayMode == 11:
-        decayMode = 10
+    self.TriggerSFFile.w.var("t_pt").setVal(tauVector.Pt())
+    self.TriggerSFFile.w.var("t_dm").setVal(theTree.l2_decayMode)
+    #decayMode = theTree.l2_decayMode
+    #if decayMode == 11:
+    #    decayMode = 10
     if theTree.Trigger24 or theTree.Trigger27:
         self.uncertaintyVariationArrays[uncert][0] = self.TriggerSFFile.w.function("m_trg_ic_ratio").getVal() * 0.98    
     elif theTree.Trigger2027:        
-        self.uncertaintyVariationArrays[uncert][0] = self.TriggerSFFile.w.function("t_trg_mediumDeepTau_mutau_ratio").getVal()
+        self.uncertaintyVariationArrays[uncert][0] = self.TriggerSFFile.w.function("t_trg_pog_deeptau_medium_mutau_ratio").getVal()
 
 def CalculateTriggerWeight2017_Trigger2027_UP(self,theTree,uncert):
     muVector = ROOT.TLorentzVector()
@@ -57,13 +62,15 @@ def CalculateTriggerWeight2017_Trigger2027_UP(self,theTree,uncert):
     self.TriggerSFFile.w.var("m_pt").setVal(muVector.Pt())
     self.TriggerSFFile.w.var("m_iso").setVal(theTree.iso_1)
     self.TriggerSFFile.w.var("m_eta").setVal(abs(muVector.Eta()))
-    decayMode = theTree.l2_decayMode
-    if decayMode == 11:
-        decayMode = 10
+    self.TriggerSFFile.w.var("t_pt").setVal(tauVector.Pt())
+    self.TriggerSFFile.w.var("t_dm").setVal(theTree.l2_decayMode)
+    #decayMode = theTree.l2_decayMode
+    #if decayMode == 11:
+    #    decayMode = 10
     if theTree.Trigger24 or theTree.Trigger27:
         self.uncertaintyVariationArrays[uncert][0] = self.TriggerSFFile.w.function("m_trg_ic_ratio").getVal()
     elif theTree.Trigger2027:        
-        self.uncertaintyVariationArrays[uncert][0] = self.TriggerSFFile.w.function("t_trg_mediumDeepTau_mutau_ratio_up").getVal()
+        self.uncertaintyVariationArrays[uncert][0] = self.TriggerSFFile.w.function("t_trg_pog_deeptau_medium_mutau_ratio_up").getVal()
 
 def CalculateTriggerWeight2017_Trigger2027_DOWN(self,theTree,uncert):
     muVector = ROOT.TLorentzVector()
@@ -73,10 +80,12 @@ def CalculateTriggerWeight2017_Trigger2027_DOWN(self,theTree,uncert):
     self.TriggerSFFile.w.var("m_pt").setVal(muVector.Pt())
     self.TriggerSFFile.w.var("m_iso").setVal(theTree.iso_1)
     self.TriggerSFFile.w.var("m_eta").setVal(abs(muVector.Eta()))
-    decayMode = theTree.l2_decayMode
-    if decayMode == 11:
-        decayMode = 10
+    self.TriggerSFFile.w.var("t_pt").setVal(tauVector.Pt())
+    self.TriggerSFFile.w.var("t_dm").setVal(theTree.l2_decayMode)
+    #decayMode = theTree.l2_decayMode
+    #if decayMode == 11:
+    #    decayMode = 10
     if theTree.Trigger24 or theTree.Trigger27:
         self.uncertaintyVariationArrays[uncert][0] = self.TriggerSFFile.w.function("m_trg_ic_ratio").getVal()
     elif theTree.Trigger2027:        
-        self.uncertaintyVariationArrays[uncert][0] = self.TriggerSFFile.w.function("t_trg_mediumDeepTau_mutau_ratio_down").getVal()
+        self.uncertaintyVariationArrays[uncert][0] = self.TriggerSFFile.w.function("t_trg_pog_deeptau_medium_mutau_ratio_down").getVal()
