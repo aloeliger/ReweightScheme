@@ -9,18 +9,24 @@ def CalculateTauFakeRateWeight(self,theTree):
 
 tauFakeRateWeight_2016 = Weight()
 tauFakeRateWeight_2016.name = 'TauFakeRateWeight'
-tauFakeRateWeight_2016.eleSFTool = TauIDSFTool("2016Legacy",'antiEleMVA6','VLoose')
-tauFakeRateWeight_2016.muSFTool = TauIDSFTool("2016Legacy",'antiMu3','Tight')
+#tauFakeRateWeight_2016.eleSFTool = TauIDSFTool("2016Legacy",'antiEleMVA6','VLoose')
+tauFakeRateWeight_2016.eleSFTool = TauIDSFTool("2016Legacy",'DeepTau2017v2p1VSe','VLoose')
+#tauFakeRateWeight_2016.muSFTool = TauIDSFTool("2016Legacy",'antiMu3','Tight')
+tauFakeRateWeight_2016.muSFTool = TauIDSFTool("2016Legacy",'DeepTau2017v2p1VSmu','Tight')
 tauFakeRateWeight_2016.CalculateWeight = CalculateTauFakeRateWeight
 
 tauFakeRateWeight_2017 = Weight()
 tauFakeRateWeight_2017.name = 'TauFakeRateWeight'
-tauFakeRateWeight_2017.eleSFTool = TauIDSFTool("2017ReReco",'antiEleMVA6','VLoose')
-tauFakeRateWeight_2017.muSFTool = TauIDSFTool("2017ReReco",'antiMu3','Tight')
+#tauFakeRateWeight_2017.eleSFTool = TauIDSFTool("2017ReReco",'antiEleMVA6','VLoose')
+tauFakeRateWeight_2017.eleSFTool = TauIDSFTool("2016Legacy",'DeepTau2017v2p1VSe','VLoose')
+#tauFakeRateWeight_2017.muSFTool = TauIDSFTool("2017ReReco",'antiMu3','Tight')
+tauFakeRateWeight_2017.muSFTool = TauIDSFTool("2016Legacy",'DeepTau2017v2p1VSmu','Tight')
 tauFakeRateWeight_2017.CalculateWeight = CalculateTauFakeRateWeight
 
 tauFakeRateWeight_2018 = Weight()
 tauFakeRateWeight_2018.name = 'TauFakeRateWeight'
-tauFakeRateWeight_2018.eleSFTool = TauIDSFTool("2018ReReco",'antiEleMVA6','VLoose')
-tauFakeRateWeight_2018.muSFTool = TauIDSFTool("2018ReReco",'antiMu3','Tight')
+#tauFakeRateWeight_2018.eleSFTool = TauIDSFTool("2018ReReco",'antiEleMVA6','VLoose')
+tauFakeRateWeight_2018.eleSFTool = TauIDSFTool("2016Legacy",'DeepTau2017v2p1VSe','VLoose')
+#tauFakeRateWeight_2018.muSFTool = TauIDSFTool("2018ReReco",'antiMu3','Tight')
+tauFakeRateWeight_2018.muSFTool = TauIDSFTool("2016Legacy",'DeepTau2017v2p1VSmu','Tight')
 tauFakeRateWeight_2018.CalculateWeight = CalculateTauFakeRateWeight
