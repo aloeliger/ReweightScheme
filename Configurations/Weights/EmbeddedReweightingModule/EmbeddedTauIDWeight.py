@@ -6,7 +6,7 @@ import Configurations.Weights.TauIDModule.TauIDFunctions as TauIDFunctions
 embeddedTauIDWeight_2016 = Weight()
 embeddedTauIDWeight_2016.name = "EmbeddedTauIDWeight"
 embeddedTauIDWeight_2016.CalculateWeight = TauIDFunctions.CalculateTauIDWeight
-embeddedTauIDWeight_2016.SFTool = TauIDSFTool("2016Legacy","DeepTau2017v2p1VSjet",'Medium',embedding=True)
+embeddedTauIDWeight_2016.SFTool = TauIDSFTool("2016Legacy","DeepTau2017v2p1VSjet",'Medium',emb=True)
 embeddedTauIDWeight_2016.hasUpDownUncertainties = True
 embeddedTauIDWeight_2016.uncertaintyVariationList = [
     "TauID_pT0to35_UP",
@@ -29,7 +29,7 @@ embeddedTauIDWeight_2016.uncertaintyVariationFunctions = {
 embeddedTauIDWeight_2017 = Weight()
 embeddedTauIDWeight_2017.name = "EmbeddedTauIDWeight"
 embeddedTauIDWeight_2017.CalculateWeight = TauIDFunctions.CalculateTauIDWeight
-embeddedTauIDWeight_2017.SFTool = TauIDSFTool("2017ReReco","DeepTau2017v2p1VSjet",'Medium',embedding=True)
+embeddedTauIDWeight_2017.SFTool = TauIDSFTool("2017ReReco","DeepTau2017v2p1VSjet",'Medium',emb=True)
 embeddedTauIDWeight_2017.hasUpDownUncertainties = True
 embeddedTauIDWeight_2017.uncertaintyVariationList = [
     "TauID_pT0to35_UP",
@@ -52,7 +52,7 @@ embeddedTauIDWeight_2017.uncertaintyVariationFunctions = {
 embeddedTauIDWeight_2018 = Weight()
 embeddedTauIDWeight_2018.name = "EmbeddedTauIDWeight"
 embeddedTauIDWeight_2018.CalculateWeight = TauIDFunctions.CalculateTauIDWeight
-embeddedTauIDWeight_2018.SFTool = TauIDSFTool("2018ReReco","DeepTau2017v2p1VSjet",'Medium',embedding=True)
+embeddedTauIDWeight_2018.SFTool = TauIDSFTool("2018ReReco","DeepTau2017v2p1VSjet",'Medium',emb=True)
 embeddedTauIDWeight_2018.hasUpDownUncertainties = True
 embeddedTauIDWeight_2018.uncertaintyVariationList = [
     "TauID_pT0to35_UP",

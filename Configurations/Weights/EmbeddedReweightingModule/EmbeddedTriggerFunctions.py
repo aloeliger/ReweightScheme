@@ -123,7 +123,7 @@ def CalculateEmbeddedTriggerWeight2016_1920UP(self,theTree,uncert):
         theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_ic_embed_ratio").getVal()
     elif theTree.Trigger1920:
         #theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_MuTau_Mu20Leg_kit_ratio_embed").getVal()
-        theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_19_ic_embed_ratio").getVal()
+        theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_19_ic_embed_ratio").getVal() * 1.02
         theWeight = theWeight * self.embeddedWorkspace.w.function("t_trg_mediumDeepTau_mutau_embed_ratio_up").getVal()
 
     self.uncertaintyVariationArrays[uncert][0] = theWeight
@@ -156,7 +156,7 @@ def CalculateEmbeddedTriggerWeight2016_1920DOWN(self,theTree,uncert):
         theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_ic_embed_ratio").getVal()
     elif theTree.Trigger1920:
         #theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_MuTau_Mu20Leg_kit_ratio_embed").getVal()
-        theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_19_ic_embed_ratio").getVal()
+        theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_19_ic_embed_ratio").getVal() * 0.98
         theWeight = theWeight * self.embeddedWorkspace.w.function("t_trg_mediumDeepTau_mutau_embed_ratio_down").getVal()
 
     self.uncertaintyVariationArrays[uncert][0] = theWeight
@@ -278,7 +278,7 @@ def CalculateEmbeddedTriggerWeight1718_2027UP(self,theTree,uncert):
     if(theTree.Trigger24 or theTree.Trigger27):
         theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_ic_embed_ratio").getVal()
     elif(theTree.Trigger2027):
-        theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_20_ic_embed_ratio").getVal() #mu leg
+        theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_20_ic_embed_ratio").getVal() * 1.02 #mu leg
         theWeight = theWeight * self.embeddedWorkspace.w.function("t_trg_mediumDeepTau_mutau_embed_ratio_up").getVal()#tau leg
     self.uncertaintyVariationArrays[uncert][0] = theWeight
 
@@ -308,8 +308,8 @@ def CalculateEmbeddedTriggerWeight1718_2027DOWN(self,theTree,uncert):
     if(theTree.Trigger24 or theTree.Trigger27):
         theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_ic_embed_ratio").getVal()
     elif(theTree.Trigger2027):
-        theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_20_ic_embed_ratio").getVal() #mu leg
-        theWeight = theWeight * self.embeddedWorkspace.w.function("t_trg_mediumDeepTau_mutau_embed_ratio").getVal()#tau leg
+        theWeight = theWeight * self.embeddedWorkspace.w.function("m_trg_20_ic_embed_ratio").getVal() * 0.98 #mu leg
+        theWeight = theWeight * self.embeddedWorkspace.w.function("t_trg_mediumDeepTau_mutau_embed_ratio_down").getVal()#tau leg
     self.uncertaintyVariationArrays[uncert][0] = theWeight
 
 

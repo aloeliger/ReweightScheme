@@ -133,15 +133,15 @@ def CalculateCrossSectionWeight(self,theTree):
             elif theTree.numGenJets == 4:
                 crossSectionWeighting = 0.21987
         if self.sample == "W":
-            crossSectionWeighting = 23.744
+            crossSectionWeighting = 23.722
             if theTree.numGenJets == 1:
-                crossSectionWeighting = 3.772
+                crossSectionWeighting = 3.113
             elif theTree.numGenJets == 2:
-                crossSectionWeighting = 3.4958
+                crossSectionWeighting = 3.020
             elif theTree.numGenJets == 3:
-                crossSectionWeighting = 2.2306
+                crossSectionWeighting = 2.205
             elif theTree.numGenJets == 4:
-                crossSectionWeighting = 2.0336
+                crossSectionWeighting = 2.1513
     if self.year == "2018":
         if self.sample == "DY":
             crossSectionWeighting = 3.6299
@@ -154,15 +154,15 @@ def CalculateCrossSectionWeight(self,theTree):
             elif theTree.numGenJets == 4:
                 crossSectionWeighting = 0.8315
         if self.sample == "W":
-            crossSectionWeighting = 51.8119
+            crossSectionWeighting = 51.7495
             if theTree.numGenJets == 1:
-                crossSectionWeighting = 10.8902
+                crossSectionWeighting = 9.0816
             elif theTree.numGenJets == 2:
-                crossSectionWeighting = 5.268
+                crossSectionWeighting = 4.5107
             elif theTree.numGenJets == 3:
-                crossSectionWeighting = 3.121
+                crossSectionWeighting = 3.0774
             elif theTree.numGenJets == 4:
-                crossSectionWeighting = 3.0367
+                crossSectionWeighting = 3.2112
     crossSectionWeighting = crossSectionWeighting * theTree.genweight
     self.value[0] = crossSectionWeighting
         

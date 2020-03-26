@@ -1,7 +1,7 @@
 import ROOT
 
 from Configurations.Weights.EmbeddedReweightingModule.EmbeddedWeight import embeddedWeight_2016 as embeddedWeight
-from Configurations.Weights.EmbeddedReweightingModule.EmbeddedWeight import embeddedWeight_2016 as embeddedTriggerWeight
+from Configurations.Weights.EmbeddedReweightingModule.EmbeddedTriggerWeight import embeddedTriggerWeight_2016 as embeddedTriggerWeight
 
 embeddedWeight.TauIDWeight = 1.0 #Anti isolated taus aren't actually identified.
 

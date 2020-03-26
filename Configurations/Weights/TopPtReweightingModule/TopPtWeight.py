@@ -4,12 +4,12 @@ from Configurations.Weights.WeightDefinition import Weight
 
 def CalculateTopPtWeight(self,theTree):
     pttop1 = theTree.pt_top1
-    if pttop1 > 400:
-        pttop1 = 400
+    if pttop1 > 472:
+        pttop1 = 472
     pttop2 = theTree.pt_top2
-    if pttop2 > 400:
-        pttop2 = 400
-    topfactor = math.sqrt(math.exp(0.0615-0.0005*pttop1)*math.exp(0.0615-0.0005*pttop2))
+    if pttop2 > 472:
+        pttop2 = 472
+    topfactor = math.sqrt(math.exp(0.088-0.00087*pttop1+0.00000092*pttop1*pttop1)*math.exp(0.088-0.00087*pttop2+0.00000092*pttop1*pttop2))
     self.value[0] = topfactor
     
 def CalculateTopPtWeightUp(self,theTree,uncert):

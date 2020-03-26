@@ -8,10 +8,10 @@ def CreateZPTWeight(self,theTree):
     self.value[0] = self.ZPTFile.w.function("zptmass_weight_nom").getVal()
 
 def CreateZPTUpWeight(self,theTree,uncert):
-    self.uncertaintyVariationArrays[uncert][0] = 1.1*self.value[0]
+    self.uncertaintyVariationArrays[uncert][0] = (self.value[0]-0.1*(self.value[0]-1))
 
 def CreateZPTDownWeight(self,theTree,uncert):
-    self.uncertaintyVariationArrays[uncert][0] = 0.9*self.value[0]
+    self.uncertaintyVariationArrays[uncert][0] = (self.value[0]+0.1*(self.value[0]-1))
 
 ZPTWeight_2018 = Weight()
 ZPTWeight_2018.name = 'ZPTWeighting'
