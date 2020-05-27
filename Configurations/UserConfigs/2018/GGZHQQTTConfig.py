@@ -9,6 +9,8 @@ from Configurations.Weights.TauIDModule.TauIDWeight import tauIDWeight_2018 as t
 from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2018 as triggerWeight
 from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
+from Configurations.Weights.QCDAcceptanceWeights.ggVH_QCD_Acceptance import ggZHQQTTStyleWeight_2018
+from Configurations.Weights.PythiaPS.PartonShowerShapeWeight import partonShowerWeight
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -33,4 +35,6 @@ EWKConfiguration.listOfWeights = [
     triggerWeight,
     bTaggingWeight,
     #PrefiringWeighting,
+    ggZHQQTTStyleWeight_2018,
+    partonShowerWeight,
 ]

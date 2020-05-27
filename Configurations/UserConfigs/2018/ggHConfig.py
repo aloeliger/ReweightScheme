@@ -10,6 +10,8 @@ from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2
 from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 from Configurations.Weights.HiggsReweightingModule.HiggsPtReweighting import HiggsPtReweighting
+from Configurations.Weights.QCDAcceptanceWeights.ggH_QCD_Acceptance import ggHStyleWeight_2018
+from Configurations.Weights.PythiaPS.PartonShowerShapeWeight import partonShowerWeight
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -35,4 +37,6 @@ EWKConfiguration.listOfWeights = [
     bTaggingWeight,
     #PrefiringWeighting,
     HiggsPtReweighting,
+    ggHStyleWeight_2018,
+    partonShowerWeight,
 ]
