@@ -7,7 +7,7 @@ from Configurations.Weights.PileupWeightingModule.PileupWeight import pileupWeig
 from Configurations.Weights.TauFakeRateWeightModule.TauFakeRateWeight import tauFakeRateWeight_2018 as tauFakeRateWeight
 from Configurations.Weights.TauIDModule.TauIDWeight import tauIDWeight_2018 as tauIDWeight
 from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2018 as triggerWeight
-from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight
+from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight_2018
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 from Configurations.Weights.QCDAcceptanceWeights.VH_QCD_Acceptance import ZHStyleWeight_2018
 from Configurations.Weights.PythiaPS.PartonShowerShapeWeight import partonShowerWeight
@@ -33,7 +33,7 @@ EWKConfiguration.listOfWeights = [
     tauFakeRateWeight,
     tauIDWeight,
     triggerWeight,
-    bTaggingWeight,
+    bTaggingWeight_2018,
     #PrefiringWeighting,
     ZHStyleWeight_2018,
     partonShowerWeight,

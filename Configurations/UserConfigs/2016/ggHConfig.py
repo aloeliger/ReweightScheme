@@ -7,7 +7,7 @@ from Configurations.Weights.PileupWeightingModule.PileupWeight import pileupWeig
 from Configurations.Weights.TauFakeRateWeightModule.TauFakeRateWeight import tauFakeRateWeight_2016 as tauFakeRateWeight
 from Configurations.Weights.TauIDModule.TauIDWeight import tauIDWeight_2016 as tauIDWeight
 from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2016 as triggerWeight
-from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight
+from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight_2016
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 from Configurations.Weights.HiggsReweightingModule.HiggsPtReweighting import HiggsPtReweighting
 from Configurations.Weights.QCDAcceptanceWeights.ggH_QCD_Acceptance import ggHStyleWeight_2016
@@ -33,7 +33,7 @@ EWKConfiguration.listOfWeights = [
     tauFakeRateWeight,
     tauIDWeight,
     triggerWeight,
-    bTaggingWeight,
+    bTaggingWeight_2016,
     PrefiringWeighting,
     HiggsPtReweighting,
     ggHStyleWeight_2016

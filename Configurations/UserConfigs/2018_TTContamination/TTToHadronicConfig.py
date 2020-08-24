@@ -7,7 +7,7 @@ from Configurations.Weights.PileupWeightingModule.PileupWeight import pileupWeig
 from Configurations.Weights.TauFakeRateWeightModule.eTauFakeRateWeight import eTauFakeRateWeight_2018 as eTauFakeRateWeight
 from Configurations.Weights.TauIDModule.TauIDWeight import tauIDWeight_2018 as tauIDWeight
 from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2018 as triggerWeight
-from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight
+from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight_2018
 from Configurations.Weights.TopPtReweightingModule.TopPtWeight import topPtWeight
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 
@@ -32,7 +32,7 @@ EWKConfiguration.listOfWeights = [
     eTauFakeRateWeight,
     tauIDWeight,
     triggerWeight,
-    bTaggingWeight,
+    bTaggingWeight_2018,
     topPtWeight,
     #PrefiringWeighting,
 ]
