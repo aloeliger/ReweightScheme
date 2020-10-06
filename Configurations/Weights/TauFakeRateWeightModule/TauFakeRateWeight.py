@@ -141,6 +141,48 @@ def CalculateTauFakeRateWeight_TauPtgt50_Down(self,theTree,uncert):
     if(tauVector.Pt() > 50):
         self.uncertaintyVariationArrays[uncert][0] = self.uncertaintyVariationArrays[uncert][0] * 0.9
 
+def CalculateTauFakeRateWeight_TauPt30to50_Up(self,theTree,uncert):
+    tauVector = ROOT.TLorentzVector()
+    tauVector.SetPtEtaPhiM(theTree.pt_2,theTree.eta_2,theTree.phi_2,theTree.m_2)
+    self.uncertaintyVariationArrays[uncert][0] = self.muSFTool.getSFvsEta(tauVector.Eta(),theTree.gen_match_2)
+    if(tauVector.Pt() > 30 and tauVector.Pt() < 50):
+        self.uncertaintyVariationArrays[uncert][0] = self.uncertaintyVariationArrays[uncert][0] * 1.1
+
+def CalculateTauFakeRateWeight_TauPt30to50_Down(self,theTree,uncert):
+    tauVector = ROOT.TLorentzVector()
+    tauVector.SetPtEtaPhiM(theTree.pt_2,theTree.eta_2,theTree.phi_2,theTree.m_2)
+    self.uncertaintyVariationArrays[uncert][0] = self.muSFTool.getSFvsEta(tauVector.Eta(),theTree.gen_match_2)
+    if(tauVector.Pt() > 30 and tauVector.Pt() < 50):
+        self.uncertaintyVariationArrays[uncert][0] = self.uncertaintyVariationArrays[uncert][0] * 0.9
+
+def CalculateTauFakeRateWeight_TauPt50to70_Up(self,theTree,uncert):
+    tauVector = ROOT.TLorentzVector()
+    tauVector.SetPtEtaPhiM(theTree.pt_2,theTree.eta_2,theTree.phi_2,theTree.m_2)
+    self.uncertaintyVariationArrays[uncert][0] = self.muSFTool.getSFvsEta(tauVector.Eta(),theTree.gen_match_2)
+    if(tauVector.Pt() > 50 and tauVector.Pt() < 70):
+        self.uncertaintyVariationArrays[uncert][0] = self.uncertaintyVariationArrays[uncert][0] * 1.1
+
+def CalculateTauFakeRateWeight_TauPt50to70_Down(self,theTree,uncert):
+    tauVector = ROOT.TLorentzVector()
+    tauVector.SetPtEtaPhiM(theTree.pt_2,theTree.eta_2,theTree.phi_2,theTree.m_2)
+    self.uncertaintyVariationArrays[uncert][0] = self.muSFTool.getSFvsEta(tauVector.Eta(),theTree.gen_match_2)
+    if(tauVector.Pt() > 50 and tauVector.Pt() < 70):
+        self.uncertaintyVariationArrays[uncert][0] = self.uncertaintyVariationArrays[uncert][0] * 0.9
+
+def CalculateTauFakeRateWeight_TauPtgt70_Up(self,theTree,uncert):
+    tauVector = ROOT.TLorentzVector()
+    tauVector.SetPtEtaPhiM(theTree.pt_2,theTree.eta_2,theTree.phi_2,theTree.m_2)
+    self.uncertaintyVariationArrays[uncert][0] = self.muSFTool.getSFvsEta(tauVector.Eta(),theTree.gen_match_2)
+    if(tauVector.Pt() > 70):
+        self.uncertaintyVariationArrays[uncert][0] = self.uncertaintyVariationArrays[uncert][0] * 1.1
+
+def CalculateTauFakeRateWeight_TauPtgt70_Down(self,theTree,uncert):
+    tauVector = ROOT.TLorentzVector()
+    tauVector.SetPtEtaPhiM(theTree.pt_2,theTree.eta_2,theTree.phi_2,theTree.m_2)
+    self.uncertaintyVariationArrays[uncert][0] = self.muSFTool.getSFvsEta(tauVector.Eta(),theTree.gen_match_2)
+    if(tauVector.Pt() > 70):
+        self.uncertaintyVariationArrays[uncert][0] = self.uncertaintyVariationArrays[uncert][0] * 0.9
+
 tauFakeRateWeight_2016 = Weight()
 tauFakeRateWeight_2016.name = 'TauFakeRateWeight'
 tauFakeRateWeight_2016.eleSFTool = TauIDSFTool("2016Legacy",'DeepTau2017v2p1VSe','VVLoose')
@@ -164,6 +206,12 @@ tauFakeRateWeight_2016.uncertaintyVariationList = [
     "TauFakeRateWeight_taupt40to50_DOWN",
     "TauFakeRateWeight_tauptgt50_UP",
     "TauFakeRateWeight_tauptgt50_DOWN",
+    "TauFakeRateWeight_taupt30to50_UP",
+    "TauFakeRateWeight_taupt30to50_DOWN",
+    "TauFakeRateWeight_taupt50to70_UP",
+    "TauFakeRateWeight_taupt50to70_DOWN",
+    "TauFakeRateWeight_tauptgt70_UP",
+    "TauFakeRateWeight_tauptgt70_DOWN",
 ]
 tauFakeRateWeight_2016.InitUncertaintyVariations()
 tauFakeRateWeight_2016.uncertaintyVariationFunctions = {
@@ -183,6 +231,12 @@ tauFakeRateWeight_2016.uncertaintyVariationFunctions = {
     "TauFakeRateWeight_taupt40to50_DOWN":CalculateTauFakeRateWeight_TauPt40to50_Down,
     "TauFakeRateWeight_tauptgt50_UP":CalculateTauFakeRateWeight_TauPtgt50_Up,
     "TauFakeRateWeight_tauptgt50_DOWN":CalculateTauFakeRateWeight_TauPtgt50_Down,
+    "TauFakeRateWeight_taupt30to50_UP":CalculateTauFakeRateWeight_TauPt30to50_Up,
+    "TauFakeRateWeight_taupt30to50_DOWN":CalculateTauFakeRateWeight_TauPt30to50_Down,
+    "TauFakeRateWeight_taupt50to70_UP":CalculateTauFakeRateWeight_TauPt50to70_Up,
+    "TauFakeRateWeight_taupt50to70_DOWN":CalculateTauFakeRateWeight_TauPt50to70_Down,
+    "TauFakeRateWeight_tauptgt70_UP":CalculateTauFakeRateWeight_TauPtgt70_Up,
+    "TauFakeRateWeight_tauptgt70_DOWN":CalculateTauFakeRateWeight_TauPtgt70_Down,
 }
 
 tauFakeRateWeight_2017 = Weight()
@@ -208,6 +262,13 @@ tauFakeRateWeight_2017.uncertaintyVariationList = [
     "TauFakeRateWeight_taupt40to50_DOWN",
     "TauFakeRateWeight_tauptgt50_UP",
     "TauFakeRateWeight_tauptgt50_DOWN",
+    "TauFakeRateWeight_taupt30to50_UP",
+    "TauFakeRateWeight_taupt30to50_DOWN",
+    "TauFakeRateWeight_taupt50to70_UP",
+    "TauFakeRateWeight_taupt50to70_DOWN",
+    "TauFakeRateWeight_tauptgt70_UP",
+    "TauFakeRateWeight_tauptgt70_DOWN",
+    
 ]
 tauFakeRateWeight_2017.InitUncertaintyVariations()
 tauFakeRateWeight_2017.uncertaintyVariationFunctions = {
@@ -227,6 +288,12 @@ tauFakeRateWeight_2017.uncertaintyVariationFunctions = {
     "TauFakeRateWeight_taupt40to50_DOWN":CalculateTauFakeRateWeight_TauPt40to50_Down,
     "TauFakeRateWeight_tauptgt50_UP":CalculateTauFakeRateWeight_TauPtgt50_Up,
     "TauFakeRateWeight_tauptgt50_DOWN":CalculateTauFakeRateWeight_TauPtgt50_Down,
+    "TauFakeRateWeight_taupt30to50_UP":CalculateTauFakeRateWeight_TauPt30to50_Up,
+    "TauFakeRateWeight_taupt30to50_DOWN":CalculateTauFakeRateWeight_TauPt30to50_Down,
+    "TauFakeRateWeight_taupt50to70_UP":CalculateTauFakeRateWeight_TauPt50to70_Up,
+    "TauFakeRateWeight_taupt50to70_DOWN":CalculateTauFakeRateWeight_TauPt50to70_Down,
+    "TauFakeRateWeight_tauptgt70_UP":CalculateTauFakeRateWeight_TauPtgt70_Up,
+    "TauFakeRateWeight_tauptgt70_DOWN":CalculateTauFakeRateWeight_TauPtgt70_Down,
 }
 
 tauFakeRateWeight_2018 = Weight()
@@ -252,6 +319,12 @@ tauFakeRateWeight_2018.uncertaintyVariationList = [
     "TauFakeRateWeight_taupt40to50_DOWN",
     "TauFakeRateWeight_tauptgt50_UP",
     "TauFakeRateWeight_tauptgt50_DOWN",
+    "TauFakeRateWeight_taupt30to50_UP",
+    "TauFakeRateWeight_taupt30to50_DOWN",
+    "TauFakeRateWeight_taupt50to70_UP",
+    "TauFakeRateWeight_taupt50to70_DOWN",
+    "TauFakeRateWeight_tauptgt70_UP",
+    "TauFakeRateWeight_tauptgt70_DOWN",
 ]
 tauFakeRateWeight_2018.InitUncertaintyVariations()
 tauFakeRateWeight_2018.uncertaintyVariationFunctions = {
@@ -271,4 +344,10 @@ tauFakeRateWeight_2018.uncertaintyVariationFunctions = {
     "TauFakeRateWeight_taupt40to50_DOWN":CalculateTauFakeRateWeight_TauPt40to50_Down,
     "TauFakeRateWeight_tauptgt50_UP":CalculateTauFakeRateWeight_TauPtgt50_Up,
     "TauFakeRateWeight_tauptgt50_DOWN":CalculateTauFakeRateWeight_TauPtgt50_Down,
+    "TauFakeRateWeight_taupt30to50_UP":CalculateTauFakeRateWeight_TauPt30to50_Up,
+    "TauFakeRateWeight_taupt30to50_DOWN":CalculateTauFakeRateWeight_TauPt30to50_Down,
+    "TauFakeRateWeight_taupt50to70_UP":CalculateTauFakeRateWeight_TauPt50to70_Up,
+    "TauFakeRateWeight_taupt50to70_DOWN":CalculateTauFakeRateWeight_TauPt50to70_Down,
+    "TauFakeRateWeight_tauptgt70_UP":CalculateTauFakeRateWeight_TauPtgt70_Up,
+    "TauFakeRateWeight_tauptgt70_DOWN":CalculateTauFakeRateWeight_TauPtgt70_Down,
 }
