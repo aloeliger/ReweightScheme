@@ -50,6 +50,9 @@ def InitPileupWeightings(self):
             self.MCHisto = self.Pileup_MC_File.Get("pua/#TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1#MINIAODSIM")
         elif self.sample == "EWK":
             self.MCHisto = self.Pileup_MC_File.Get("pua/#EWKZ2Jets_ZToLL_M-50_TuneCP5_13TeV-madgraph-pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v2#MINIAODSIM")
+        #this is just a guess. Needs dedicated pileup reweighting
+        elif self.sample == 'ttHtoTauTau' or self.sample == 'ttHtoNonbb':
+            self.MCHisto = self.Pileup_MC_File.Get("pua/#GluGluHToTauTau_M125_13TeV_powheg_pythia8#RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v2#MINIAODSIM")
         self.DataHisto = self.Pileup_Data_File.Get("pileup")
     elif self.year == "2016" or self.year == "2018":
         self.MCHisto = self.Pileup_MC_File.Get("pileup")

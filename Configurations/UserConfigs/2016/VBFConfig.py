@@ -1,3 +1,4 @@
+
 import ROOT 
 
 from Configurations.Weights.CrossSectionWeightingModule.CrossSectionWeight import crossSectionWeight
@@ -10,6 +11,7 @@ from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2
 from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight_2016
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 from Configurations.Weights.QCDAcceptanceWeights.qqH_QCD_Acceptance import VBFStyleWeight_2016
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import qqHStyleWeight_Differential
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -35,4 +37,5 @@ EWKConfiguration.listOfWeights = [
     bTaggingWeight_2016,
     PrefiringWeighting,
     VBFStyleWeight_2016,
+    qqHStyleWeight_Differential,
 ]

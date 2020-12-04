@@ -11,6 +11,7 @@ from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingW
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 from Configurations.Weights.QCDAcceptanceWeights.VH_QCD_Acceptance import WplusHStyleWeight_2018
 from Configurations.Weights.PythiaPS.PartonShowerShapeWeight import partonShowerWeight
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import WplusHStyleWeight_Differential
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -37,4 +38,5 @@ EWKConfiguration.listOfWeights = [
     #PrefiringWeighting,
     WplusHStyleWeight_2018,
     partonShowerWeight,
+    WplusHStyleWeight_Differential,
 ]

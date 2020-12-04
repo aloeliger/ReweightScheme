@@ -11,6 +11,8 @@ from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingW
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 from Configurations.Weights.HiggsReweightingModule.HiggsPtReweighting import HiggsPtReweighting
 from Configurations.Weights.QCDAcceptanceWeights.ggH_QCD_Acceptance import ggHStyleWeight_2017
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import ggHStyleWeight_Differential
+from Configurations.Weights.ggHTheoryNormalizationWeight.ggHTheoryNormalizationWeight import ggHTheoryNormalizationWeight
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -36,5 +38,7 @@ EWKConfiguration.listOfWeights = [
     bTaggingWeight_2017,
     PrefiringWeighting,
     HiggsPtReweighting,
-    ggHStyleWeight_2017
+    ggHStyleWeight_2017,
+    ggHStyleWeight_Differential,
+    ggHTheoryNormalizationWeight,
 ]

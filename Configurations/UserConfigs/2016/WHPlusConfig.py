@@ -10,6 +10,7 @@ from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2
 from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight_2016
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 from Configurations.Weights.QCDAcceptanceWeights.VH_QCD_Acceptance import WplusHStyleWeight_2016
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import WplusHStyleWeight_Differential
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -34,5 +35,6 @@ EWKConfiguration.listOfWeights = [
     triggerWeight,
     bTaggingWeight_2016,
     PrefiringWeighting,
-    WplusHStyleWeight_2016
+    WplusHStyleWeight_2016,
+    WplusHStyleWeight_Differential,
 ]

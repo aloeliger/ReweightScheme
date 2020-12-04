@@ -32,5 +32,5 @@ EWKConfiguration.listOfWeights = [
     tauIDWeight,
     triggerWeight,
     bTaggingWeight_2016,
-    PrefiringWeighting
+    PrefiringWeighting,
 ]

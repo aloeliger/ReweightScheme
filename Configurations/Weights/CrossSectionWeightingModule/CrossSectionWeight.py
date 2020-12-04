@@ -54,7 +54,9 @@ def CalculateCrossSectionWeight(self,theTree):
             "WplusHWW":0.840e-12 * 0.2137,
             "WminusHWW":0.5328e-12 * 0.2137,
             "ZHWW":0.7612e-12 * 0.2137,
-            "GGZHWW": 0.1227e-12 * 0.2137
+            "GGZHWW": 0.1227e-12 * 0.2137,
+            "ttHtoTauTau":0.5071e-12*0.0627,
+            "ttHtoNonbb":0.5071e-12*(1.0-0.5824),
         }
     else:
         crossSections = {
@@ -95,7 +97,9 @@ def CalculateCrossSectionWeight(self,theTree):
             "WplusHWW":0.840e-12 * 0.2137,
             "WminusHWW":0.5328e-12 * 0.2137,
             "ZHWW":0.7612e-12 * 0.2137,
-            "GGZHWW": 0.1227e-12 * 0.2137
+            "GGZHWW": 0.1227e-12 * 0.2137,
+            "ttHtoTauTau":0.5071e-12*0.0627,
+            "ttHtoNonbb":0.5071e-12*(1.0-0.5824),
         }
     crossSectionWeighting = crossSections[self.sample] * LHCLumi / self.totalEvents
 
