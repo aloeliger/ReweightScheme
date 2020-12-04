@@ -6,7 +6,6 @@ import os
 def PruneBranches(theFileName,branchesToPrune):
     pruneFile = ROOT.TFile(theFileName,"UPDATE")
     #theTree = pruneFile.mt_Selected
-    pruneFile.ls()
 
     newFile = ROOT.TFile("Temporary.root","RECREATE")
     alreadyGrabbedItems = []
