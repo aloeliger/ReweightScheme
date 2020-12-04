@@ -4,480 +4,480 @@ from Configurations.Weights import localWeightDataPath
 
 def prepNormalizationWeights(self):
     self.normalizationHistogram_pth_0_45 = self.reweightFile.Get("h_THUggH_pth0to45")
-    self.normalizationWeight_pth_0_45_MuUP = self.normalizationHistogram_pth_0_45.GetBinContent(2)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
-    self.normalizationWeight_pth_0_45_MuDOWN = self.normalizationHistogram_pth_0_45.GetBinContent(3)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
+    self.normalizationWeight_pth_0_45_MuUP = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(2)
+    self.normalizationWeight_pth_0_45_MuDOWN = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(3)
 
-    self.normalizationWeight_pth_0_45_ResUP = self.normalizationHistogram_pth_0_45.GetBinContent(4)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
-    self.normalizationWeight_pth_0_45_ResDOWN = self.normalizationHistogram_pth_0_45.GetBinContent(5)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
+    self.normalizationWeight_pth_0_45_ResUP = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(4)
+    self.normalizationWeight_pth_0_45_ResDOWN = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(5)
 
-    self.normalizationWeight_pth_0_45_Mig01UP = self.normalizationHistogram_pth_0_45.GetBinContent(6)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
-    self.normalizationWeight_pth_0_45_Mig01DOWN = self.normalizationHistogram_pth_0_45.GetBinContent(7)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
+    self.normalizationWeight_pth_0_45_Mig01UP = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(6)
+    self.normalizationWeight_pth_0_45_Mig01DOWN = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(7)
 
-    self.normalizationWeight_pth_0_45_Mig12UP = self.normalizationHistogram_pth_0_45.GetBinContent(8)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
-    self.normalizationWeight_pth_0_45_Mig12DOWN = self.normalizationHistogram_pth_0_45.GetBinContent(9)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
+    self.normalizationWeight_pth_0_45_Mig12UP = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(8)
+    self.normalizationWeight_pth_0_45_Mig12DOWN = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(9)
 
-    self.normalizationWeight_pth_0_45_VBF2jUP = self.normalizationHistogram_pth_0_45.GetBinContent(10)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
-    self.normalizationWeight_pth_0_45_VBF2jDOWN = self.normalizationHistogram_pth_0_45.GetBinContent(11)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
+    self.normalizationWeight_pth_0_45_VBF2jUP = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(10)
+    self.normalizationWeight_pth_0_45_VBF2jDOWN = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(11)
 
-    self.normalizationWeight_pth_0_45_VBF3jUP = self.normalizationHistogram_pth_0_45.GetBinContent(12)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
-    self.normalizationWeight_pth_0_45_VBF3jDOWN = self.normalizationHistogram_pth_0_45.GetBinContent(13)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
+    self.normalizationWeight_pth_0_45_VBF3jUP = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(12)
+    self.normalizationWeight_pth_0_45_VBF3jDOWN = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(13)
     
-    self.normalizationWeight_pth_0_45_PT60UP = self.normalizationHistogram_pth_0_45.GetBinContent(14)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
-    self.normalizationWeight_pth_0_45_PT60DOWN = self.normalizationHistogram_pth_0_45.GetBinContent(15)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
+    self.normalizationWeight_pth_0_45_PT60UP = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(14)
+    self.normalizationWeight_pth_0_45_PT60DOWN = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(15)
 
-    self.normalizationWeight_pth_0_45_PT120UP = self.normalizationHistogram_pth_0_45.GetBinContent(16)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
-    self.normalizationWeight_pth_0_45_PT120DOWN = self.normalizationHistogram_pth_0_45.GetBinContent(17)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
+    self.normalizationWeight_pth_0_45_PT120UP = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(16)
+    self.normalizationWeight_pth_0_45_PT120DOWN = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(17)
 
-    self.normalizationWeight_pth_0_45_qmtopUP = self.normalizationHistogram_pth_0_45.GetBinContent(18)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
-    self.normalizationWeight_pth_0_45_qmtopDOWN = self.normalizationHistogram_pth_0_45.GetBinContent(19)/self.normalizationHistogram_pth_0_45.GetBinContent(1)
+    self.normalizationWeight_pth_0_45_qmtopUP = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(18)
+    self.normalizationWeight_pth_0_45_qmtopDOWN = self.normalizationHistogram_pth_0_45.GetBinContent(1)/self.normalizationHistogram_pth_0_45.GetBinContent(19)
 
     self.normalizationHistogram_pth_45_80 = self.reweightFile.Get("h_THUggH_pth45to80")
-    self.normalizationWeight_pth_45_80_MuUP = self.normalizationHistogram_pth_45_80.GetBinContent(2)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
-    self.normalizationWeight_pth_45_80_MuDOWN = self.normalizationHistogram_pth_45_80.GetBinContent(3)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
+    self.normalizationWeight_pth_45_80_MuUP = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(2)
+    self.normalizationWeight_pth_45_80_MuDOWN = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(3)
 
-    self.normalizationWeight_pth_45_80_ResUP = self.normalizationHistogram_pth_45_80.GetBinContent(4)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
-    self.normalizationWeight_pth_45_80_ResDOWN = self.normalizationHistogram_pth_45_80.GetBinContent(5)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
+    self.normalizationWeight_pth_45_80_ResUP = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(4)
+    self.normalizationWeight_pth_45_80_ResDOWN = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(5)
 
-    self.normalizationWeight_pth_45_80_Mig01UP = self.normalizationHistogram_pth_45_80.GetBinContent(6)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
-    self.normalizationWeight_pth_45_80_Mig01DOWN = self.normalizationHistogram_pth_45_80.GetBinContent(7)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
+    self.normalizationWeight_pth_45_80_Mig01UP = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(6)
+    self.normalizationWeight_pth_45_80_Mig01DOWN = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(7)
 
-    self.normalizationWeight_pth_45_80_Mig12UP = self.normalizationHistogram_pth_45_80.GetBinContent(8)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
-    self.normalizationWeight_pth_45_80_Mig12DOWN = self.normalizationHistogram_pth_45_80.GetBinContent(9)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
+    self.normalizationWeight_pth_45_80_Mig12UP = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(8)
+    self.normalizationWeight_pth_45_80_Mig12DOWN = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(9)
 
-    self.normalizationWeight_pth_45_80_VBF2jUP = self.normalizationHistogram_pth_45_80.GetBinContent(10)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
-    self.normalizationWeight_pth_45_80_VBF2jDOWN = self.normalizationHistogram_pth_45_80.GetBinContent(11)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
+    self.normalizationWeight_pth_45_80_VBF2jUP = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(10)
+    self.normalizationWeight_pth_45_80_VBF2jDOWN = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(11)
 
-    self.normalizationWeight_pth_45_80_VBF3jUP = self.normalizationHistogram_pth_45_80.GetBinContent(12)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
-    self.normalizationWeight_pth_45_80_VBF3jDOWN = self.normalizationHistogram_pth_45_80.GetBinContent(13)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
+    self.normalizationWeight_pth_45_80_VBF3jUP = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(12)
+    self.normalizationWeight_pth_45_80_VBF3jDOWN = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(13)
     
-    self.normalizationWeight_pth_45_80_PT60UP = self.normalizationHistogram_pth_45_80.GetBinContent(14)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
-    self.normalizationWeight_pth_45_80_PT60DOWN = self.normalizationHistogram_pth_45_80.GetBinContent(15)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
+    self.normalizationWeight_pth_45_80_PT60UP = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(14)
+    self.normalizationWeight_pth_45_80_PT60DOWN = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(15)
 
-    self.normalizationWeight_pth_45_80_PT120UP = self.normalizationHistogram_pth_45_80.GetBinContent(16)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
-    self.normalizationWeight_pth_45_80_PT120DOWN = self.normalizationHistogram_pth_45_80.GetBinContent(17)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
+    self.normalizationWeight_pth_45_80_PT120UP = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(16)
+    self.normalizationWeight_pth_45_80_PT120DOWN = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(17)
 
-    self.normalizationWeight_pth_45_80_qmtopUP = self.normalizationHistogram_pth_45_80.GetBinContent(18)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
-    self.normalizationWeight_pth_45_80_qmtopDOWN = self.normalizationHistogram_pth_45_80.GetBinContent(19)/self.normalizationHistogram_pth_45_80.GetBinContent(1)
+    self.normalizationWeight_pth_45_80_qmtopUP = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(18)
+    self.normalizationWeight_pth_45_80_qmtopDOWN = self.normalizationHistogram_pth_45_80.GetBinContent(1)/self.normalizationHistogram_pth_45_80.GetBinContent(19)
 
     self.normalizationHistogram_pth_80_120 = self.reweightFile.Get("h_THUggH_pth80to120")
-    self.normalizationWeight_pth_80_120_MuUP = self.normalizationHistogram_pth_80_120.GetBinContent(2)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
-    self.normalizationWeight_pth_80_120_MuDOWN = self.normalizationHistogram_pth_80_120.GetBinContent(3)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
+    self.normalizationWeight_pth_80_120_MuUP = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(2)
+    self.normalizationWeight_pth_80_120_MuDOWN = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(3)
 
-    self.normalizationWeight_pth_80_120_ResUP = self.normalizationHistogram_pth_80_120.GetBinContent(4)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
-    self.normalizationWeight_pth_80_120_ResDOWN = self.normalizationHistogram_pth_80_120.GetBinContent(5)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
+    self.normalizationWeight_pth_80_120_ResUP = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(4)
+    self.normalizationWeight_pth_80_120_ResDOWN = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(5)
 
-    self.normalizationWeight_pth_80_120_Mig01UP = self.normalizationHistogram_pth_80_120.GetBinContent(6)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
-    self.normalizationWeight_pth_80_120_Mig01DOWN = self.normalizationHistogram_pth_80_120.GetBinContent(7)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
+    self.normalizationWeight_pth_80_120_Mig01UP = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(6)
+    self.normalizationWeight_pth_80_120_Mig01DOWN = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(7)
 
-    self.normalizationWeight_pth_80_120_Mig12UP = self.normalizationHistogram_pth_80_120.GetBinContent(8)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
-    self.normalizationWeight_pth_80_120_Mig12DOWN = self.normalizationHistogram_pth_80_120.GetBinContent(9)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
+    self.normalizationWeight_pth_80_120_Mig12UP = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(8)
+    self.normalizationWeight_pth_80_120_Mig12DOWN = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(9)
 
-    self.normalizationWeight_pth_80_120_VBF2jUP = self.normalizationHistogram_pth_80_120.GetBinContent(10)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
-    self.normalizationWeight_pth_80_120_VBF2jDOWN = self.normalizationHistogram_pth_80_120.GetBinContent(11)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
+    self.normalizationWeight_pth_80_120_VBF2jUP = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(10)
+    self.normalizationWeight_pth_80_120_VBF2jDOWN = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(11)
 
-    self.normalizationWeight_pth_80_120_VBF3jUP = self.normalizationHistogram_pth_80_120.GetBinContent(12)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
-    self.normalizationWeight_pth_80_120_VBF3jDOWN = self.normalizationHistogram_pth_80_120.GetBinContent(13)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
+    self.normalizationWeight_pth_80_120_VBF3jUP = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(12)
+    self.normalizationWeight_pth_80_120_VBF3jDOWN = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(13)
     
-    self.normalizationWeight_pth_80_120_PT60UP = self.normalizationHistogram_pth_80_120.GetBinContent(14)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
-    self.normalizationWeight_pth_80_120_PT60DOWN = self.normalizationHistogram_pth_80_120.GetBinContent(15)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
+    self.normalizationWeight_pth_80_120_PT60UP = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(14)
+    self.normalizationWeight_pth_80_120_PT60DOWN = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(15)
 
-    self.normalizationWeight_pth_80_120_PT120UP = self.normalizationHistogram_pth_80_120.GetBinContent(16)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
-    self.normalizationWeight_pth_80_120_PT120DOWN = self.normalizationHistogram_pth_80_120.GetBinContent(17)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
+    self.normalizationWeight_pth_80_120_PT120UP = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(16)
+    self.normalizationWeight_pth_80_120_PT120DOWN = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(17)
 
-    self.normalizationWeight_pth_80_120_qmtopUP = self.normalizationHistogram_pth_80_120.GetBinContent(18)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
-    self.normalizationWeight_pth_80_120_qmtopDOWN = self.normalizationHistogram_pth_80_120.GetBinContent(19)/self.normalizationHistogram_pth_80_120.GetBinContent(1)
+    self.normalizationWeight_pth_80_120_qmtopUP = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(18)
+    self.normalizationWeight_pth_80_120_qmtopDOWN = self.normalizationHistogram_pth_80_120.GetBinContent(1)/self.normalizationHistogram_pth_80_120.GetBinContent(19)
     
     self.normalizationHistogram_pth_120_200 = self.reweightFile.Get("h_THUggH_pth120to200")
-    self.normalizationWeight_pth_120_200_MuUP = self.normalizationHistogram_pth_120_200.GetBinContent(2)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
-    self.normalizationWeight_pth_120_200_MuDOWN = self.normalizationHistogram_pth_120_200.GetBinContent(3)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
+    self.normalizationWeight_pth_120_200_MuUP = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(2)
+    self.normalizationWeight_pth_120_200_MuDOWN = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(3)
 
-    self.normalizationWeight_pth_120_200_ResUP = self.normalizationHistogram_pth_120_200.GetBinContent(4)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
-    self.normalizationWeight_pth_120_200_ResDOWN = self.normalizationHistogram_pth_120_200.GetBinContent(5)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
+    self.normalizationWeight_pth_120_200_ResUP = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(4)
+    self.normalizationWeight_pth_120_200_ResDOWN = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(5)
 
-    self.normalizationWeight_pth_120_200_Mig01UP = self.normalizationHistogram_pth_120_200.GetBinContent(6)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
-    self.normalizationWeight_pth_120_200_Mig01DOWN = self.normalizationHistogram_pth_120_200.GetBinContent(7)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
+    self.normalizationWeight_pth_120_200_Mig01UP = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(6)
+    self.normalizationWeight_pth_120_200_Mig01DOWN = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(7)
 
-    self.normalizationWeight_pth_120_200_Mig12UP = self.normalizationHistogram_pth_120_200.GetBinContent(8)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
-    self.normalizationWeight_pth_120_200_Mig12DOWN = self.normalizationHistogram_pth_120_200.GetBinContent(9)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
+    self.normalizationWeight_pth_120_200_Mig12UP = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(8)
+    self.normalizationWeight_pth_120_200_Mig12DOWN = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(9)
 
-    self.normalizationWeight_pth_120_200_VBF2jUP = self.normalizationHistogram_pth_120_200.GetBinContent(10)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
-    self.normalizationWeight_pth_120_200_VBF2jDOWN = self.normalizationHistogram_pth_120_200.GetBinContent(11)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
+    self.normalizationWeight_pth_120_200_VBF2jUP = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(10)
+    self.normalizationWeight_pth_120_200_VBF2jDOWN = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(11)
 
-    self.normalizationWeight_pth_120_200_VBF3jUP = self.normalizationHistogram_pth_120_200.GetBinContent(12)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
-    self.normalizationWeight_pth_120_200_VBF3jDOWN = self.normalizationHistogram_pth_120_200.GetBinContent(13)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
+    self.normalizationWeight_pth_120_200_VBF3jUP = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(12)
+    self.normalizationWeight_pth_120_200_VBF3jDOWN = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(13)
     
-    self.normalizationWeight_pth_120_200_PT60UP = self.normalizationHistogram_pth_120_200.GetBinContent(14)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
-    self.normalizationWeight_pth_120_200_PT60DOWN = self.normalizationHistogram_pth_120_200.GetBinContent(15)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
+    self.normalizationWeight_pth_120_200_PT60UP = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(14)
+    self.normalizationWeight_pth_120_200_PT60DOWN = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(15)
 
-    self.normalizationWeight_pth_120_200_PT120UP = self.normalizationHistogram_pth_120_200.GetBinContent(16)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
-    self.normalizationWeight_pth_120_200_PT120DOWN = self.normalizationHistogram_pth_120_200.GetBinContent(17)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
+    self.normalizationWeight_pth_120_200_PT120UP = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(16)
+    self.normalizationWeight_pth_120_200_PT120DOWN = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(17)
 
-    self.normalizationWeight_pth_120_200_qmtopUP = self.normalizationHistogram_pth_120_200.GetBinContent(18)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
-    self.normalizationWeight_pth_120_200_qmtopDOWN = self.normalizationHistogram_pth_120_200.GetBinContent(19)/self.normalizationHistogram_pth_120_200.GetBinContent(1)
+    self.normalizationWeight_pth_120_200_qmtopUP = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(18)
+    self.normalizationWeight_pth_120_200_qmtopDOWN = self.normalizationHistogram_pth_120_200.GetBinContent(1)/self.normalizationHistogram_pth_120_200.GetBinContent(19)
 
     self.normalizationHistogram_pth_200_350 = self.reweightFile.Get("h_THUggH_pth200to350")
-    self.normalizationWeight_pth_200_350_MuUP = self.normalizationHistogram_pth_200_350.GetBinContent(2)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
-    self.normalizationWeight_pth_200_350_MuDOWN = self.normalizationHistogram_pth_200_350.GetBinContent(3)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
+    self.normalizationWeight_pth_200_350_MuUP = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(2)
+    self.normalizationWeight_pth_200_350_MuDOWN = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(3)
 
-    self.normalizationWeight_pth_200_350_ResUP = self.normalizationHistogram_pth_200_350.GetBinContent(4)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
-    self.normalizationWeight_pth_200_350_ResDOWN = self.normalizationHistogram_pth_200_350.GetBinContent(5)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
+    self.normalizationWeight_pth_200_350_ResUP = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(4)
+    self.normalizationWeight_pth_200_350_ResDOWN = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(5)
 
-    self.normalizationWeight_pth_200_350_Mig01UP = self.normalizationHistogram_pth_200_350.GetBinContent(6)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
-    self.normalizationWeight_pth_200_350_Mig01DOWN = self.normalizationHistogram_pth_200_350.GetBinContent(7)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
+    self.normalizationWeight_pth_200_350_Mig01UP = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(6)
+    self.normalizationWeight_pth_200_350_Mig01DOWN = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(7)
 
-    self.normalizationWeight_pth_200_350_Mig12UP = self.normalizationHistogram_pth_200_350.GetBinContent(8)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
-    self.normalizationWeight_pth_200_350_Mig12DOWN = self.normalizationHistogram_pth_200_350.GetBinContent(9)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
+    self.normalizationWeight_pth_200_350_Mig12UP = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(8)
+    self.normalizationWeight_pth_200_350_Mig12DOWN = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(9)
 
-    self.normalizationWeight_pth_200_350_VBF2jUP = self.normalizationHistogram_pth_200_350.GetBinContent(10)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
-    self.normalizationWeight_pth_200_350_VBF2jDOWN = self.normalizationHistogram_pth_200_350.GetBinContent(11)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
+    self.normalizationWeight_pth_200_350_VBF2jUP = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(10)
+    self.normalizationWeight_pth_200_350_VBF2jDOWN = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(11)
 
-    self.normalizationWeight_pth_200_350_VBF3jUP = self.normalizationHistogram_pth_200_350.GetBinContent(12)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
-    self.normalizationWeight_pth_200_350_VBF3jDOWN = self.normalizationHistogram_pth_200_350.GetBinContent(13)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
+    self.normalizationWeight_pth_200_350_VBF3jUP = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(12)
+    self.normalizationWeight_pth_200_350_VBF3jDOWN = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(13)
     
-    self.normalizationWeight_pth_200_350_PT60UP = self.normalizationHistogram_pth_200_350.GetBinContent(14)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
-    self.normalizationWeight_pth_200_350_PT60DOWN = self.normalizationHistogram_pth_200_350.GetBinContent(15)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
+    self.normalizationWeight_pth_200_350_PT60UP = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(14)
+    self.normalizationWeight_pth_200_350_PT60DOWN = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(15)
 
-    self.normalizationWeight_pth_200_350_PT120UP = self.normalizationHistogram_pth_200_350.GetBinContent(16)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
-    self.normalizationWeight_pth_200_350_PT120DOWN = self.normalizationHistogram_pth_200_350.GetBinContent(17)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
+    self.normalizationWeight_pth_200_350_PT120UP = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(16)
+    self.normalizationWeight_pth_200_350_PT120DOWN = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(17)
 
-    self.normalizationWeight_pth_200_350_qmtopUP = self.normalizationHistogram_pth_200_350.GetBinContent(18)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
-    self.normalizationWeight_pth_200_350_qmtopDOWN = self.normalizationHistogram_pth_200_350.GetBinContent(19)/self.normalizationHistogram_pth_200_350.GetBinContent(1)
+    self.normalizationWeight_pth_200_350_qmtopUP = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(18)
+    self.normalizationWeight_pth_200_350_qmtopDOWN = self.normalizationHistogram_pth_200_350.GetBinContent(1)/self.normalizationHistogram_pth_200_350.GetBinContent(19)
 
     self.normalizationHistogram_pth_350_450 = self.reweightFile.Get("h_THUggH_pth350to450")
-    self.normalizationWeight_pth_350_450_MuUP = self.normalizationHistogram_pth_350_450.GetBinContent(2)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
-    self.normalizationWeight_pth_350_450_MuDOWN = self.normalizationHistogram_pth_350_450.GetBinContent(3)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
+    self.normalizationWeight_pth_350_450_MuUP = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(2)
+    self.normalizationWeight_pth_350_450_MuDOWN = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(3)
 
-    self.normalizationWeight_pth_350_450_ResUP = self.normalizationHistogram_pth_350_450.GetBinContent(4)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
-    self.normalizationWeight_pth_350_450_ResDOWN = self.normalizationHistogram_pth_350_450.GetBinContent(5)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
+    self.normalizationWeight_pth_350_450_ResUP = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(4)
+    self.normalizationWeight_pth_350_450_ResDOWN = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(5)
 
-    self.normalizationWeight_pth_350_450_Mig01UP = self.normalizationHistogram_pth_350_450.GetBinContent(6)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
-    self.normalizationWeight_pth_350_450_Mig01DOWN = self.normalizationHistogram_pth_350_450.GetBinContent(7)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
+    self.normalizationWeight_pth_350_450_Mig01UP = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(6)
+    self.normalizationWeight_pth_350_450_Mig01DOWN = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(7)
 
-    self.normalizationWeight_pth_350_450_Mig12UP = self.normalizationHistogram_pth_350_450.GetBinContent(8)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
-    self.normalizationWeight_pth_350_450_Mig12DOWN = self.normalizationHistogram_pth_350_450.GetBinContent(9)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
+    self.normalizationWeight_pth_350_450_Mig12UP = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(8)
+    self.normalizationWeight_pth_350_450_Mig12DOWN = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(9)
 
-    self.normalizationWeight_pth_350_450_VBF2jUP = self.normalizationHistogram_pth_350_450.GetBinContent(10)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
-    self.normalizationWeight_pth_350_450_VBF2jDOWN = self.normalizationHistogram_pth_350_450.GetBinContent(11)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
+    self.normalizationWeight_pth_350_450_VBF2jUP = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(10)
+    self.normalizationWeight_pth_350_450_VBF2jDOWN = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(11)
 
-    self.normalizationWeight_pth_350_450_VBF3jUP = self.normalizationHistogram_pth_350_450.GetBinContent(12)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
-    self.normalizationWeight_pth_350_450_VBF3jDOWN = self.normalizationHistogram_pth_350_450.GetBinContent(13)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
+    self.normalizationWeight_pth_350_450_VBF3jUP = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(12)
+    self.normalizationWeight_pth_350_450_VBF3jDOWN = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(13)
     
-    self.normalizationWeight_pth_350_450_PT60UP = self.normalizationHistogram_pth_350_450.GetBinContent(14)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
-    self.normalizationWeight_pth_350_450_PT60DOWN = self.normalizationHistogram_pth_350_450.GetBinContent(15)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
+    self.normalizationWeight_pth_350_450_PT60UP = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(14)
+    self.normalizationWeight_pth_350_450_PT60DOWN = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(15)
 
-    self.normalizationWeight_pth_350_450_PT120UP = self.normalizationHistogram_pth_350_450.GetBinContent(16)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
-    self.normalizationWeight_pth_350_450_PT120DOWN = self.normalizationHistogram_pth_350_450.GetBinContent(17)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
+    self.normalizationWeight_pth_350_450_PT120UP = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(16)
+    self.normalizationWeight_pth_350_450_PT120DOWN = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(17)
 
-    self.normalizationWeight_pth_350_450_qmtopUP = self.normalizationHistogram_pth_350_450.GetBinContent(18)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
-    self.normalizationWeight_pth_350_450_qmtopDOWN = self.normalizationHistogram_pth_350_450.GetBinContent(19)/self.normalizationHistogram_pth_350_450.GetBinContent(1)
+    self.normalizationWeight_pth_350_450_qmtopUP = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(18)
+    self.normalizationWeight_pth_350_450_qmtopDOWN = self.normalizationHistogram_pth_350_450.GetBinContent(1)/self.normalizationHistogram_pth_350_450.GetBinContent(19)
 
     self.normalizationHistogram_pth_gt450 = self.reweightFile.Get("h_THUggH_pthgt450")
-    self.normalizationWeight_pth_gt450_MuUP = self.normalizationHistogram_pth_gt450.GetBinContent(2)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
-    self.normalizationWeight_pth_gt450_MuDOWN = self.normalizationHistogram_pth_gt450.GetBinContent(3)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
+    self.normalizationWeight_pth_gt450_MuUP = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(2)
+    self.normalizationWeight_pth_gt450_MuDOWN = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(3)
 
-    self.normalizationWeight_pth_gt450_ResUP = self.normalizationHistogram_pth_gt450.GetBinContent(4)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
-    self.normalizationWeight_pth_gt450_ResDOWN = self.normalizationHistogram_pth_gt450.GetBinContent(5)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
+    self.normalizationWeight_pth_gt450_ResUP = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(4)
+    self.normalizationWeight_pth_gt450_ResDOWN = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(5)
 
-    self.normalizationWeight_pth_gt450_Mig01UP = self.normalizationHistogram_pth_gt450.GetBinContent(6)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
-    self.normalizationWeight_pth_gt450_Mig01DOWN = self.normalizationHistogram_pth_gt450.GetBinContent(7)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
+    self.normalizationWeight_pth_gt450_Mig01UP = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(6)
+    self.normalizationWeight_pth_gt450_Mig01DOWN = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(7)
 
-    self.normalizationWeight_pth_gt450_Mig12UP = self.normalizationHistogram_pth_gt450.GetBinContent(8)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
-    self.normalizationWeight_pth_gt450_Mig12DOWN = self.normalizationHistogram_pth_gt450.GetBinContent(9)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
+    self.normalizationWeight_pth_gt450_Mig12UP = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(8)
+    self.normalizationWeight_pth_gt450_Mig12DOWN = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(9)
 
-    self.normalizationWeight_pth_gt450_VBF2jUP = self.normalizationHistogram_pth_gt450.GetBinContent(10)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
-    self.normalizationWeight_pth_gt450_VBF2jDOWN = self.normalizationHistogram_pth_gt450.GetBinContent(11)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
+    self.normalizationWeight_pth_gt450_VBF2jUP = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(10)
+    self.normalizationWeight_pth_gt450_VBF2jDOWN = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(11)
 
-    self.normalizationWeight_pth_gt450_VBF3jUP = self.normalizationHistogram_pth_gt450.GetBinContent(12)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
-    self.normalizationWeight_pth_gt450_VBF3jDOWN = self.normalizationHistogram_pth_gt450.GetBinContent(13)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
+    self.normalizationWeight_pth_gt450_VBF3jUP = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(12)
+    self.normalizationWeight_pth_gt450_VBF3jDOWN = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(13)
     
-    self.normalizationWeight_pth_gt450_PT60UP = self.normalizationHistogram_pth_gt450.GetBinContent(14)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
-    self.normalizationWeight_pth_gt450_PT60DOWN = self.normalizationHistogram_pth_gt450.GetBinContent(15)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
+    self.normalizationWeight_pth_gt450_PT60UP = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(14)
+    self.normalizationWeight_pth_gt450_PT60DOWN = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(15)
 
-    self.normalizationWeight_pth_gt450_PT120UP = self.normalizationHistogram_pth_gt450.GetBinContent(16)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
-    self.normalizationWeight_pth_gt450_PT120DOWN = self.normalizationHistogram_pth_gt450.GetBinContent(17)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
+    self.normalizationWeight_pth_gt450_PT120UP = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(16)
+    self.normalizationWeight_pth_gt450_PT120DOWN = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(17)
 
-    self.normalizationWeight_pth_gt450_qmtopUP = self.normalizationHistogram_pth_gt450.GetBinContent(18)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
-    self.normalizationWeight_pth_gt450_qmtopDOWN = self.normalizationHistogram_pth_gt450.GetBinContent(19)/self.normalizationHistogram_pth_gt450.GetBinContent(1)
+    self.normalizationWeight_pth_gt450_qmtopUP = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(18)
+    self.normalizationWeight_pth_gt450_qmtopDOWN = self.normalizationHistogram_pth_gt450.GetBinContent(1)/self.normalizationHistogram_pth_gt450.GetBinContent(19)
 
     self.normalizationHistogram_njets_0 = self.reweightFile.Get("h_THUggH_njets0")
-    self.normalizationWeight_njets_0_MuUP = self.normalizationHistogram_njets_0.GetBinContent(2)/self.normalizationHistogram_njets_0.GetBinContent(1)
-    self.normalizationWeight_njets_0_MuDOWN = self.normalizationHistogram_njets_0.GetBinContent(3)/self.normalizationHistogram_njets_0.GetBinContent(1)
+    self.normalizationWeight_njets_0_MuUP = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(2)
+    self.normalizationWeight_njets_0_MuDOWN = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(3)
 
-    self.normalizationWeight_njets_0_ResUP = self.normalizationHistogram_njets_0.GetBinContent(4)/self.normalizationHistogram_njets_0.GetBinContent(1)
-    self.normalizationWeight_njets_0_ResDOWN = self.normalizationHistogram_njets_0.GetBinContent(5)/self.normalizationHistogram_njets_0.GetBinContent(1)
+    self.normalizationWeight_njets_0_ResUP = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(4)
+    self.normalizationWeight_njets_0_ResDOWN = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(5)
 
-    self.normalizationWeight_njets_0_Mig01UP = self.normalizationHistogram_njets_0.GetBinContent(6)/self.normalizationHistogram_njets_0.GetBinContent(1)
-    self.normalizationWeight_njets_0_Mig01DOWN = self.normalizationHistogram_njets_0.GetBinContent(7)/self.normalizationHistogram_njets_0.GetBinContent(1)
+    self.normalizationWeight_njets_0_Mig01UP = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(6)
+    self.normalizationWeight_njets_0_Mig01DOWN = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(7)
 
-    self.normalizationWeight_njets_0_Mig12UP = self.normalizationHistogram_njets_0.GetBinContent(8)/self.normalizationHistogram_njets_0.GetBinContent(1)
-    self.normalizationWeight_njets_0_Mig12DOWN = self.normalizationHistogram_njets_0.GetBinContent(9)/self.normalizationHistogram_njets_0.GetBinContent(1)
+    self.normalizationWeight_njets_0_Mig12UP = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(8)
+    self.normalizationWeight_njets_0_Mig12DOWN = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(9)
 
-    self.normalizationWeight_njets_0_VBF2jUP = self.normalizationHistogram_njets_0.GetBinContent(10)/self.normalizationHistogram_njets_0.GetBinContent(1)
-    self.normalizationWeight_njets_0_VBF2jDOWN = self.normalizationHistogram_njets_0.GetBinContent(11)/self.normalizationHistogram_njets_0.GetBinContent(1)
+    self.normalizationWeight_njets_0_VBF2jUP = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(10)
+    self.normalizationWeight_njets_0_VBF2jDOWN = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(11)
 
-    self.normalizationWeight_njets_0_VBF3jUP = self.normalizationHistogram_njets_0.GetBinContent(12)/self.normalizationHistogram_njets_0.GetBinContent(1)
-    self.normalizationWeight_njets_0_VBF3jDOWN = self.normalizationHistogram_njets_0.GetBinContent(13)/self.normalizationHistogram_njets_0.GetBinContent(1)
+    self.normalizationWeight_njets_0_VBF3jUP = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(12)
+    self.normalizationWeight_njets_0_VBF3jDOWN = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(13)
     
-    self.normalizationWeight_njets_0_PT60UP = self.normalizationHistogram_njets_0.GetBinContent(14)/self.normalizationHistogram_njets_0.GetBinContent(1)
-    self.normalizationWeight_njets_0_PT60DOWN = self.normalizationHistogram_njets_0.GetBinContent(15)/self.normalizationHistogram_njets_0.GetBinContent(1)
+    self.normalizationWeight_njets_0_PT60UP = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(14)
+    self.normalizationWeight_njets_0_PT60DOWN = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(15)
 
-    self.normalizationWeight_njets_0_PT120UP = self.normalizationHistogram_njets_0.GetBinContent(16)/self.normalizationHistogram_njets_0.GetBinContent(1)
-    self.normalizationWeight_njets_0_PT120DOWN = self.normalizationHistogram_njets_0.GetBinContent(17)/self.normalizationHistogram_njets_0.GetBinContent(1)
+    self.normalizationWeight_njets_0_PT120UP = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(16)
+    self.normalizationWeight_njets_0_PT120DOWN = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(17)
 
-    self.normalizationWeight_njets_0_qmtopUP = self.normalizationHistogram_njets_0.GetBinContent(18)/self.normalizationHistogram_njets_0.GetBinContent(1)
-    self.normalizationWeight_njets_0_qmtopDOWN = self.normalizationHistogram_njets_0.GetBinContent(19)/self.normalizationHistogram_njets_0.GetBinContent(1)
+    self.normalizationWeight_njets_0_qmtopUP = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(18)
+    self.normalizationWeight_njets_0_qmtopDOWN = self.normalizationHistogram_njets_0.GetBinContent(1)/self.normalizationHistogram_njets_0.GetBinContent(19)
 
     self.normalizationHistogram_njets_1 = self.reweightFile.Get("h_THUggH_njets1")
-    self.normalizationWeight_njets_1_MuUP = self.normalizationHistogram_njets_1.GetBinContent(2)/self.normalizationHistogram_njets_1.GetBinContent(1)
-    self.normalizationWeight_njets_1_MuDOWN = self.normalizationHistogram_njets_1.GetBinContent(3)/self.normalizationHistogram_njets_1.GetBinContent(1)
+    self.normalizationWeight_njets_1_MuUP = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(2)
+    self.normalizationWeight_njets_1_MuDOWN = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(3)
 
-    self.normalizationWeight_njets_1_ResUP = self.normalizationHistogram_njets_1.GetBinContent(4)/self.normalizationHistogram_njets_1.GetBinContent(1)
-    self.normalizationWeight_njets_1_ResDOWN = self.normalizationHistogram_njets_1.GetBinContent(5)/self.normalizationHistogram_njets_1.GetBinContent(1)
+    self.normalizationWeight_njets_1_ResUP = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(4)
+    self.normalizationWeight_njets_1_ResDOWN = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(5)
 
-    self.normalizationWeight_njets_1_Mig01UP = self.normalizationHistogram_njets_1.GetBinContent(6)/self.normalizationHistogram_njets_1.GetBinContent(1)
-    self.normalizationWeight_njets_1_Mig01DOWN = self.normalizationHistogram_njets_1.GetBinContent(7)/self.normalizationHistogram_njets_1.GetBinContent(1)
+    self.normalizationWeight_njets_1_Mig01UP = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(6)
+    self.normalizationWeight_njets_1_Mig01DOWN = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(7)
 
-    self.normalizationWeight_njets_1_Mig12UP = self.normalizationHistogram_njets_1.GetBinContent(8)/self.normalizationHistogram_njets_1.GetBinContent(1)
-    self.normalizationWeight_njets_1_Mig12DOWN = self.normalizationHistogram_njets_1.GetBinContent(9)/self.normalizationHistogram_njets_1.GetBinContent(1)
+    self.normalizationWeight_njets_1_Mig12UP = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(8)
+    self.normalizationWeight_njets_1_Mig12DOWN = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(9)
 
-    self.normalizationWeight_njets_1_VBF2jUP = self.normalizationHistogram_njets_1.GetBinContent(10)/self.normalizationHistogram_njets_1.GetBinContent(1)
-    self.normalizationWeight_njets_1_VBF2jDOWN = self.normalizationHistogram_njets_1.GetBinContent(11)/self.normalizationHistogram_njets_1.GetBinContent(1)
+    self.normalizationWeight_njets_1_VBF2jUP = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(10)
+    self.normalizationWeight_njets_1_VBF2jDOWN = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(11)
 
-    self.normalizationWeight_njets_1_VBF3jUP = self.normalizationHistogram_njets_1.GetBinContent(12)/self.normalizationHistogram_njets_1.GetBinContent(1)
-    self.normalizationWeight_njets_1_VBF3jDOWN = self.normalizationHistogram_njets_1.GetBinContent(13)/self.normalizationHistogram_njets_1.GetBinContent(1)
+    self.normalizationWeight_njets_1_VBF3jUP = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(12)
+    self.normalizationWeight_njets_1_VBF3jDOWN = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(13)
     
-    self.normalizationWeight_njets_1_PT60UP = self.normalizationHistogram_njets_1.GetBinContent(14)/self.normalizationHistogram_njets_1.GetBinContent(1)
-    self.normalizationWeight_njets_1_PT60DOWN = self.normalizationHistogram_njets_1.GetBinContent(15)/self.normalizationHistogram_njets_1.GetBinContent(1)
+    self.normalizationWeight_njets_1_PT60UP = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(14)
+    self.normalizationWeight_njets_1_PT60DOWN = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(15)
 
-    self.normalizationWeight_njets_1_PT120UP = self.normalizationHistogram_njets_1.GetBinContent(16)/self.normalizationHistogram_njets_1.GetBinContent(1)
-    self.normalizationWeight_njets_1_PT120DOWN = self.normalizationHistogram_njets_1.GetBinContent(17)/self.normalizationHistogram_njets_1.GetBinContent(1)
+    self.normalizationWeight_njets_1_PT120UP = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(16)
+    self.normalizationWeight_njets_1_PT120DOWN = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(17)
 
-    self.normalizationWeight_njets_1_qmtopUP = self.normalizationHistogram_njets_1.GetBinContent(18)/self.normalizationHistogram_njets_1.GetBinContent(1)
-    self.normalizationWeight_njets_1_qmtopDOWN = self.normalizationHistogram_njets_1.GetBinContent(19)/self.normalizationHistogram_njets_1.GetBinContent(1)
+    self.normalizationWeight_njets_1_qmtopUP = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(18)
+    self.normalizationWeight_njets_1_qmtopDOWN = self.normalizationHistogram_njets_1.GetBinContent(1)/self.normalizationHistogram_njets_1.GetBinContent(19)
 
     self.normalizationHistogram_njets_2 = self.reweightFile.Get("h_THUggH_njets2")
-    self.normalizationWeight_njets_2_MuUP = self.normalizationHistogram_njets_2.GetBinContent(2)/self.normalizationHistogram_njets_2.GetBinContent(1)
-    self.normalizationWeight_njets_2_MuDOWN = self.normalizationHistogram_njets_2.GetBinContent(3)/self.normalizationHistogram_njets_2.GetBinContent(1)
+    self.normalizationWeight_njets_2_MuUP = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(2)
+    self.normalizationWeight_njets_2_MuDOWN = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(3)
 
-    self.normalizationWeight_njets_2_ResUP = self.normalizationHistogram_njets_2.GetBinContent(4)/self.normalizationHistogram_njets_2.GetBinContent(1)
-    self.normalizationWeight_njets_2_ResDOWN = self.normalizationHistogram_njets_2.GetBinContent(5)/self.normalizationHistogram_njets_2.GetBinContent(1)
+    self.normalizationWeight_njets_2_ResUP = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(4)
+    self.normalizationWeight_njets_2_ResDOWN = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(5)
 
-    self.normalizationWeight_njets_2_Mig01UP = self.normalizationHistogram_njets_2.GetBinContent(6)/self.normalizationHistogram_njets_2.GetBinContent(1)
-    self.normalizationWeight_njets_2_Mig01DOWN = self.normalizationHistogram_njets_2.GetBinContent(7)/self.normalizationHistogram_njets_2.GetBinContent(1)
+    self.normalizationWeight_njets_2_Mig01UP = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(6)
+    self.normalizationWeight_njets_2_Mig01DOWN = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(7)
 
-    self.normalizationWeight_njets_2_Mig12UP = self.normalizationHistogram_njets_2.GetBinContent(8)/self.normalizationHistogram_njets_2.GetBinContent(1)
-    self.normalizationWeight_njets_2_Mig12DOWN = self.normalizationHistogram_njets_2.GetBinContent(9)/self.normalizationHistogram_njets_2.GetBinContent(1)
+    self.normalizationWeight_njets_2_Mig12UP = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(8)
+    self.normalizationWeight_njets_2_Mig12DOWN = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(9)
 
-    self.normalizationWeight_njets_2_VBF2jUP = self.normalizationHistogram_njets_2.GetBinContent(10)/self.normalizationHistogram_njets_2.GetBinContent(1)
-    self.normalizationWeight_njets_2_VBF2jDOWN = self.normalizationHistogram_njets_2.GetBinContent(11)/self.normalizationHistogram_njets_2.GetBinContent(1)
+    self.normalizationWeight_njets_2_VBF2jUP = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(10)
+    self.normalizationWeight_njets_2_VBF2jDOWN = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(11)
 
-    self.normalizationWeight_njets_2_VBF3jUP = self.normalizationHistogram_njets_2.GetBinContent(12)/self.normalizationHistogram_njets_2.GetBinContent(1)
-    self.normalizationWeight_njets_2_VBF3jDOWN = self.normalizationHistogram_njets_2.GetBinContent(13)/self.normalizationHistogram_njets_2.GetBinContent(1)
+    self.normalizationWeight_njets_2_VBF3jUP = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(12)
+    self.normalizationWeight_njets_2_VBF3jDOWN = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(13)
     
-    self.normalizationWeight_njets_2_PT60UP = self.normalizationHistogram_njets_2.GetBinContent(14)/self.normalizationHistogram_njets_2.GetBinContent(1)
-    self.normalizationWeight_njets_2_PT60DOWN = self.normalizationHistogram_njets_2.GetBinContent(15)/self.normalizationHistogram_njets_2.GetBinContent(1)
+    self.normalizationWeight_njets_2_PT60UP = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(14)
+    self.normalizationWeight_njets_2_PT60DOWN = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(15)
 
-    self.normalizationWeight_njets_2_PT120UP = self.normalizationHistogram_njets_2.GetBinContent(16)/self.normalizationHistogram_njets_2.GetBinContent(1)
-    self.normalizationWeight_njets_2_PT120DOWN = self.normalizationHistogram_njets_2.GetBinContent(17)/self.normalizationHistogram_njets_2.GetBinContent(1)
+    self.normalizationWeight_njets_2_PT120UP = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(16)
+    self.normalizationWeight_njets_2_PT120DOWN = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(17)
 
-    self.normalizationWeight_njets_2_qmtopUP = self.normalizationHistogram_njets_2.GetBinContent(18)/self.normalizationHistogram_njets_2.GetBinContent(1)
-    self.normalizationWeight_njets_2_qmtopDOWN = self.normalizationHistogram_njets_2.GetBinContent(19)/self.normalizationHistogram_njets_2.GetBinContent(1)
+    self.normalizationWeight_njets_2_qmtopUP = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(18)
+    self.normalizationWeight_njets_2_qmtopDOWN = self.normalizationHistogram_njets_2.GetBinContent(1)/self.normalizationHistogram_njets_2.GetBinContent(19)
 
     self.normalizationHistogram_njets_3 = self.reweightFile.Get("h_THUggH_njets3")
-    self.normalizationWeight_njets_3_MuUP = self.normalizationHistogram_njets_3.GetBinContent(2)/self.normalizationHistogram_njets_3.GetBinContent(1)
-    self.normalizationWeight_njets_3_MuDOWN = self.normalizationHistogram_njets_3.GetBinContent(3)/self.normalizationHistogram_njets_3.GetBinContent(1)
+    self.normalizationWeight_njets_3_MuUP = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(2)
+    self.normalizationWeight_njets_3_MuDOWN = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(3)
 
-    self.normalizationWeight_njets_3_ResUP = self.normalizationHistogram_njets_3.GetBinContent(4)/self.normalizationHistogram_njets_3.GetBinContent(1)
-    self.normalizationWeight_njets_3_ResDOWN = self.normalizationHistogram_njets_3.GetBinContent(5)/self.normalizationHistogram_njets_3.GetBinContent(1)
+    self.normalizationWeight_njets_3_ResUP = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(4)
+    self.normalizationWeight_njets_3_ResDOWN = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(5)
 
-    self.normalizationWeight_njets_3_Mig01UP = self.normalizationHistogram_njets_3.GetBinContent(6)/self.normalizationHistogram_njets_3.GetBinContent(1)
-    self.normalizationWeight_njets_3_Mig01DOWN = self.normalizationHistogram_njets_3.GetBinContent(7)/self.normalizationHistogram_njets_3.GetBinContent(1)
+    self.normalizationWeight_njets_3_Mig01UP = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(6)
+    self.normalizationWeight_njets_3_Mig01DOWN = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(7)
 
-    self.normalizationWeight_njets_3_Mig12UP = self.normalizationHistogram_njets_3.GetBinContent(8)/self.normalizationHistogram_njets_3.GetBinContent(1)
-    self.normalizationWeight_njets_3_Mig12DOWN = self.normalizationHistogram_njets_3.GetBinContent(9)/self.normalizationHistogram_njets_3.GetBinContent(1)
+    self.normalizationWeight_njets_3_Mig12UP = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(8)
+    self.normalizationWeight_njets_3_Mig12DOWN = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(9)
 
-    self.normalizationWeight_njets_3_VBF2jUP = self.normalizationHistogram_njets_3.GetBinContent(10)/self.normalizationHistogram_njets_3.GetBinContent(1)
-    self.normalizationWeight_njets_3_VBF2jDOWN = self.normalizationHistogram_njets_3.GetBinContent(11)/self.normalizationHistogram_njets_3.GetBinContent(1)
+    self.normalizationWeight_njets_3_VBF2jUP = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(10)
+    self.normalizationWeight_njets_3_VBF2jDOWN = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(11)
 
-    self.normalizationWeight_njets_3_VBF3jUP = self.normalizationHistogram_njets_3.GetBinContent(12)/self.normalizationHistogram_njets_3.GetBinContent(1)
-    self.normalizationWeight_njets_3_VBF3jDOWN = self.normalizationHistogram_njets_3.GetBinContent(13)/self.normalizationHistogram_njets_3.GetBinContent(1)
+    self.normalizationWeight_njets_3_VBF3jUP = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(12)
+    self.normalizationWeight_njets_3_VBF3jDOWN = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(13)
     
-    self.normalizationWeight_njets_3_PT60UP = self.normalizationHistogram_njets_3.GetBinContent(14)/self.normalizationHistogram_njets_3.GetBinContent(1)
-    self.normalizationWeight_njets_3_PT60DOWN = self.normalizationHistogram_njets_3.GetBinContent(15)/self.normalizationHistogram_njets_3.GetBinContent(1)
+    self.normalizationWeight_njets_3_PT60UP = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(14)
+    self.normalizationWeight_njets_3_PT60DOWN = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(15)
 
-    self.normalizationWeight_njets_3_PT120UP = self.normalizationHistogram_njets_3.GetBinContent(16)/self.normalizationHistogram_njets_3.GetBinContent(1)
-    self.normalizationWeight_njets_3_PT120DOWN = self.normalizationHistogram_njets_3.GetBinContent(17)/self.normalizationHistogram_njets_3.GetBinContent(1)
+    self.normalizationWeight_njets_3_PT120UP = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(16)
+    self.normalizationWeight_njets_3_PT120DOWN = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(17)
 
-    self.normalizationWeight_njets_3_qmtopUP = self.normalizationHistogram_njets_3.GetBinContent(18)/self.normalizationHistogram_njets_3.GetBinContent(1)
-    self.normalizationWeight_njets_3_qmtopDOWN = self.normalizationHistogram_njets_3.GetBinContent(19)/self.normalizationHistogram_njets_3.GetBinContent(1)
+    self.normalizationWeight_njets_3_qmtopUP = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(18)
+    self.normalizationWeight_njets_3_qmtopDOWN = self.normalizationHistogram_njets_3.GetBinContent(1)/self.normalizationHistogram_njets_3.GetBinContent(19)
 
     self.normalizationHistogram_njets_4 = self.reweightFile.Get("h_THUggH_njets4")
-    self.normalizationWeight_njets_4_MuUP = self.normalizationHistogram_njets_4.GetBinContent(2)/self.normalizationHistogram_njets_4.GetBinContent(1)
-    self.normalizationWeight_njets_4_MuDOWN = self.normalizationHistogram_njets_4.GetBinContent(3)/self.normalizationHistogram_njets_4.GetBinContent(1)
+    self.normalizationWeight_njets_4_MuUP = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(2)
+    self.normalizationWeight_njets_4_MuDOWN = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(3)
 
-    self.normalizationWeight_njets_4_ResUP = self.normalizationHistogram_njets_4.GetBinContent(4)/self.normalizationHistogram_njets_4.GetBinContent(1)
-    self.normalizationWeight_njets_4_ResDOWN = self.normalizationHistogram_njets_4.GetBinContent(5)/self.normalizationHistogram_njets_4.GetBinContent(1)
+    self.normalizationWeight_njets_4_ResUP = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(4)
+    self.normalizationWeight_njets_4_ResDOWN = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(5)
 
-    self.normalizationWeight_njets_4_Mig01UP = self.normalizationHistogram_njets_4.GetBinContent(6)/self.normalizationHistogram_njets_4.GetBinContent(1)
-    self.normalizationWeight_njets_4_Mig01DOWN = self.normalizationHistogram_njets_4.GetBinContent(7)/self.normalizationHistogram_njets_4.GetBinContent(1)
+    self.normalizationWeight_njets_4_Mig01UP = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(6)
+    self.normalizationWeight_njets_4_Mig01DOWN = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(7)
 
-    self.normalizationWeight_njets_4_Mig12UP = self.normalizationHistogram_njets_4.GetBinContent(8)/self.normalizationHistogram_njets_4.GetBinContent(1)
-    self.normalizationWeight_njets_4_Mig12DOWN = self.normalizationHistogram_njets_4.GetBinContent(9)/self.normalizationHistogram_njets_4.GetBinContent(1)
+    self.normalizationWeight_njets_4_Mig12UP = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(8)
+    self.normalizationWeight_njets_4_Mig12DOWN = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(9)
 
-    self.normalizationWeight_njets_4_VBF2jUP = self.normalizationHistogram_njets_4.GetBinContent(10)/self.normalizationHistogram_njets_4.GetBinContent(1)
-    self.normalizationWeight_njets_4_VBF2jDOWN = self.normalizationHistogram_njets_4.GetBinContent(11)/self.normalizationHistogram_njets_4.GetBinContent(1)
+    self.normalizationWeight_njets_4_VBF2jUP = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(10)
+    self.normalizationWeight_njets_4_VBF2jDOWN = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(11)
 
-    self.normalizationWeight_njets_4_VBF3jUP = self.normalizationHistogram_njets_4.GetBinContent(12)/self.normalizationHistogram_njets_4.GetBinContent(1)
-    self.normalizationWeight_njets_4_VBF3jDOWN = self.normalizationHistogram_njets_4.GetBinContent(13)/self.normalizationHistogram_njets_4.GetBinContent(1)
+    self.normalizationWeight_njets_4_VBF3jUP = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(12)
+    self.normalizationWeight_njets_4_VBF3jDOWN = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(13)
     
-    self.normalizationWeight_njets_4_PT60UP = self.normalizationHistogram_njets_4.GetBinContent(14)/self.normalizationHistogram_njets_4.GetBinContent(1)
-    self.normalizationWeight_njets_4_PT60DOWN = self.normalizationHistogram_njets_4.GetBinContent(15)/self.normalizationHistogram_njets_4.GetBinContent(1)
+    self.normalizationWeight_njets_4_PT60UP = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(14)
+    self.normalizationWeight_njets_4_PT60DOWN = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(15)
 
-    self.normalizationWeight_njets_4_PT120UP = self.normalizationHistogram_njets_4.GetBinContent(16)/self.normalizationHistogram_njets_4.GetBinContent(1)
-    self.normalizationWeight_njets_4_PT120DOWN = self.normalizationHistogram_njets_4.GetBinContent(17)/self.normalizationHistogram_njets_4.GetBinContent(1)
+    self.normalizationWeight_njets_4_PT120UP = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(16)
+    self.normalizationWeight_njets_4_PT120DOWN = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(17)
 
-    self.normalizationWeight_njets_4_qmtopUP = self.normalizationHistogram_njets_4.GetBinContent(18)/self.normalizationHistogram_njets_4.GetBinContent(1)
-    self.normalizationWeight_njets_4_qmtopDOWN = self.normalizationHistogram_njets_4.GetBinContent(19)/self.normalizationHistogram_njets_4.GetBinContent(1)
+    self.normalizationWeight_njets_4_qmtopUP = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(18)
+    self.normalizationWeight_njets_4_qmtopDOWN = self.normalizationHistogram_njets_4.GetBinContent(1)/self.normalizationHistogram_njets_4.GetBinContent(19)
 
     self.normalizationHistogram_j1pt_30_60 = self.reweightFile.Get("h_THUggH_j1pt30to60")
-    self.normalizationWeight_j1pt_30_60_MuUP = self.normalizationHistogram_j1pt_30_60.GetBinContent(2)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
-    self.normalizationWeight_j1pt_30_60_MuDOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(3)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
+    self.normalizationWeight_j1pt_30_60_MuUP = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(2)
+    self.normalizationWeight_j1pt_30_60_MuDOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(3)
 
-    self.normalizationWeight_j1pt_30_60_ResUP = self.normalizationHistogram_j1pt_30_60.GetBinContent(4)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
-    self.normalizationWeight_j1pt_30_60_ResDOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(5)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
+    self.normalizationWeight_j1pt_30_60_ResUP = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(4)
+    self.normalizationWeight_j1pt_30_60_ResDOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(5)
 
-    self.normalizationWeight_j1pt_30_60_Mig01UP = self.normalizationHistogram_j1pt_30_60.GetBinContent(6)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
-    self.normalizationWeight_j1pt_30_60_Mig01DOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(7)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
+    self.normalizationWeight_j1pt_30_60_Mig01UP = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(6)
+    self.normalizationWeight_j1pt_30_60_Mig01DOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(7)
 
-    self.normalizationWeight_j1pt_30_60_Mig12UP = self.normalizationHistogram_j1pt_30_60.GetBinContent(8)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
-    self.normalizationWeight_j1pt_30_60_Mig12DOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(9)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
+    self.normalizationWeight_j1pt_30_60_Mig12UP = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(8)
+    self.normalizationWeight_j1pt_30_60_Mig12DOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(9)
 
-    self.normalizationWeight_j1pt_30_60_VBF2jUP = self.normalizationHistogram_j1pt_30_60.GetBinContent(10)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
-    self.normalizationWeight_j1pt_30_60_VBF2jDOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(11)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
+    self.normalizationWeight_j1pt_30_60_VBF2jUP = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(10)
+    self.normalizationWeight_j1pt_30_60_VBF2jDOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(11)
 
-    self.normalizationWeight_j1pt_30_60_VBF3jUP = self.normalizationHistogram_j1pt_30_60.GetBinContent(12)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
-    self.normalizationWeight_j1pt_30_60_VBF3jDOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(13)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
+    self.normalizationWeight_j1pt_30_60_VBF3jUP = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(12)
+    self.normalizationWeight_j1pt_30_60_VBF3jDOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(13)
     
-    self.normalizationWeight_j1pt_30_60_PT60UP = self.normalizationHistogram_j1pt_30_60.GetBinContent(14)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
-    self.normalizationWeight_j1pt_30_60_PT60DOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(15)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
+    self.normalizationWeight_j1pt_30_60_PT60UP = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(14)
+    self.normalizationWeight_j1pt_30_60_PT60DOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(15)
 
-    self.normalizationWeight_j1pt_30_60_PT120UP = self.normalizationHistogram_j1pt_30_60.GetBinContent(16)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
-    self.normalizationWeight_j1pt_30_60_PT120DOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(17)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
+    self.normalizationWeight_j1pt_30_60_PT120UP = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(16)
+    self.normalizationWeight_j1pt_30_60_PT120DOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(17)
 
-    self.normalizationWeight_j1pt_30_60_qmtopUP = self.normalizationHistogram_j1pt_30_60.GetBinContent(18)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
-    self.normalizationWeight_j1pt_30_60_qmtopDOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(19)/self.normalizationHistogram_j1pt_30_60.GetBinContent(1)
+    self.normalizationWeight_j1pt_30_60_qmtopUP = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(18)
+    self.normalizationWeight_j1pt_30_60_qmtopDOWN = self.normalizationHistogram_j1pt_30_60.GetBinContent(1)/self.normalizationHistogram_j1pt_30_60.GetBinContent(19)
 
     self.normalizationHistogram_j1pt_60_120 = self.reweightFile.Get("h_THUggH_j1pt60to120")
-    self.normalizationWeight_j1pt_60_120_MuUP = self.normalizationHistogram_j1pt_60_120.GetBinContent(2)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
-    self.normalizationWeight_j1pt_60_120_MuDOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(3)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
+    self.normalizationWeight_j1pt_60_120_MuUP = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(2)
+    self.normalizationWeight_j1pt_60_120_MuDOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(3)
 
-    self.normalizationWeight_j1pt_60_120_ResUP = self.normalizationHistogram_j1pt_60_120.GetBinContent(4)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
-    self.normalizationWeight_j1pt_60_120_ResDOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(5)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
+    self.normalizationWeight_j1pt_60_120_ResUP = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(4)
+    self.normalizationWeight_j1pt_60_120_ResDOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(5)
 
-    self.normalizationWeight_j1pt_60_120_Mig01UP = self.normalizationHistogram_j1pt_60_120.GetBinContent(6)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
-    self.normalizationWeight_j1pt_60_120_Mig01DOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(7)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
+    self.normalizationWeight_j1pt_60_120_Mig01UP = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(6)
+    self.normalizationWeight_j1pt_60_120_Mig01DOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(7)
 
-    self.normalizationWeight_j1pt_60_120_Mig12UP = self.normalizationHistogram_j1pt_60_120.GetBinContent(8)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
-    self.normalizationWeight_j1pt_60_120_Mig12DOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(9)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
+    self.normalizationWeight_j1pt_60_120_Mig12UP = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(8)
+    self.normalizationWeight_j1pt_60_120_Mig12DOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(9)
 
-    self.normalizationWeight_j1pt_60_120_VBF2jUP = self.normalizationHistogram_j1pt_60_120.GetBinContent(10)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
-    self.normalizationWeight_j1pt_60_120_VBF2jDOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(11)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
+    self.normalizationWeight_j1pt_60_120_VBF2jUP = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(10)
+    self.normalizationWeight_j1pt_60_120_VBF2jDOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(11)
 
-    self.normalizationWeight_j1pt_60_120_VBF3jUP = self.normalizationHistogram_j1pt_60_120.GetBinContent(12)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
-    self.normalizationWeight_j1pt_60_120_VBF3jDOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(13)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
+    self.normalizationWeight_j1pt_60_120_VBF3jUP = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(12)
+    self.normalizationWeight_j1pt_60_120_VBF3jDOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(13)
     
-    self.normalizationWeight_j1pt_60_120_PT60UP = self.normalizationHistogram_j1pt_60_120.GetBinContent(14)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
-    self.normalizationWeight_j1pt_60_120_PT60DOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(15)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
+    self.normalizationWeight_j1pt_60_120_PT60UP = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(14)
+    self.normalizationWeight_j1pt_60_120_PT60DOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(15)
 
-    self.normalizationWeight_j1pt_60_120_PT120UP = self.normalizationHistogram_j1pt_60_120.GetBinContent(16)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
-    self.normalizationWeight_j1pt_60_120_PT120DOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(17)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
+    self.normalizationWeight_j1pt_60_120_PT120UP = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(16)
+    self.normalizationWeight_j1pt_60_120_PT120DOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(17)
 
-    self.normalizationWeight_j1pt_60_120_qmtopUP = self.normalizationHistogram_j1pt_60_120.GetBinContent(18)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
-    self.normalizationWeight_j1pt_60_120_qmtopDOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(19)/self.normalizationHistogram_j1pt_60_120.GetBinContent(1)
+    self.normalizationWeight_j1pt_60_120_qmtopUP = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(18)
+    self.normalizationWeight_j1pt_60_120_qmtopDOWN = self.normalizationHistogram_j1pt_60_120.GetBinContent(1)/self.normalizationHistogram_j1pt_60_120.GetBinContent(19)
 
     self.normalizationHistogram_j1pt_120_200 = self.reweightFile.Get("h_THUggH_j1pt120to200")
-    self.normalizationWeight_j1pt_120_200_MuUP = self.normalizationHistogram_j1pt_120_200.GetBinContent(2)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
-    self.normalizationWeight_j1pt_120_200_MuDOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(3)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
+    self.normalizationWeight_j1pt_120_200_MuUP = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(2)
+    self.normalizationWeight_j1pt_120_200_MuDOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(3)
 
-    self.normalizationWeight_j1pt_120_200_ResUP = self.normalizationHistogram_j1pt_120_200.GetBinContent(4)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
-    self.normalizationWeight_j1pt_120_200_ResDOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(5)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
+    self.normalizationWeight_j1pt_120_200_ResUP = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(4)
+    self.normalizationWeight_j1pt_120_200_ResDOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(5)
 
-    self.normalizationWeight_j1pt_120_200_Mig01UP = self.normalizationHistogram_j1pt_120_200.GetBinContent(6)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
-    self.normalizationWeight_j1pt_120_200_Mig01DOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(7)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
+    self.normalizationWeight_j1pt_120_200_Mig01UP = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(6)
+    self.normalizationWeight_j1pt_120_200_Mig01DOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(7)
 
-    self.normalizationWeight_j1pt_120_200_Mig12UP = self.normalizationHistogram_j1pt_120_200.GetBinContent(8)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
-    self.normalizationWeight_j1pt_120_200_Mig12DOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(9)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
+    self.normalizationWeight_j1pt_120_200_Mig12UP = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(8)
+    self.normalizationWeight_j1pt_120_200_Mig12DOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(9)
 
-    self.normalizationWeight_j1pt_120_200_VBF2jUP = self.normalizationHistogram_j1pt_120_200.GetBinContent(10)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
-    self.normalizationWeight_j1pt_120_200_VBF2jDOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(11)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
+    self.normalizationWeight_j1pt_120_200_VBF2jUP = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(10)
+    self.normalizationWeight_j1pt_120_200_VBF2jDOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(11)
 
-    self.normalizationWeight_j1pt_120_200_VBF3jUP = self.normalizationHistogram_j1pt_120_200.GetBinContent(12)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
-    self.normalizationWeight_j1pt_120_200_VBF3jDOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(13)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
+    self.normalizationWeight_j1pt_120_200_VBF3jUP = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(12)
+    self.normalizationWeight_j1pt_120_200_VBF3jDOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(13)
     
-    self.normalizationWeight_j1pt_120_200_PT60UP = self.normalizationHistogram_j1pt_120_200.GetBinContent(14)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
-    self.normalizationWeight_j1pt_120_200_PT60DOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(15)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
+    self.normalizationWeight_j1pt_120_200_PT60UP = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(14)
+    self.normalizationWeight_j1pt_120_200_PT60DOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(15)
 
-    self.normalizationWeight_j1pt_120_200_PT120UP = self.normalizationHistogram_j1pt_120_200.GetBinContent(16)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
-    self.normalizationWeight_j1pt_120_200_PT120DOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(17)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
+    self.normalizationWeight_j1pt_120_200_PT120UP = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(16)
+    self.normalizationWeight_j1pt_120_200_PT120DOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(17)
 
-    self.normalizationWeight_j1pt_120_200_qmtopUP = self.normalizationHistogram_j1pt_120_200.GetBinContent(18)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
-    self.normalizationWeight_j1pt_120_200_qmtopDOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(19)/self.normalizationHistogram_j1pt_120_200.GetBinContent(1)
+    self.normalizationWeight_j1pt_120_200_qmtopUP = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(18)
+    self.normalizationWeight_j1pt_120_200_qmtopDOWN = self.normalizationHistogram_j1pt_120_200.GetBinContent(1)/self.normalizationHistogram_j1pt_120_200.GetBinContent(19)
 
     self.normalizationHistogram_j1pt_200_350 = self.reweightFile.Get("h_THUggH_j1pt200to350")
-    self.normalizationWeight_j1pt_200_350_MuUP = self.normalizationHistogram_j1pt_200_350.GetBinContent(2)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
-    self.normalizationWeight_j1pt_200_350_MuDOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(3)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
+    self.normalizationWeight_j1pt_200_350_MuUP = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(2)
+    self.normalizationWeight_j1pt_200_350_MuDOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(3)
 
-    self.normalizationWeight_j1pt_200_350_ResUP = self.normalizationHistogram_j1pt_200_350.GetBinContent(4)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
-    self.normalizationWeight_j1pt_200_350_ResDOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(5)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
+    self.normalizationWeight_j1pt_200_350_ResUP = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(4)
+    self.normalizationWeight_j1pt_200_350_ResDOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(5)
 
-    self.normalizationWeight_j1pt_200_350_Mig01UP = self.normalizationHistogram_j1pt_200_350.GetBinContent(6)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
-    self.normalizationWeight_j1pt_200_350_Mig01DOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(7)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
+    self.normalizationWeight_j1pt_200_350_Mig01UP = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(6)
+    self.normalizationWeight_j1pt_200_350_Mig01DOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(7)
 
-    self.normalizationWeight_j1pt_200_350_Mig12UP = self.normalizationHistogram_j1pt_200_350.GetBinContent(8)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
-    self.normalizationWeight_j1pt_200_350_Mig12DOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(9)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
+    self.normalizationWeight_j1pt_200_350_Mig12UP = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(8)
+    self.normalizationWeight_j1pt_200_350_Mig12DOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(9)
 
-    self.normalizationWeight_j1pt_200_350_VBF2jUP = self.normalizationHistogram_j1pt_200_350.GetBinContent(10)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
-    self.normalizationWeight_j1pt_200_350_VBF2jDOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(11)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
+    self.normalizationWeight_j1pt_200_350_VBF2jUP = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(10)
+    self.normalizationWeight_j1pt_200_350_VBF2jDOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(11)
 
-    self.normalizationWeight_j1pt_200_350_VBF3jUP = self.normalizationHistogram_j1pt_200_350.GetBinContent(12)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
-    self.normalizationWeight_j1pt_200_350_VBF3jDOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(13)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
+    self.normalizationWeight_j1pt_200_350_VBF3jUP = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(12)
+    self.normalizationWeight_j1pt_200_350_VBF3jDOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(13)
     
-    self.normalizationWeight_j1pt_200_350_PT60UP = self.normalizationHistogram_j1pt_200_350.GetBinContent(14)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
-    self.normalizationWeight_j1pt_200_350_PT60DOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(15)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
+    self.normalizationWeight_j1pt_200_350_PT60UP = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(14)
+    self.normalizationWeight_j1pt_200_350_PT60DOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(15)
 
-    self.normalizationWeight_j1pt_200_350_PT120UP = self.normalizationHistogram_j1pt_200_350.GetBinContent(16)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
-    self.normalizationWeight_j1pt_200_350_PT120DOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(17)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
+    self.normalizationWeight_j1pt_200_350_PT120UP = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(16)
+    self.normalizationWeight_j1pt_200_350_PT120DOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(17)
 
-    self.normalizationWeight_j1pt_200_350_qmtopUP = self.normalizationHistogram_j1pt_200_350.GetBinContent(18)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
-    self.normalizationWeight_j1pt_200_350_qmtopDOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(19)/self.normalizationHistogram_j1pt_200_350.GetBinContent(1)
+    self.normalizationWeight_j1pt_200_350_qmtopUP = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(18)
+    self.normalizationWeight_j1pt_200_350_qmtopDOWN = self.normalizationHistogram_j1pt_200_350.GetBinContent(1)/self.normalizationHistogram_j1pt_200_350.GetBinContent(19)
 
     self.normalizationHistogram_j1pt_gt350 = self.reweightFile.Get("h_THUggH_j1ptgt350")
-    self.normalizationWeight_j1pt_gt350_MuUP = self.normalizationHistogram_j1pt_gt350.GetBinContent(2)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
-    self.normalizationWeight_j1pt_gt350_MuDOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(3)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
+    self.normalizationWeight_j1pt_gt350_MuUP = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(2)
+    self.normalizationWeight_j1pt_gt350_MuDOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(3)
 
-    self.normalizationWeight_j1pt_gt350_ResUP = self.normalizationHistogram_j1pt_gt350.GetBinContent(4)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
-    self.normalizationWeight_j1pt_gt350_ResDOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(5)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
+    self.normalizationWeight_j1pt_gt350_ResUP = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(4)
+    self.normalizationWeight_j1pt_gt350_ResDOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(5)
 
-    self.normalizationWeight_j1pt_gt350_Mig01UP = self.normalizationHistogram_j1pt_gt350.GetBinContent(6)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
-    self.normalizationWeight_j1pt_gt350_Mig01DOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(7)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
+    self.normalizationWeight_j1pt_gt350_Mig01UP = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(6)
+    self.normalizationWeight_j1pt_gt350_Mig01DOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(7)
 
-    self.normalizationWeight_j1pt_gt350_Mig12UP = self.normalizationHistogram_j1pt_gt350.GetBinContent(8)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
-    self.normalizationWeight_j1pt_gt350_Mig12DOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(9)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
+    self.normalizationWeight_j1pt_gt350_Mig12UP = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(8)
+    self.normalizationWeight_j1pt_gt350_Mig12DOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(9)
 
-    self.normalizationWeight_j1pt_gt350_VBF2jUP = self.normalizationHistogram_j1pt_gt350.GetBinContent(10)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
-    self.normalizationWeight_j1pt_gt350_VBF2jDOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(11)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
+    self.normalizationWeight_j1pt_gt350_VBF2jUP = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(10)
+    self.normalizationWeight_j1pt_gt350_VBF2jDOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(11)
 
-    self.normalizationWeight_j1pt_gt350_VBF3jUP = self.normalizationHistogram_j1pt_gt350.GetBinContent(12)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
-    self.normalizationWeight_j1pt_gt350_VBF3jDOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(13)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
+    self.normalizationWeight_j1pt_gt350_VBF3jUP = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(12)
+    self.normalizationWeight_j1pt_gt350_VBF3jDOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(13)
     
-    self.normalizationWeight_j1pt_gt350_PT60UP = self.normalizationHistogram_j1pt_gt350.GetBinContent(14)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
-    self.normalizationWeight_j1pt_gt350_PT60DOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(15)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
+    self.normalizationWeight_j1pt_gt350_PT60UP = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(14)
+    self.normalizationWeight_j1pt_gt350_PT60DOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(15)
 
-    self.normalizationWeight_j1pt_gt350_PT120UP = self.normalizationHistogram_j1pt_gt350.GetBinContent(16)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
-    self.normalizationWeight_j1pt_gt350_PT120DOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(17)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
+    self.normalizationWeight_j1pt_gt350_PT120UP = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(16)
+    self.normalizationWeight_j1pt_gt350_PT120DOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(17)
 
-    self.normalizationWeight_j1pt_gt350_qmtopUP = self.normalizationHistogram_j1pt_gt350.GetBinContent(18)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
-    self.normalizationWeight_j1pt_gt350_qmtopDOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(19)/self.normalizationHistogram_j1pt_gt350.GetBinContent(1)
+    self.normalizationWeight_j1pt_gt350_qmtopUP = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(18)
+    self.normalizationWeight_j1pt_gt350_qmtopDOWN = self.normalizationHistogram_j1pt_gt350.GetBinContent(1)/self.normalizationHistogram_j1pt_gt350.GetBinContent(19)
 
 def CalculateggHNormalizationWeight(self,theTree):
     self.value[0] = 1.0
