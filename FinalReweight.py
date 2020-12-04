@@ -7,11 +7,12 @@ import traceback
 from Configurations.ConfigDefinition import ReweightConfiguration
 from array import array
 from tqdm import tqdm
+import Utilities.BranchRemovalTool as branchRemovalTool
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Handle script for performing final reweighting of events')
     parser.add_argument('--ConfigFiles',nargs = '+',help="Python based config files used to specify samples",required=True)
-    parser.add_argument('--RemovalRecipe',help = "Provide the recipe to remove the branches from the file, and then exit", action="store_true")
+    parser.add_argument('--Remove',help = "Provide the recipe to remove the branches from the file, and then exit", action="store_true")
 
     args = parser.parse_args()
     theLoader= RecursiveLoader()    
@@ -25,7 +26,7 @@ if __name__ == "__main__":
                 theConfig = getattr(theConfigModule,item)
                 if isinstance(theConfig,ReweightConfiguration):
                     break                        
-            if(args.RemovalRecipe):
+            if(args.Remove):
                 #okay, let's figure out the name of any branches we're going add.
                 branchesToAdd=[]
                 for weight in theConfig.listOfWeights:                
@@ -38,7 +39,8 @@ if __name__ == "__main__":
                     if weight.hasUpDownUncertainties:
                         for uncertainty in weight.uncertaintyVariationList:
                             branchesToAdd.append('FinalWeighting_'+uncertainty)                        
-
+                #this is now deprecated with the creation of the branch removal tool
+                """
                 print("Removal Recipe: \'\n")
                 theRecipe = "python PruneBranch.py --Branches "
                 for branch in branchesToAdd:
@@ -46,7 +48,10 @@ if __name__ == "__main__":
                 theRecipe += '--Files '
                 print(theRecipe)
                 print("\n\'")
+                """
+                branchRemovalTool.PruneBranches(theConfig.inputFile,branchesToAdd)
                 continue
+
             #now get on with it
             theFile = ROOT.TFile.Open(theConfig.inputFile,"UPDATE")
             theTree = theFile.mt_Selected
