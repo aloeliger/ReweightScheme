@@ -11,6 +11,7 @@ from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingW
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
 from Configurations.Weights.QCDAcceptanceWeights.qqH_QCD_Acceptance import VBFStyleWeight_2017
 from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import qqHStyleWeight_Differential
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import qqHRawQCDScaleAcceptance
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -36,5 +37,6 @@ EWKConfiguration.listOfWeights = [
     bTaggingWeight_2017,
     PrefiringWeighting,
     VBFStyleWeight_2017,
-    qqHStyleWeight_Differential
+    qqHStyleWeight_Differential,
+    qqHRawQCDScaleAcceptance,
 ]

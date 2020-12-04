@@ -13,6 +13,7 @@ from Configurations.Weights.HiggsReweightingModule.HiggsPtReweighting import Hig
 from Configurations.Weights.QCDAcceptanceWeights.ggH_QCD_Acceptance import ggHStyleWeight_2017
 from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import ggHStyleWeight_Differential
 from Configurations.Weights.ggHTheoryNormalizationWeight.ggHTheoryNormalizationWeight import ggHTheoryNormalizationWeight
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import ggHRawQCDScaleAcceptance
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -41,4 +42,5 @@ EWKConfiguration.listOfWeights = [
     ggHStyleWeight_2017,
     ggHStyleWeight_Differential,
     ggHTheoryNormalizationWeight,
+    ggHRawQCDScaleAcceptance,
 ]

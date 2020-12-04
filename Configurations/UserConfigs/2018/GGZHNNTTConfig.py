@@ -12,6 +12,7 @@ from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import Prefiri
 from Configurations.Weights.QCDAcceptanceWeights.ggVH_QCD_Acceptance import ggZHNNTTStyleWeight_2018
 from Configurations.Weights.PythiaPS.PartonShowerShapeWeight import partonShowerWeight
 from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import GGZHNNTTStyleWeight_Differential
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import ggZHRawQCDScaleAcceptance
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -39,4 +40,5 @@ EWKConfiguration.listOfWeights = [
     ggZHNNTTStyleWeight_2018,
     partonShowerWeight,
     GGZHNNTTStyleWeight_Differential,
+    ggZHRawQCDScaleAcceptance,
 ]

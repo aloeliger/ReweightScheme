@@ -9,6 +9,7 @@ from Configurations.Weights.TauIDModule.TauIDWeight import tauIDWeight_2016 as t
 from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2016 as triggerWeight
 from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight_2016
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import ggZHRawQCDScaleAcceptance
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -33,4 +34,5 @@ EWKConfiguration.listOfWeights = [
     triggerWeight,
     bTaggingWeight_2016,
     PrefiringWeighting,
+    ggZHRawQCDScaleAcceptance,
 ]

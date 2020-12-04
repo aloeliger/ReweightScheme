@@ -14,6 +14,7 @@ from Configurations.Weights.QCDAcceptanceWeights.ggH_QCD_Acceptance import ggHSt
 from Configurations.Weights.PythiaPS.PartonShowerShapeWeight import partonShowerWeight
 from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import ggHStyleWeight_Differential
 from Configurations.Weights.ggHTheoryNormalizationWeight.ggHTheoryNormalizationWeight import ggHTheoryNormalizationWeight
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import ggHRawQCDScaleAcceptance
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -43,4 +44,5 @@ EWKConfiguration.listOfWeights = [
     partonShowerWeight,
     ggHStyleWeight_Differential,
     ggHTheoryNormalizationWeight,
+    ggHRawQCDScaleAcceptance,
 ]
