@@ -12,9 +12,17 @@ from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import Prefiri
 from Configurations.Weights.HiggsReweightingModule.HiggsPtReweighting import HiggsPtReweighting
 from Configurations.Weights.QCDAcceptanceWeights.ggH_QCD_Acceptance import ggHStyleWeight_2018
 from Configurations.Weights.PythiaPS.PartonShowerShapeWeight import partonShowerWeight
+
 from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import ggHStyleWeight_Differential
-from Configurations.Weights.ggHTheoryNormalizationWeight.ggHTheoryNormalizationWeight import ggHTheoryNormalizationWeight
+
 from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import ggHRawQCDScaleAcceptance
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import dummyqqHRawQCDScaleAcceptance
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import dummyVHRawQCDScaleAcceptance
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import dummyggZHRawQCDScaleAcceptance
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import dummyttHRawQCDScaleAcceptance
+
+from Configurations.Weights.ggHTheoryWeight.ggHTheoryWeight import  ggHTheoryWeight
+from Configurations.Weights.ggHTheoryNormalizationWeight.ggHTheoryNormalizationWeight import ggHTheoryNormalizationWeight
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -43,6 +51,14 @@ EWKConfiguration.listOfWeights = [
     ggHStyleWeight_2018,
     partonShowerWeight,
     ggHStyleWeight_Differential,
+
     ggHTheoryNormalizationWeight,
+
     ggHRawQCDScaleAcceptance,
+    dummyqqHRawQCDScaleAcceptance,
+    dummyVHRawQCDScaleAcceptance,
+    dummyggZHRawQCDScaleAcceptance,
+    dummyttHRawQCDScaleAcceptance,
+
+    ggHTheoryWeight,
 ]

@@ -82,6 +82,9 @@ def prepUpAndDownConstants(self):
 def CalculateDifferentialStyleWeight(self,theTree):
     self.value[0] = 1.0
 
+def CalculateDummyDifferentialStyleUncertainty(self,theTree,uncert):
+    self.uncertaintyVariationArrays[uncert][0] = 1.0
+
 def CalculateDifferentialStyleWeight_pth_0_45_UP(self,theTree,uncert):
     if (theTree.Rivet_higgsPt >= 0 and theTree.Rivet_higgsPt < 45):
         self.uncertaintyVariationArrays[uncert][0] = theTree.lheweight_muR2_muF2 *self.weight_pth_0_45_UP
@@ -448,6 +451,87 @@ qqHStyleWeight_Differential.uncertaintyVariationFunctions={
 qqHStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
 qqHStyleWeight_Differential.prepUpAndDownConstants(qqHStyleWeight_Differential)
 
+dummyqqHStyleWeight_Differential = Weight()
+dummyqqHStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_qqH'
+dummyqqHStyleWeight_Differential.reweightFile = ROOT.TFile(localWeightDataPath+'/theory_uncertainties_differential/qqH_htt125.root')
+dummyqqHStyleWeight_Differential.hasUpDownUncertainties = True
+dummyqqHStyleWeight_Differential.CalculateWeight = CalculateDifferentialStyleWeight
+dummyqqHStyleWeight_Differential.uncertaintyVariationList = [
+    'QCDScaleAcceptance_Differential_qqH_pth_0_45UP',
+    'QCDScaleAcceptance_Differential_qqH_pth_0_45DOWN',
+    'QCDScaleAcceptance_Differential_qqH_pth_45_80UP',
+    'QCDScaleAcceptance_Differential_qqH_pth_45_80DOWN',
+    'QCDScaleAcceptance_Differential_qqH_pth_80_120UP',
+    'QCDScaleAcceptance_Differential_qqH_pth_80_120DOWN',
+    'QCDScaleAcceptance_Differential_qqH_pth_120_200UP',
+    'QCDScaleAcceptance_Differential_qqH_pth_120_200DOWN',
+    'QCDScaleAcceptance_Differential_qqH_pth_200_350UP',
+    'QCDScaleAcceptance_Differential_qqH_pth_200_350DOWN',
+    'QCDScaleAcceptance_Differential_qqH_pth_350_450UP',
+    'QCDScaleAcceptance_Differential_qqH_pth_350_450DOWN',
+    'QCDScaleAcceptance_Differential_qqH_pth_gt450UP',
+    'QCDScaleAcceptance_Differential_qqH_pth_gt450DOWN',
+    'QCDScaleAcceptance_Differential_qqH_njets0UP',
+    'QCDScaleAcceptance_Differential_qqH_njets0DOWN',
+    'QCDScaleAcceptance_Differential_qqH_njets1UP',
+    'QCDScaleAcceptance_Differential_qqH_njets1DOWN',
+    'QCDScaleAcceptance_Differential_qqH_njets2UP',
+    'QCDScaleAcceptance_Differential_qqH_njets2DOWN',
+    'QCDScaleAcceptance_Differential_qqH_njets3UP',
+    'QCDScaleAcceptance_Differential_qqH_njets3DOWN',
+    'QCDScaleAcceptance_Differential_qqH_njets4UP',
+    'QCDScaleAcceptance_Differential_qqH_njets4DOWN',
+    'QCDScaleAcceptance_Differential_qqH_j1pt_30_60UP',
+    'QCDScaleAcceptance_Differential_qqH_j1pt_30_60DOWN',
+    'QCDScaleAcceptance_Differential_qqH_j1pt_60_120UP',
+    'QCDScaleAcceptance_Differential_qqH_j1pt_60_120DOWN',
+    'QCDScaleAcceptance_Differential_qqH_j1pt_120_200UP',
+    'QCDScaleAcceptance_Differential_qqH_j1pt_120_200DOWN',
+    'QCDScaleAcceptance_Differential_qqH_j1pt_200_350UP',
+    'QCDScaleAcceptance_Differential_qqH_j1pt_200_350DOWN',
+    'QCDScaleAcceptance_Differential_qqH_j1pt_gt350UP',
+    'QCDScaleAcceptance_Differential_qqH_j1pt_gt350DOWN',
+]
+dummyqqHStyleWeight_Differential.InitUncertaintyVariations()
+dummyqqHStyleWeight_Differential.uncertaintyVariationFunctions={
+    'QCDScaleAcceptance_Differential_qqH_pth_0_45UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_pth_0_45DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_pth_45_80UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_pth_45_80DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_pth_80_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_pth_80_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_pth_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_pth_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_pth_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_pth_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_pth_350_450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_pth_350_450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_pth_gt450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_pth_gt450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_njets0UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_njets0DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_njets1UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_njets1DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_njets2UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_njets2DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_njets3UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_njets3DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_njets4UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_njets4DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_j1pt_30_60UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_j1pt_30_60DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_j1pt_60_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_j1pt_60_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_j1pt_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_j1pt_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_j1pt_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_j1pt_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_j1pt_gt350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_qqH_j1pt_gt350DOWN':CalculateDummyDifferentialStyleUncertainty,
+}
+dummyqqHStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
+dummyqqHStyleWeight_Differential.prepUpAndDownConstants(dummyqqHStyleWeight_Differential)
+
 WminusHStyleWeight_Differential = Weight()
 WminusHStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_WminusH'
 WminusHStyleWeight_Differential.reweightFile = ROOT.TFile(localWeightDataPath+'/theory_uncertainties_differential/WminusH125.root')
@@ -528,6 +612,87 @@ WminusHStyleWeight_Differential.uncertaintyVariationFunctions={
 }
 WminusHStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
 WminusHStyleWeight_Differential.prepUpAndDownConstants(WminusHStyleWeight_Differential)
+
+dummyWminusHStyleWeight_Differential = Weight()
+dummyWminusHStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_WminusH'
+dummyWminusHStyleWeight_Differential.reweightFile = ROOT.TFile(localWeightDataPath+'/theory_uncertainties_differential/WminusH125.root')
+dummyWminusHStyleWeight_Differential.hasUpDownUncertainties = True
+dummyWminusHStyleWeight_Differential.CalculateWeight = CalculateDifferentialStyleWeight
+dummyWminusHStyleWeight_Differential.uncertaintyVariationList = [
+    'QCDScaleAcceptance_Differential_WminusH_pth_0_45UP',
+    'QCDScaleAcceptance_Differential_WminusH_pth_0_45DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_pth_45_80UP',
+    'QCDScaleAcceptance_Differential_WminusH_pth_45_80DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_pth_80_120UP',
+    'QCDScaleAcceptance_Differential_WminusH_pth_80_120DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_pth_120_200UP',
+    'QCDScaleAcceptance_Differential_WminusH_pth_120_200DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_pth_200_350UP',
+    'QCDScaleAcceptance_Differential_WminusH_pth_200_350DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_pth_350_450UP',
+    'QCDScaleAcceptance_Differential_WminusH_pth_350_450DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_pth_gt450UP',
+    'QCDScaleAcceptance_Differential_WminusH_pth_gt450DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_njets0UP',
+    'QCDScaleAcceptance_Differential_WminusH_njets0DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_njets1UP',
+    'QCDScaleAcceptance_Differential_WminusH_njets1DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_njets2UP',
+    'QCDScaleAcceptance_Differential_WminusH_njets2DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_njets3UP',
+    'QCDScaleAcceptance_Differential_WminusH_njets3DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_njets4UP',
+    'QCDScaleAcceptance_Differential_WminusH_njets4DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_30_60UP',
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_30_60DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_60_120UP',
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_60_120DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_120_200UP',
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_120_200DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_200_350UP',
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_200_350DOWN',
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_gt350UP',
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_gt350DOWN',
+]
+dummyWminusHStyleWeight_Differential.InitUncertaintyVariations()
+dummyWminusHStyleWeight_Differential.uncertaintyVariationFunctions={
+    'QCDScaleAcceptance_Differential_WminusH_pth_0_45UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_pth_0_45DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_pth_45_80UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_pth_45_80DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_pth_80_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_pth_80_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_pth_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_pth_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_pth_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_pth_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_pth_350_450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_pth_350_450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_pth_gt450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_pth_gt450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_njets0UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_njets0DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_njets1UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_njets1DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_njets2UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_njets2DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_njets3UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_njets3DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_njets4UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_njets4DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_30_60UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_30_60DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_60_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_60_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_gt350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WminusH_j1pt_gt350DOWN':CalculateDummyDifferentialStyleUncertainty,
+}
+dummyWminusHStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
+dummyWminusHStyleWeight_Differential.prepUpAndDownConstants(dummyWminusHStyleWeight_Differential)
 
 WplusHStyleWeight_Differential = Weight()
 WplusHStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_WplusH'
@@ -610,6 +775,87 @@ WplusHStyleWeight_Differential.uncertaintyVariationFunctions={
 WplusHStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
 WplusHStyleWeight_Differential.prepUpAndDownConstants(WplusHStyleWeight_Differential)
 
+dummyWplusHStyleWeight_Differential = Weight()
+dummyWplusHStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_WplusH'
+dummyWplusHStyleWeight_Differential.reweightFile = ROOT.TFile(localWeightDataPath+'/theory_uncertainties_differential/Wplus125.root')
+dummyWplusHStyleWeight_Differential.hasUpDownUncertainties = True
+dummyWplusHStyleWeight_Differential.CalculateWeight = CalculateDifferentialStyleWeight
+dummyWplusHStyleWeight_Differential.uncertaintyVariationList = [
+    'QCDScaleAcceptance_Differential_WplusH_pth_0_45UP',
+    'QCDScaleAcceptance_Differential_WplusH_pth_0_45DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_pth_45_80UP',
+    'QCDScaleAcceptance_Differential_WplusH_pth_45_80DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_pth_80_120UP',
+    'QCDScaleAcceptance_Differential_WplusH_pth_80_120DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_pth_120_200UP',
+    'QCDScaleAcceptance_Differential_WplusH_pth_120_200DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_pth_200_350UP',
+    'QCDScaleAcceptance_Differential_WplusH_pth_200_350DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_pth_350_450UP',
+    'QCDScaleAcceptance_Differential_WplusH_pth_350_450DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_pth_gt450UP',
+    'QCDScaleAcceptance_Differential_WplusH_pth_gt450DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_njets0UP',
+    'QCDScaleAcceptance_Differential_WplusH_njets0DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_njets1UP',
+    'QCDScaleAcceptance_Differential_WplusH_njets1DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_njets2UP',
+    'QCDScaleAcceptance_Differential_WplusH_njets2DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_njets3UP',
+    'QCDScaleAcceptance_Differential_WplusH_njets3DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_njets4UP',
+    'QCDScaleAcceptance_Differential_WplusH_njets4DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_30_60UP',
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_30_60DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_60_120UP',
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_60_120DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_120_200UP',
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_120_200DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_200_350UP',
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_200_350DOWN',
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_gt350UP',
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_gt350DOWN',
+]
+dummyWplusHStyleWeight_Differential.InitUncertaintyVariations()
+dummyWplusHStyleWeight_Differential.uncertaintyVariationFunctions={
+    'QCDScaleAcceptance_Differential_WplusH_pth_0_45UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_pth_0_45DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_pth_45_80UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_pth_45_80DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_pth_80_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_pth_80_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_pth_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_pth_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_pth_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_pth_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_pth_350_450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_pth_350_450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_pth_gt450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_pth_gt450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_njets0UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_njets0DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_njets1UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_njets1DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_njets2UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_njets2DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_njets3UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_njets3DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_njets4UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_njets4DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_30_60UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_30_60DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_60_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_60_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_gt350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_WplusH_j1pt_gt350DOWN':CalculateDummyDifferentialStyleUncertainty,
+}
+dummyWplusHStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
+dummyWplusHStyleWeight_Differential.prepUpAndDownConstants(dummyWplusHStyleWeight_Differential)
+
 ZHStyleWeight_Differential = Weight()
 ZHStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_ZH'
 ZHStyleWeight_Differential.reweightFile = ROOT.TFile(localWeightDataPath+'/theory_uncertainties_differential/ZH125.root')
@@ -690,6 +936,87 @@ ZHStyleWeight_Differential.uncertaintyVariationFunctions={
 }
 ZHStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
 ZHStyleWeight_Differential.prepUpAndDownConstants(ZHStyleWeight_Differential)
+
+dummyZHStyleWeight_Differential = Weight()
+dummyZHStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_ZH'
+dummyZHStyleWeight_Differential.reweightFile = ROOT.TFile(localWeightDataPath+'/theory_uncertainties_differential/ZH125.root')
+dummyZHStyleWeight_Differential.hasUpDownUncertainties = True
+dummyZHStyleWeight_Differential.CalculateWeight = CalculateDifferentialStyleWeight
+dummyZHStyleWeight_Differential.uncertaintyVariationList = [
+    'QCDScaleAcceptance_Differential_ZH_pth_0_45UP',
+    'QCDScaleAcceptance_Differential_ZH_pth_0_45DOWN',
+    'QCDScaleAcceptance_Differential_ZH_pth_45_80UP',
+    'QCDScaleAcceptance_Differential_ZH_pth_45_80DOWN',
+    'QCDScaleAcceptance_Differential_ZH_pth_80_120UP',
+    'QCDScaleAcceptance_Differential_ZH_pth_80_120DOWN',
+    'QCDScaleAcceptance_Differential_ZH_pth_120_200UP',
+    'QCDScaleAcceptance_Differential_ZH_pth_120_200DOWN',
+    'QCDScaleAcceptance_Differential_ZH_pth_200_350UP',
+    'QCDScaleAcceptance_Differential_ZH_pth_200_350DOWN',
+    'QCDScaleAcceptance_Differential_ZH_pth_350_450UP',
+    'QCDScaleAcceptance_Differential_ZH_pth_350_450DOWN',
+    'QCDScaleAcceptance_Differential_ZH_pth_gt450UP',
+    'QCDScaleAcceptance_Differential_ZH_pth_gt450DOWN',
+    'QCDScaleAcceptance_Differential_ZH_njets0UP',
+    'QCDScaleAcceptance_Differential_ZH_njets0DOWN',
+    'QCDScaleAcceptance_Differential_ZH_njets1UP',
+    'QCDScaleAcceptance_Differential_ZH_njets1DOWN',
+    'QCDScaleAcceptance_Differential_ZH_njets2UP',
+    'QCDScaleAcceptance_Differential_ZH_njets2DOWN',
+    'QCDScaleAcceptance_Differential_ZH_njets3UP',
+    'QCDScaleAcceptance_Differential_ZH_njets3DOWN',
+    'QCDScaleAcceptance_Differential_ZH_njets4UP',
+    'QCDScaleAcceptance_Differential_ZH_njets4DOWN',
+    'QCDScaleAcceptance_Differential_ZH_j1pt_30_60UP',
+    'QCDScaleAcceptance_Differential_ZH_j1pt_30_60DOWN',
+    'QCDScaleAcceptance_Differential_ZH_j1pt_60_120UP',
+    'QCDScaleAcceptance_Differential_ZH_j1pt_60_120DOWN',
+    'QCDScaleAcceptance_Differential_ZH_j1pt_120_200UP',
+    'QCDScaleAcceptance_Differential_ZH_j1pt_120_200DOWN',
+    'QCDScaleAcceptance_Differential_ZH_j1pt_200_350UP',
+    'QCDScaleAcceptance_Differential_ZH_j1pt_200_350DOWN',
+    'QCDScaleAcceptance_Differential_ZH_j1pt_gt350UP',
+    'QCDScaleAcceptance_Differential_ZH_j1pt_gt350DOWN',
+]
+dummyZHStyleWeight_Differential.InitUncertaintyVariations()
+dummyZHStyleWeight_Differential.uncertaintyVariationFunctions={
+    'QCDScaleAcceptance_Differential_ZH_pth_0_45UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_pth_0_45DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_pth_45_80UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_pth_45_80DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_pth_80_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_pth_80_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_pth_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_pth_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_pth_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_pth_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_pth_350_450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_pth_350_450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_pth_gt450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_pth_gt450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_njets0UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_njets0DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_njets1UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_njets1DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_njets2UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_njets2DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_njets3UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_njets3DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_njets4UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_njets4DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_j1pt_30_60UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_j1pt_30_60DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_j1pt_60_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_j1pt_60_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_j1pt_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_j1pt_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_j1pt_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_j1pt_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_j1pt_gt350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ZH_j1pt_gt350DOWN':CalculateDummyDifferentialStyleUncertainty,
+}
+dummyZHStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
+dummyZHStyleWeight_Differential.prepUpAndDownConstants(dummyZHStyleWeight_Differential)
 
 GGZHLLTTStyleWeight_Differential = Weight()
 GGZHLLTTStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_GGZHLLTT'
@@ -772,6 +1099,87 @@ GGZHLLTTStyleWeight_Differential.uncertaintyVariationFunctions={
 GGZHLLTTStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
 GGZHLLTTStyleWeight_Differential.prepUpAndDownConstants(GGZHLLTTStyleWeight_Differential)
 
+dummyGGZHLLTTStyleWeight_Differential = Weight()
+dummyGGZHLLTTStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_GGZHLLTT'
+dummyGGZHLLTTStyleWeight_Differential.reweightFile = ROOT.TFile(localWeightDataPath+'/theory_uncertainties_differential/GGZHLLTT125.root')
+dummyGGZHLLTTStyleWeight_Differential.hasUpDownUncertainties = True
+dummyGGZHLLTTStyleWeight_Differential.CalculateWeight = CalculateDifferentialStyleWeight
+dummyGGZHLLTTStyleWeight_Differential.uncertaintyVariationList = [
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_0_45UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_0_45DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_45_80UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_45_80DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_80_120UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_80_120DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_120_200UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_120_200DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_200_350UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_200_350DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_350_450UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_350_450DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_gt450UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_gt450DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets0UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets0DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets1UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets1DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets2UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets2DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets3UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets3DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets4UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets4DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_30_60UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_30_60DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_60_120UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_60_120DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_120_200UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_120_200DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_200_350UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_200_350DOWN',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_gt350UP',
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_gt350DOWN',
+]
+dummyGGZHLLTTStyleWeight_Differential.InitUncertaintyVariations()
+dummyGGZHLLTTStyleWeight_Differential.uncertaintyVariationFunctions={
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_0_45UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_0_45DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_45_80UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_45_80DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_80_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_80_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_350_450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_350_450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_gt450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_pth_gt450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets0UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets0DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets1UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets1DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets2UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets2DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets3UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets3DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets4UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_njets4DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_30_60UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_30_60DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_60_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_60_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_gt350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHLLTT_j1pt_gt350DOWN':CalculateDummyDifferentialStyleUncertainty,
+}
+dummyGGZHLLTTStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
+dummyGGZHLLTTStyleWeight_Differential.prepUpAndDownConstants(dummyGGZHLLTTStyleWeight_Differential)
+
 GGZHNNTTStyleWeight_Differential = Weight()
 GGZHNNTTStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_GGZHNNTT'
 GGZHNNTTStyleWeight_Differential.reweightFile = ROOT.TFile(localWeightDataPath+'/theory_uncertainties_differential/GGZHNNTT125.root')
@@ -852,6 +1260,87 @@ GGZHNNTTStyleWeight_Differential.uncertaintyVariationFunctions={
 }
 GGZHNNTTStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
 GGZHNNTTStyleWeight_Differential.prepUpAndDownConstants(GGZHNNTTStyleWeight_Differential)
+
+dummyGGZHNNTTStyleWeight_Differential = Weight()
+dummyGGZHNNTTStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_GGZHNNTT'
+dummyGGZHNNTTStyleWeight_Differential.reweightFile = ROOT.TFile(localWeightDataPath+'/theory_uncertainties_differential/GGZHNNTT125.root')
+dummyGGZHNNTTStyleWeight_Differential.hasUpDownUncertainties = True
+dummyGGZHNNTTStyleWeight_Differential.CalculateWeight = CalculateDifferentialStyleWeight
+dummyGGZHNNTTStyleWeight_Differential.uncertaintyVariationList = [
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_0_45UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_0_45DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_45_80UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_45_80DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_80_120UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_80_120DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_120_200UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_120_200DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_200_350UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_200_350DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_350_450UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_350_450DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_gt450UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_gt450DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets0UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets0DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets1UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets1DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets2UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets2DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets3UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets3DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets4UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets4DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_30_60UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_30_60DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_60_120UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_60_120DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_120_200UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_120_200DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_200_350UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_200_350DOWN',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_gt350UP',
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_gt350DOWN',
+]
+dummyGGZHNNTTStyleWeight_Differential.InitUncertaintyVariations()
+dummyGGZHNNTTStyleWeight_Differential.uncertaintyVariationFunctions={
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_0_45UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_0_45DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_45_80UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_45_80DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_80_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_80_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_350_450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_350_450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_gt450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_pth_gt450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets0UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets0DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets1UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets1DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets2UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets2DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets3UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets3DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets4UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_njets4DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_30_60UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_30_60DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_60_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_60_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_gt350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHNNTT_j1pt_gt350DOWN':CalculateDummyDifferentialStyleUncertainty,
+}
+dummyGGZHNNTTStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
+dummyGGZHNNTTStyleWeight_Differential.prepUpAndDownConstants(dummyGGZHNNTTStyleWeight_Differential)
 
 GGZHQQTTStyleWeight_Differential = Weight()
 GGZHQQTTStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_GGZHQQTT'
@@ -934,6 +1423,87 @@ GGZHQQTTStyleWeight_Differential.uncertaintyVariationFunctions={
 GGZHQQTTStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
 GGZHQQTTStyleWeight_Differential.prepUpAndDownConstants(GGZHQQTTStyleWeight_Differential)
 
+dummyGGZHQQTTStyleWeight_Differential = Weight()
+dummyGGZHQQTTStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_GGZHQQTT'
+dummyGGZHQQTTStyleWeight_Differential.reweightFile = ROOT.TFile(localWeightDataPath+'/theory_uncertainties_differential/GGZHQQTT125.root')
+dummyGGZHQQTTStyleWeight_Differential.hasUpDownUncertainties = True
+dummyGGZHQQTTStyleWeight_Differential.CalculateWeight = CalculateDifferentialStyleWeight
+dummyGGZHQQTTStyleWeight_Differential.uncertaintyVariationList = [
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_0_45UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_0_45DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_45_80UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_45_80DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_80_120UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_80_120DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_120_200UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_120_200DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_200_350UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_200_350DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_350_450UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_350_450DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_gt450UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_gt450DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets0UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets0DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets1UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets1DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets2UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets2DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets3UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets3DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets4UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets4DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_30_60UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_30_60DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_60_120UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_60_120DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_120_200UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_120_200DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_200_350UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_200_350DOWN',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_gt350UP',
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_gt350DOWN',
+]
+dummyGGZHQQTTStyleWeight_Differential.InitUncertaintyVariations()
+dummyGGZHQQTTStyleWeight_Differential.uncertaintyVariationFunctions={
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_0_45UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_0_45DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_45_80UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_45_80DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_80_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_80_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_350_450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_350_450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_gt450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_pth_gt450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets0UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets0DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets1UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets1DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets2UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets2DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets3UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets3DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets4UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_njets4DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_30_60UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_30_60DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_60_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_60_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_gt350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_GGZHQQTT_j1pt_gt350DOWN':CalculateDummyDifferentialStyleUncertainty,
+}
+dummyGGZHQQTTStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
+dummyGGZHQQTTStyleWeight_Differential.prepUpAndDownConstants(dummyGGZHQQTTStyleWeight_Differential)
+
 ttHStyleWeight_Differential = Weight()
 ttHStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_ttH'
 ttHStyleWeight_Differential.reweightFile = ROOT.TFile(localWeightDataPath+'/theory_uncertainties_differential/ttHTT125.root')
@@ -1014,3 +1584,84 @@ ttHStyleWeight_Differential.uncertaintyVariationFunctions={
 }
 ttHStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
 ttHStyleWeight_Differential.prepUpAndDownConstants(ttHStyleWeight_Differential)
+
+dummyttHStyleWeight_Differential = Weight()
+dummyttHStyleWeight_Differential.name = 'QCDScaleAcceptance_Differential_ttH'
+dummyttHStyleWeight_Differential.reweightFile = ROOT.TFile(localWeightDataPath+'/theory_uncertainties_differential/ttHTT125.root')
+dummyttHStyleWeight_Differential.hasUpDownUncertainties = True
+dummyttHStyleWeight_Differential.CalculateWeight = CalculateDifferentialStyleWeight
+dummyttHStyleWeight_Differential.uncertaintyVariationList = [
+    'QCDScaleAcceptance_Differential_ttH_pth_0_45UP',
+    'QCDScaleAcceptance_Differential_ttH_pth_0_45DOWN',
+    'QCDScaleAcceptance_Differential_ttH_pth_45_80UP',
+    'QCDScaleAcceptance_Differential_ttH_pth_45_80DOWN',
+    'QCDScaleAcceptance_Differential_ttH_pth_80_120UP',
+    'QCDScaleAcceptance_Differential_ttH_pth_80_120DOWN',
+    'QCDScaleAcceptance_Differential_ttH_pth_120_200UP',
+    'QCDScaleAcceptance_Differential_ttH_pth_120_200DOWN',
+    'QCDScaleAcceptance_Differential_ttH_pth_200_350UP',
+    'QCDScaleAcceptance_Differential_ttH_pth_200_350DOWN',
+    'QCDScaleAcceptance_Differential_ttH_pth_350_450UP',
+    'QCDScaleAcceptance_Differential_ttH_pth_350_450DOWN',
+    'QCDScaleAcceptance_Differential_ttH_pth_gt450UP',
+    'QCDScaleAcceptance_Differential_ttH_pth_gt450DOWN',
+    'QCDScaleAcceptance_Differential_ttH_njets0UP',
+    'QCDScaleAcceptance_Differential_ttH_njets0DOWN',
+    'QCDScaleAcceptance_Differential_ttH_njets1UP',
+    'QCDScaleAcceptance_Differential_ttH_njets1DOWN',
+    'QCDScaleAcceptance_Differential_ttH_njets2UP',
+    'QCDScaleAcceptance_Differential_ttH_njets2DOWN',
+    'QCDScaleAcceptance_Differential_ttH_njets3UP',
+    'QCDScaleAcceptance_Differential_ttH_njets3DOWN',
+    'QCDScaleAcceptance_Differential_ttH_njets4UP',
+    'QCDScaleAcceptance_Differential_ttH_njets4DOWN',
+    'QCDScaleAcceptance_Differential_ttH_j1pt_30_60UP',
+    'QCDScaleAcceptance_Differential_ttH_j1pt_30_60DOWN',
+    'QCDScaleAcceptance_Differential_ttH_j1pt_60_120UP',
+    'QCDScaleAcceptance_Differential_ttH_j1pt_60_120DOWN',
+    'QCDScaleAcceptance_Differential_ttH_j1pt_120_200UP',
+    'QCDScaleAcceptance_Differential_ttH_j1pt_120_200DOWN',
+    'QCDScaleAcceptance_Differential_ttH_j1pt_200_350UP',
+    'QCDScaleAcceptance_Differential_ttH_j1pt_200_350DOWN',
+    'QCDScaleAcceptance_Differential_ttH_j1pt_gt350UP',
+    'QCDScaleAcceptance_Differential_ttH_j1pt_gt350DOWN',
+]
+dummyttHStyleWeight_Differential.InitUncertaintyVariations()
+dummyttHStyleWeight_Differential.uncertaintyVariationFunctions={
+    'QCDScaleAcceptance_Differential_ttH_pth_0_45UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_pth_0_45DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_pth_45_80UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_pth_45_80DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_pth_80_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_pth_80_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_pth_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_pth_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_pth_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_pth_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_pth_350_450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_pth_350_450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_pth_gt450UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_pth_gt450DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_njets0UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_njets0DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_njets1UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_njets1DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_njets2UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_njets2DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_njets3UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_njets3DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_njets4UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_njets4DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_j1pt_30_60UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_j1pt_30_60DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_j1pt_60_120UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_j1pt_60_120DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_j1pt_120_200UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_j1pt_120_200DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_j1pt_200_350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_j1pt_200_350DOWN':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_j1pt_gt350UP':CalculateDummyDifferentialStyleUncertainty,
+    'QCDScaleAcceptance_Differential_ttH_j1pt_gt350DOWN':CalculateDummyDifferentialStyleUncertainty,
+}
+dummyttHStyleWeight_Differential.prepUpAndDownConstants = prepUpAndDownConstants
+dummyttHStyleWeight_Differential.prepUpAndDownConstants(dummyttHStyleWeight_Differential)

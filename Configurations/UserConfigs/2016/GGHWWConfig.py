@@ -9,7 +9,14 @@ from Configurations.Weights.TauIDModule.TauIDWeight import tauIDWeight_2016 as t
 from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2016 as triggerWeight
 from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight_2016
 from Configurations.Weights.PrefiringWeightModule.PrefiringWeight import PrefiringWeighting
+
 from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import ggHRawQCDScaleAcceptance
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import dummyqqHRawQCDScaleAcceptance
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import dummyVHRawQCDScaleAcceptance
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import dummyggZHRawQCDScaleAcceptance
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import dummyttHRawQCDScaleAcceptance
+
+from Configurations.Weights.ggHTheoryWeight.ggHTheoryWeight import  ggHTheoryWeight
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -35,4 +42,11 @@ EWKConfiguration.listOfWeights = [
     bTaggingWeight_2016,
     PrefiringWeighting,
     ggHRawQCDScaleAcceptance,
+
+    dummyqqHRawQCDScaleAcceptance,
+    dummyVHRawQCDScaleAcceptance,
+    dummyggZHRawQCDScaleAcceptance,
+    dummyttHRawQCDScaleAcceptance,
+
+    ggHTheoryWeight,
 ]

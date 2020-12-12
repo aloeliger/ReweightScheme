@@ -9,8 +9,23 @@ from Configurations.Weights.TauIDModule.TauIDWeight import tauIDWeight_2018 as t
 from Configurations.Weights.TriggerSFModule.TriggerWeight import triggerWeight_2018 as triggerWeight
 from Configurations.Weights.bTaggingWeightModule.bTaggingWeight import bTaggingWeight_2018
 from Configurations.Weights.TopPtReweightingModule.TopPtWeight import topPtWeight
+
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import dummyqqHStyleWeight_Differential
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import dummyWminusHStyleWeight_Differential
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import dummyWplusHStyleWeight_Differential
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import dummyZHStyleWeight_Differential
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import dummyGGZHLLTTStyleWeight_Differential
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import dummyGGZHNNTTStyleWeight_Differential
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import dummyGGZHQQTTStyleWeight_Differential
 from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.DifferentialQCDAcceptanceWeight import ttHStyleWeight_Differential
+
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import dummyggHRawQCDScaleAcceptance
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import dummyqqHRawQCDScaleAcceptance
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import dummyVHRawQCDScaleAcceptance
+from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import dummyggZHRawQCDScaleAcceptance
 from Configurations.Weights.QCDAcceptanceWeights.DifferentialQCDAcceptanceWeights.RawDifferentialQCDAcceptanceWeight import ttHRawQCDScaleAcceptance
+
+from Configurations.Weights.ggHTheoryWeight.ggHTheoryWeight import  dummyggHTheoryWeight
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 
@@ -35,6 +50,21 @@ EWKConfiguration.listOfWeights = [
     triggerWeight,
     bTaggingWeight_2018,    
     topPtWeight,
+
+    dummyqqHStyleWeight_Differential,
+    dummyWminusHStyleWeight_Differential,
+    dummyWplusHStyleWeight_Differential,
+    dummyZHStyleWeight_Differential,
+    dummyGGZHLLTTStyleWeight_Differential,
+    dummyGGZHNNTTStyleWeight_Differential,
+    dummyGGZHQQTTStyleWeight_Differential,
     ttHStyleWeight_Differential,
+    
+    dummyggHRawQCDScaleAcceptance,
+    dummyqqHRawQCDScaleAcceptance,
+    dummyVHRawQCDScaleAcceptance,
+    dummyggZHRawQCDScaleAcceptance,
     ttHRawQCDScaleAcceptance,
+
+    dummyggHTheoryWeight,
 ]
