@@ -9,7 +9,7 @@ from Configurations.Weights.WeightDefinition import Weight as Weight
 def CalculateCrossSectionWeight(self,theTree):
     crossSectionWeight = 1.0
     if self.year == "2016":
-        LHCLumi = 35.92e15
+        LHCLumi = 36.33e15
     elif self.year == "2017":
         LHCLumi = 41.557e15
     elif self.year == "2018":
