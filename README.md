@@ -11,8 +11,7 @@ the shapes of individual weights, and their up/down uncertainties.
 
 ### Options
 - `--ConfigFiles`: Required, takes any number of arugments, which are just the paths to configuration files to run the tool
-- `--RemovalRecipe`: provides a quick recipe for the removal of the branches added by a particular configuration, designed
-  to be run on my `PruneBranches.py` script included elsewhere in the SMHTT code (to be ported here soon?)
+- `--Remove`: provides a tool for the removal of branches in case an error has been made
 
 ## Configurations
 
