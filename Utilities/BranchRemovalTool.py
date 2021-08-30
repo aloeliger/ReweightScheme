@@ -7,12 +7,10 @@ def PruneBranches(theFileName,branchesToPrune):
     pruneFile = ROOT.TFile(theFileName,"UPDATE")
     #theTree = pruneFile.mt_Selected
 
-    newFile = ROOT.TFile("Temporary.root","RECREATE")
     alreadyGrabbedItems = []
     for keyObj in pruneFile.GetListOfKeys():
         if keyObj.GetName() not in alreadyGrabbedItems:
             obj = pruneFile.Get(keyObj.GetName())
-            newFile.cd()
             if type(obj) == type(ROOT.TTree()):
                 for branch in branchesToPrune:
                     try:
@@ -22,5 +20,3 @@ def PruneBranches(theFileName,branchesToPrune):
                 obj = obj.CloneTree(-1,"fast")
             obj.Write()
             alreadyGrabbedItems.append(keyObj.GetName())
-    newFile.Write()
-    os.system("mv Temporary.root "+theFileName)
