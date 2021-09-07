@@ -3,7 +3,7 @@ import json
 from Configurations.Weights.WeightDefinition import Weight as Weight
 
 def calculateCrossSectionWeight(self, theTree):
-    crossSectionWeight = 1.0
+    crossSectionWeighting = 1.0
     if self.timePeriod == '2016': #not fond of having the configuration spread out like this
         LHCLumi =  16.81e15
     elif self.timePeriod == '2016APV':
@@ -14,9 +14,9 @@ def calculateCrossSectionWeight(self, theTree):
         LHCLumi = 59.83e15
     else:
         raise RuntimeError('Found unknown or absent time period for XS weights')
-
-    crossSectionWeight = self.XS * LHCLumi / self.totalNumberOfEvents
-    self.value[0] = crossSectionWeight#*theTree.genWeight
+        
+    crossSectionWeighting = self.XS * LHCLumi / self.totalNumberOfEvents
+    self.value[0] = crossSectionWeighting#*theTree.genWeight
     
     
 
