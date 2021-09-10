@@ -4,6 +4,7 @@ import json
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 from Configurations.Weights.b2gAnalysisWeights.crossSectionWeighting.crossSectionWeight import crossSectionWeight as crossSectionWeight
+from Configurations.Weights.b2gAnalysisWeights.pileupWeightingModule.pileupWeight import pileupWeight_2016
 
 DYConfig = ReweightConfiguration()
 DYConfig.name = 'DY'
@@ -20,7 +21,13 @@ DYConfig.inputFile = jsonInfo[DYConfig.name]['file']
 crossSectionWeight.XS = jsonInfo[DYConfig.name]['XS'] * 1e-12 #XS in pb
 crossSectionWeight.timePeriod = '2016'
 crossSectionWeight.totalNumberOfEvents = totalNumberOfEvents
+try:
+    crossSectionWeight.forcedGenWeight = jsonInfo[DYConfig.name]['forcedGenWeight']
+except KeyError:
+    crossSectionWeight.forcedGenWeight = None
+
 
 DYConfig.listOfWeights = [
     crossSectionWeight,
+    pileupWeight_2016,
 ]

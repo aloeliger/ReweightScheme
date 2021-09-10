@@ -4,6 +4,8 @@ import json
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 from Configurations.Weights.b2gAnalysisWeights.crossSectionWeighting.crossSectionWeight import crossSectionWeight as crossSectionWeight
+from Configurations.Weights.b2gAnalysisWeights.pileupWeightingModule.pileupWeight import pileupWeight_2016
+
 
 Radion_M2500Config = ReweightConfiguration()
 Radion_M2500Config.name = 'Radion_M2500'
@@ -20,7 +22,13 @@ Radion_M2500Config.inputFile = jsonInfo[Radion_M2500Config.name]['file']
 crossSectionWeight.XS = jsonInfo[Radion_M2500Config.name]['XS'] * 1e-12 #XS in pb
 crossSectionWeight.timePeriod = '2016'
 crossSectionWeight.totalNumberOfEvents = totalNumberOfEvents
+try:
+    crossSectionWeight.forcedGenWeight = jsonInfo[Radion_M2500Config.name]['forcedGenWeight']
+except KeyError:
+    crossSectionWeight.forcedGenWeight = None
+
 
 Radion_M2500Config.listOfWeights = [
     crossSectionWeight,
+    pileupWeight_2016,
 ]

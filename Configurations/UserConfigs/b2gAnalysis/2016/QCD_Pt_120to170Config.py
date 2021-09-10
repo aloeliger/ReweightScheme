@@ -4,6 +4,8 @@ import json
 
 from Configurations.ConfigDefinition import ReweightConfiguration
 from Configurations.Weights.b2gAnalysisWeights.crossSectionWeighting.crossSectionWeight import crossSectionWeight as crossSectionWeight
+from Configurations.Weights.b2gAnalysisWeights.pileupWeightingModule.pileupWeight import pileupWeight_2016
+
 
 QCD_Pt_120to170Config = ReweightConfiguration()
 QCD_Pt_120to170Config.name = 'QCD_Pt_120to170'
@@ -20,7 +22,13 @@ QCD_Pt_120to170Config.inputFile = jsonInfo[QCD_Pt_120to170Config.name]['file']
 crossSectionWeight.XS = jsonInfo[QCD_Pt_120to170Config.name]['XS'] * 1e-12 #XS in pb
 crossSectionWeight.timePeriod = '2016'
 crossSectionWeight.totalNumberOfEvents = totalNumberOfEvents
+try:
+    crossSectionWeight.forcedGenWeight = jsonInfo[QCD_Pt_120to170Config.name]['forcedGenWeight']
+except KeyError:
+    crossSectionWeight.forcedGenWeight = None
+
 
 QCD_Pt_120to170Config.listOfWeights = [
     crossSectionWeight,
+    pileupWeight_2016,
 ]
