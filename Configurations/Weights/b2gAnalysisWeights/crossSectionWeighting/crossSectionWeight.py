@@ -16,10 +16,17 @@ def calculateCrossSectionWeight(self, theTree):
         raise RuntimeError('Found unknown or absent time period for XS weights')
         
     crossSectionWeighting = self.XS * LHCLumi / self.totalNumberOfEvents
-    self.value[0] = crossSectionWeighting#*theTree.genWeight
+
+    genWeighting = 1.0
+    if not self.forcedGenWeight == None:
+        genWeighting = self.forcedGenWeight
+    else:
+        genWeighting = theTree.genWeight
+    self.value[0] = crossSectionWeighting * genWeighting
     
     
 
 crossSectionWeight = Weight()
 crossSectionWeight.name = 'crossSectionWeighting'
 crossSectionWeight.CalculateWeight = calculateCrossSectionWeight
+crossSectionWeight.forcedGenWeight = None
